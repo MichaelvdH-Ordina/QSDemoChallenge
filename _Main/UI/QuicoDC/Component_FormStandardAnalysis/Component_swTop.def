@@ -1,0 +1,185 @@
+Quintiq file version 2.0
+Component swTop
+{
+  #keys: '[530.0.3531806]'
+  BaseType: 'SplitterWnd'
+  Children:
+  [
+    Component spTopLeft
+    {
+      #keys: '[530.0.3531807]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 1 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /dpFixedAnalysis
+            Position { startcolumn: 1 startrow: 1 endcolumn: 1 endrow: 1 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 1 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        Component Analysis
+        {
+          #keys: '[530.0.3532065]'
+          BaseType: 'GUIAnalysis'
+          Properties:
+          [
+            GlobalInstance: 'Company'
+            List: 'List1'
+            SizePosition: 'lt335 361 2 28'
+          ]
+        }
+        #child: dpFixedAnalysis
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        ModeledStringList ChildOrdering
+        {
+          c: Analysis
+          c: dpFixedAnalysis
+        }
+      ]
+    }
+    Component spTopRight
+    {
+      #keys: '[530.0.3531808]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 100 id: 1 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => AnalysisGrid
+            Position { startcolumn: 1 startrow: 1 endcolumn: 1 endrow: 1 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 100 id: 1 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        Component AnalysisGrid
+        {
+          #keys: '[530.0.3532013]'
+          BaseType: 'GUIAnalysisGrid'
+          Children:
+          [
+            Component popupAnalysisGrid1
+            {
+              #keys: '[530.0.5957088]'
+              BaseType: 'popupAnalysisGrid'
+              Children:
+              [
+                Component PopupParent
+                {
+                  #keys: '[558.1.851404]'
+                  BaseType: 'PopupParent'
+                  IsDerived: true
+                  Children:
+                  [
+                    Component menuFormatGridCell { #keys: '[530.1.574769]' BaseType: 'Menu' Properties: [ Shortcut: 'Alt+Enter' Text: '&Format...' ] }
+                    Component Menu4 { #keys: '[530.1.574673]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+                    Component MenuSelectanalysis { #keys: '[530.1.7655720]' BaseType: 'Menu' Properties: [ Shortcut: 'Ctrl+G' Text: '&Goto analysis' ] }
+                    Component menuAutosizeColumns { #keys: '[530.1.21178314]' BaseType: 'Menu' Properties: [ Text: 'Autosize selected columns' ] }
+                    Component Menu6 { #keys: '[530.1.10431854]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+                    Component menuInsertGroupLabels { #keys: '[530.1.10431853]' BaseType: 'Menu' Properties: [ Text: 'Insert group &labels' ] }
+                    Component menuInsertGroupValues { #keys: '[530.1.10431888]' BaseType: 'Menu' Properties: [ Text: 'Insert group &values' ] }
+                    Component menuInsertQuantorGroupValues { #keys: '[530.1.10447536]' BaseType: 'Menu' Properties: [ Shortcut: 'Ctrl+Q' Text: 'Insert &quantor group values...' ] }
+                    Component menuInsertGroupLabelsAndValues { #keys: '[530.1.10431922]' BaseType: 'Menu' Properties: [ Shortcut: 'Ctrl+I' Text: '&Insert group labels and values' ] }
+                    Component menuInsertMatrix { #keys: '[530.1.10431956]' BaseType: 'Menu' Properties: [ Shortcut: 'Ctrl+M' Text: 'Insert &matrix' ] }
+                    Component menuInsertQuantorMatrix { #keys: '[530.1.10447825]' BaseType: 'Menu' Properties: [ Text: 'Insert &quantor matrix...' ] }
+                  ]
+                  Properties:
+                  [
+                    ModeledStringList ChildOrdering
+                    {
+                      c: menuAGCut
+                      c: menuAGCopy
+                      c: menuAGPaste
+                      c: menuPasteFormatting
+                      c: menuAGSeparator0
+                      c: menuEditAnalysisGridCell
+                      c: menuExportAnalysisGrid
+                      c: menuFormatGridCell
+                      c: Menu4
+                      c: MenuSelectanalysis
+                      c: menuAutosizeColumns
+                      c: Menu6
+                      c: menuInsertGroupLabels
+                      c: menuInsertGroupValues
+                      c: menuInsertQuantorGroupValues
+                      c: menuInsertGroupLabelsAndValues
+                      c: menuInsertMatrix
+                      c: menuInsertQuantorMatrix
+                    }
+                  ]
+                }
+              ]
+              Properties:
+              [
+                SizePosition: 'lt86 112 65 91'
+              ]
+            }
+          ]
+          Properties:
+          [
+            Analysis: 'Analysis'
+            BackgroundColor: 'Window'
+            ContextMenu: 'popupAnalysisGrid1'
+            SizePosition: 'ss0 0 0 0'
+          ]
+          ResponseDefinitions:
+          [
+            DelegatedResponseDefinition OnClick id:Responsedef_swTop_AnalysisGrid_Menu_OnClick
+            {
+              #keys: '[530.1.574770]'
+              Initiator: 'Menu'
+              IsInherited: false
+              ResponseType: 'OnClick'
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+      ]
+    }
+  ]
+  Properties:
+  [
+    DoubleBuffering: false
+    SizePosition: 'ss0 0 0 0'
+    ModeledStringList ChildOrdering
+    {
+      c: spTopLeft
+      c: spTopRight
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/MenuDeleteData
+Response OnClick () id:Response_mbMainMenu_MenuDeleteData_OnClick
+{
+  #keys: '[141928.0.93824519]'
+  Body:
+  [*
+    // Delete data
+    Company.RemoveAllData();
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+  Precondition:
+  [*
+    not isnull( Company );
+  *]
+}

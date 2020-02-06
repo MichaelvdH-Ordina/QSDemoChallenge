@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute OrderNr
+{
+  #keys: '3[107600.0.334700865][107600.0.334700862][107600.0.334700866]'
+  Description: 'Order number'
+  ValueType: String
+}

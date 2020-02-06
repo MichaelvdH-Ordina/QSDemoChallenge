@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/GUIAnalysisBarChartPath1
+Response OnClick () id:Response_SplitterWnd1_menuBCPDelete_OnClick
+{
+  #keys: '[530.1.22258243]'
+  Body:
+  [*
+    this.DeleteFilter();
+  *]
+  DefinitionID => /SplitterWnd1/Responsedef_SplitterWnd1_GUIAnalysisBarChartPath1_Menu_OnClick
+  Initiator: 'menuBCPDelete'
+  Precondition:
+  [*
+    return this.CanDeleteFilter();
+  *]
+}

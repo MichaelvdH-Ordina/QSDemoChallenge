@@ -1,0 +1,137 @@
+Quintiq file version 2.0
+Component ListGUIAnalysisData
+{
+  #keys: '[530.1.25480335]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles4
+    Component popupList2
+    {
+      #keys: '[530.1.25480338]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component menuListQuintiqSetQuantor
+            {
+              #keys: '[530.0.12233117]'
+              BaseType: 'menuListQuintiqSetQuantor'
+              IsDerived: true
+              Properties:
+              [
+                Visible: false
+              ]
+            }
+            Component Menu7 { #keys: '[530.1.25480360]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+            Component menuSelectFixed { #keys: '[530.1.25520277]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'HORIZONTALBARCHART' Shortcut: 'Enter' Text: '&Goto' ] }
+            Component menuEditFixedAnalysis { #keys: '[530.1.25480378]' BaseType: 'Menu' Properties: [ Image: 'EDITOBJECT' Shortcut: 'Ctrl+Enter' Text: '&Edit...' ] }
+            Component menuRemoveFixedAnalysis { #keys: '[530.1.25480361]' BaseType: 'Menu' Properties: [ Shortcut: 'Del' Text: '&Remove' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+              c: Menu7
+              c: menuSelectFixed
+              c: menuEditFixedAnalysis
+              c: menuRemoveFixedAnalysis
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 2
+        PosY: 25
+        SizePosition: 'lt2 28 25 51'
+      ]
+    }
+    Component GUIDataExtractor4
+    {
+      #keys: '[530.1.25480339]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'dpFixedAnalysis'
+        DataType: 'internal[GUIFixedAnalysis]'
+        PosX: 2
+        PosY: 57
+        SizePosition: 'lt2 28 57 83'
+        Transformation: 'Analysis'
+      ]
+    }
+    Component GUIDataSetLevel4
+    {
+      #keys: '[530.1.25480340]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        AutoSelectColumns: false
+        Columns: 'GUIAnalysisDataColumns1'
+        DataExtractor: 'GUIDataExtractor4'
+        PosX: 2
+        PosY: 89
+        SizePosition: 'lt2 28 89 115'
+        SortCriteria: 'Name'
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoSizeColumns: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList2'
+    FullRowSelect: true
+    SizePosition: 'ss0 0 0 0'
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles4
+      c: popupList2
+      c: GUIDataExtractor4
+      c: GUIDataSetLevel4
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListGUIAnalysisData_Menu_OnClick
+    {
+      #keys: '[530.1.25480341]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[530.1.25480342]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListGUIAnalysisData_GUIButtonBase_OnClick
+    {
+      #keys: '[530.1.25480343]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[530.1.25480344]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

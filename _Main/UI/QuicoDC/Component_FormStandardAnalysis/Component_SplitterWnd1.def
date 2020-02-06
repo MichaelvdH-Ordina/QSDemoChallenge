@@ -1,0 +1,261 @@
+Quintiq file version 2.0
+Component SplitterWnd1
+{
+  #keys: '[530.1.8006303]'
+  BaseType: 'SplitterWnd'
+  Children:
+  [
+    Component SplitterPane3
+    {
+      #keys: '[530.1.8006304]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 100 id: 1 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => GUIAnalysisBarChartPath1
+            Position { startcolumn: 1 startrow: 1 endcolumn: 1 endrow: 1 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 100 id: 1 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        Component GUIAnalysisBarChartPath1
+        {
+          #keys: '[530.1.8006308]'
+          BaseType: 'GUIAnalysisBarChartPath'
+          Children:
+          [
+            Component popupBarChartPath
+            {
+              #keys: '[530.1.22258122]'
+              BaseType: 'PopupMenu'
+              Children:
+              [
+                Component PopupParent
+                {
+                  #keys: '[530.1.22258123]'
+                  BaseType: 'Menu'
+                  Children:
+                  [
+                    Component menuBCPGoto { #keys: '[530.1.22258142]' BaseType: 'Menu' Properties: [ Image: '185' Text: 'Goto' ] }
+                    Component menuBCPEdit { #keys: '[530.1.22258161]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Text: 'Edit...' ] }
+                    Component menuBCPEditFilter { #keys: '[530.1.22258199]' BaseType: 'Menu' Properties: [ Text: 'Add filter...' ] }
+                    Component menuBCPDelete { #keys: '[530.1.22258180]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Text: 'Clear filter' ] }
+                  ]
+                  Properties:
+                  [
+                    ModeledStringList ChildOrdering
+                    {
+                      c: menuBCPGoto
+                      c: menuBCPEdit
+                      c: menuBCPEditFilter
+                      c: menuBCPDelete
+                    }
+                  ]
+                }
+              ]
+              Properties:
+              [
+                SizePosition: 'lt35 61 22 48'
+              ]
+            }
+          ]
+          Properties:
+          [
+            ContextMenu: 'popupBarChartPath'
+            SizePosition: 'ss0 0 0 0'
+          ]
+          ResponseDefinitions:
+          [
+            DelegatedResponseDefinition OnClick id:Responsedef_SplitterWnd1_GUIAnalysisBarChartPath1_Menu_OnClick
+            {
+              #keys: '[530.1.22258200]'
+              Initiator: 'Menu'
+              IsInherited: false
+              ResponseType: 'OnClick'
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Size: 25
+      ]
+    }
+    Component SplitterPane4
+    {
+      #keys: '[530.1.8006305]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 100 id: 1 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => AnalysisBarChart
+            Position { startcolumn: 1 startrow: 1 endcolumn: 1 endrow: 1 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 100 id: 1 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        Component AnalysisBarChart
+        {
+          #keys: '[530.0.3532182]'
+          BaseType: 'GUIAnalysisBarChart'
+          Children:
+          [
+            Component popupMenuBarChart
+            {
+              #keys: '[530.0.3532183]'
+              BaseType: 'PopupMenu'
+              Children:
+              [
+                Component PopupParent id:PopupParent_666
+                {
+                  #keys: '[530.0.3532184]'
+                  BaseType: 'Menu'
+                  Children:
+                  [
+                    Component menuBCGroupBy
+                    {
+                      #keys: '[530.1.5505171]'
+                      BaseType: 'Menu'
+                      Children:
+                      [
+                        Component menuBCMoreAttributes { #keys: '[530.1.5505275]' BaseType: 'Menu' Properties: [ Shortcut: 'Ctrl+G' Text: 'More attributes...' ] }
+                        Component menuBCSelectFavorites { #keys: '[530.1.5505277]' BaseType: 'Menu' Properties: [ Text: 'Select favorites...' ] }
+                      ]
+                      Properties:
+                      [
+                        Text: 'Group by'
+                        ModeledStringList ChildOrdering
+                        {
+                          c: menuBCMoreAttributes
+                          c: menuBCSelectFavorites
+                        }
+                      ]
+                    }
+                    Component menuBCTraverse { #keys: '[530.1.5505262]' BaseType: 'Menu' Properties: [ Shortcut: 'Ctrl+T' Text: 'Traverse...' ] }
+                    Component menuABCSeparator2 { #keys: '[530.0.5481190]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+                    Component menuBCEdit { #keys: '[530.1.10216736]' BaseType: 'Menu' Properties: [ Image: 'EDITOBJECT' Text: 'Edit...' ] }
+                    Component menuClearAnalysisFilterBC { #keys: '[530.0.3532186]' BaseType: 'Menu' Properties: [ Text: 'Clear filter' ] }
+                    Component menuABCSeparator0 { #keys: '[530.0.3532187]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+                    Component menuBCRemoveQuantor { #keys: '[530.0.3532190]' BaseType: 'Menu' Properties: [ Text: 'Remove quantor' ] }
+                    Component menuBCClearTraverse { #keys: '[530.0.11231062]' BaseType: 'Menu' Properties: [ Text: 'Clear traverse' ] }
+                    Component menuBCClearGroupBy { #keys: '[530.0.11231063]' BaseType: 'Menu' Properties: [ Text: 'Clear group by' ] }
+                    Component menuBCRotateGroupBy { #keys: '[530.1.21120051]' BaseType: 'Menu' Properties: [ Text: 'Rotate group by' ] }
+                    Component Menu3 { #keys: '[530.1.7661787]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+                    Component menuBCSetAsHome { #keys: '[530.0.6938866]' BaseType: 'Menu' Properties: [ Image: '320' Text: 'Set as home' ] }
+                    Component MenuBack { #keys: '[530.1.7995025]' BaseType: 'Menu' Properties: [ Shortcut: 'Alt+Left' Text: 'Back' ] }
+                    Component menuBCGotoHome { #keys: '[530.1.9526813]' BaseType: 'Menu' Properties: [ Shortcut: 'Alt+Home' Text: 'Goto home' ] }
+                    Component MenuGotoanalysis { #keys: '[530.1.7661821]' BaseType: 'Menu' Properties: [ Text: 'Goto analysis...' ] }
+                    Component menuABCSeparator3 { #keys: '[530.0.6938865]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+                    Component menuBCClearAnalysis { #keys: '[530.0.5481191]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Text: 'Clear analysis to home' ] }
+                    Component menuBCClearAnalysisComplete { #keys: '[530.1.5501361]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Text: 'Clear analysis' ] }
+                    Component menuDuplicateAnalysis { #keys: '[530.1.9880747]' BaseType: 'Menu' Properties: [ Image: 'COPY' Text: 'Duplicate analysis' ] }
+                    Component menuABCSeparator1 { #keys: '[530.0.3532189]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+                    Component menuBCAddGroup { #keys: '[530.0.3532188]' BaseType: 'Menu' Properties: [ Image: 'NEW' Shortcut: 'Ins' Text: 'Add group...' ] }
+                    Component menuBCEditFilter { #keys: '[530.0.3532185]' BaseType: 'Menu' Properties: [ Image: 'EDITOBJECT' Text: 'Add filter...' ] }
+                  ]
+                  Properties:
+                  [
+                    ModeledStringList ChildOrdering
+                    {
+                      c: menuBCGroupBy
+                      c: menuBCTraverse
+                      c: menuABCSeparator2
+                      c: menuBCEdit
+                      c: menuBCEditFilter
+                      c: menuClearAnalysisFilterBC
+                      c: menuABCSeparator0
+                      c: menuBCRemoveQuantor
+                      c: menuBCClearTraverse
+                      c: menuBCClearGroupBy
+                      c: menuBCRotateGroupBy
+                      c: Menu3
+                      c: menuBCSetAsHome
+                      c: MenuBack
+                      c: menuBCGotoHome
+                      c: MenuGotoanalysis
+                      c: menuABCSeparator3
+                      c: menuBCClearAnalysis
+                      c: menuBCClearAnalysisComplete
+                      c: menuDuplicateAnalysis
+                      c: menuABCSeparator1
+                      c: menuBCAddGroup
+                    }
+                  ]
+                }
+              ]
+              Properties:
+              [
+                SizePosition: 'lt130 156 68 94'
+              ]
+            }
+          ]
+          Properties:
+          [
+            Analysis: 'Analysis'
+            BackgroundColor: 'Window'
+            ContextMenu: 'popupMenuBarChart'
+            List: 'List1'
+            SizePosition: 'ss0 0 0 0'
+          ]
+          ResponseDefinitions:
+          [
+            DelegatedResponseDefinition OnClick id:Responsedef_SplitterWnd1_AnalysisBarChart_Menu_OnClick
+            {
+              #keys: '[530.0.3532191]'
+              Initiator: 'Menu'
+              IsInherited: false
+              ResponseType: 'OnClick'
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Size: 75
+      ]
+    }
+  ]
+  Properties:
+  [
+    DoubleBuffering: false
+    HorizontalSplit: false
+    SizePosition: 'ss0 0 0 0'
+    ModeledStringList ChildOrdering
+    {
+      c: SplitterPane3
+      c: SplitterPane4
+    }
+  ]
+}

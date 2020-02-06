@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type Company
+{
+  #keys: '5[10046.0.72984747][10046.0.72984750][0.0.0][103736.0.162035222][103736.0.162035223]'
+  BaseType: Object
+  Description: 'The root type of the model'
+  OnCreate: 'this.Time( DateTime::Now().StartOfNextDay() );'
+  StructuredName: 'Companys'
+}

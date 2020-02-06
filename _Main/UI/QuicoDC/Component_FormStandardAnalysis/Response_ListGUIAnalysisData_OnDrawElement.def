@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: ListGUIAnalysisData
+Response OnDrawElement (internal[GUIAnalysisData] element) id:Response_ListGUIAnalysisData_OnDrawElement
+{
+  #keys: '[530.1.67561113]'
+  Body:
+  [*
+    if ( element.IsVisualized() )
+    {
+      drawinfo.Image(0, 'CHECKMARK');
+    }
+    else
+    {
+      drawinfo.Image(0, '');
+    }
+  *]
+  DefinitionID: 'Responsedef_List_OnDrawElement'
+}

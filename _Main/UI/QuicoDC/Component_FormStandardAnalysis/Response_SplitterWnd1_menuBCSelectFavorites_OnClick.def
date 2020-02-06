@@ -1,0 +1,22 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/AnalysisBarChart
+Response OnClick () id:Response_SplitterWnd1_menuBCSelectFavorites_OnClick
+{
+  #keys: '[530.1.5505429]'
+  Body:
+  [*
+    typeinfo      := AnalysisBarChart.TypeInfo();
+    typeinterface := AnalysisBarChart.TypeInterface();
+    
+    dlg := construct(dlgSelectFavoriteDataMembers);
+    dlg.Data(typeinfo);
+    dlg.dpTypeInterface().Data(&typeinterface);
+    dlg.DoModal(this);
+  *]
+  DefinitionID => /SplitterWnd1/Responsedef_SplitterWnd1_AnalysisBarChart_Menu_OnClick
+  Initiator: 'menuBCSelectFavorites'
+  Precondition:
+  [*
+    return not isnull(AnalysisBarChart.TypeInfo());
+  *]
+}

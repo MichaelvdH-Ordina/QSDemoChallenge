@@ -1,0 +1,7 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Thickness
+{
+  #keys: '3[107600.0.334701726][107600.0.334701723][107600.0.334701727]'
+  ValueType: Number
+}

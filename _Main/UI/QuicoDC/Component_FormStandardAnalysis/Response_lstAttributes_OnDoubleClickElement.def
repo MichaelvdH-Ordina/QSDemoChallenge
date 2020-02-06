@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: lstAttributes
+Response OnDoubleClickElement (internal[UITypeDataMember] element) id:Response_lstAttributes_OnDoubleClickElement
+{
+  #keys: '[530.0.3532159]'
+  Body:
+  [*
+    if ( action.IsShift() )
+    {
+      AnalysisBarChart.ExtendGroupBy(element);
+    }
+    else
+    {
+      AnalysisBarChart.GroupBy(element);
+    }
+  *]
+  DefinitionID: 'Responsedef_List_OnDoubleClickElement'
+}

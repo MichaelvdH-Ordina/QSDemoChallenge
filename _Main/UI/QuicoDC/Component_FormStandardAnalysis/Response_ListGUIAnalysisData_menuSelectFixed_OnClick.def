@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: ListGUIAnalysisData
+Response OnClick (internal[GUIAnalysisData] selection) id:Response_ListGUIAnalysisData_menuSelectFixed_OnClick
+{
+  #keys: '[530.1.25520278]'
+  Body:
+  [*
+    selection.Select();
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListGUIAnalysisData/Responsedef_ListGUIAnalysisData_Menu_OnClick
+  Initiator: 'menuSelectFixed'
+}

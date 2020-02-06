@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type PlanUnit
+{
+  #keys: '5[107600.0.334623900][107600.0.334623898][0.0.0][107600.0.334623899][107600.0.334623901]'
+  BaseType: Object
+  Description: 'Supertype for all plannable types'
+  IsUserAbstract: true
+  StructuredName: 'PlanUnits'
+}

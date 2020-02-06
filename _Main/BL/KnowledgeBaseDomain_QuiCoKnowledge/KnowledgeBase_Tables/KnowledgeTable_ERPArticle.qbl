@@ -1,0 +1,46 @@
+Quintiq file version 2.0
+#parent: #root
+KnowledgeTable ERPArticle
+{
+  #keys: '6[10046.0.72996335][10046.0.72996324][0.0.0][10046.0.72996326][0.0.0][10046.0.72996328]'
+  Description: 'Contains test data for articles'
+  ColumnDefinitions:
+  [
+    Column ArticleNr
+    {
+      ColumnWeight: 1
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column Length
+    {
+      ColumnWeight: 1
+      ISODefaultValue: '*'
+      Type: Number
+    }
+    Column Width
+    {
+      ColumnWeight: 1
+      ISODefaultValue: '*'
+      Type: Real
+    }
+    Column Density
+    {
+      ColumnWeight: 1
+      ISODefaultValue: '*'
+      Type: Number
+    }
+    Column Color
+    {
+      ColumnWeight: 1
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column Thickness
+    {
+      ColumnWeight: 1
+      ISODefaultValue: '*'
+      Type: Number
+    }
+  ]
+}

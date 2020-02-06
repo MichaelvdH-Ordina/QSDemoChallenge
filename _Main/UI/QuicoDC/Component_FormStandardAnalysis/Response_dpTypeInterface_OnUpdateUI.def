@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: dpTypeInterface
+Response OnUpdateUI () id:Response_dpTypeInterface_OnUpdateUI
+{
+  #keys: '[530.1.6698370]'
+  Body:
+  [*
+      if ( AnalysisBarChart.MustUpdateTypeInterface( this.Data() ) )
+    {
+      typeinterface := AnalysisBarChart.TypeInterface();
+        this.Data( &typeinterface );
+      }
+  *]
+  DefinitionID: 'Responsedef_GUIComponent_OnUpdateUI'
+}

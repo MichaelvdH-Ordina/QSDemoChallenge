@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: ListGUIAnalysisData
+Response OnClick (internal[GUIAnalysisData] selection) id:Response_ListGUIAnalysisData_menuEditFixedAnalysis_OnClick
+{
+  #keys: '[530.1.25480379]'
+  Body:
+  [*
+    dlg := construct(dlgEditGUIAnalysisData);
+    dlg.Data(selection);
+    dlg.DoModal(this);
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListGUIAnalysisData/Responsedef_ListGUIAnalysisData_Menu_OnClick
+  Initiator: 'menuEditFixedAnalysis'
+}

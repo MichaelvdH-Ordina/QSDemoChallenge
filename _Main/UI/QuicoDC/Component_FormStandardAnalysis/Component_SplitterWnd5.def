@@ -1,0 +1,92 @@
+Quintiq file version 2.0
+Component SplitterWnd5
+{
+  #keys: '[530.0.3532138]'
+  BaseType: 'SplitterWnd'
+  Children:
+  [
+    Component SplitterPane9
+    {
+      #keys: '[530.0.3532139]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 100 id: 1 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /lstAttributes
+            Position { startcolumn: 1 startrow: 1 endcolumn: 1 endrow: 1 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 100 id: 1 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: lstAttributes
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Title: 'Group by'
+      ]
+    }
+    Component SplitterPane10
+    {
+      #keys: '[530.0.3532169]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 100 id: 1 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /List3
+            Position { startcolumn: 1 startrow: 1 endcolumn: 1 endrow: 1 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 100 id: 1 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: List3
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Title: 'Traverse'
+      ]
+    }
+  ]
+  Properties:
+  [
+    DoubleBuffering: false
+    HorizontalSplit: false
+    SizePosition: 'ss0 0 0 0'
+    ModeledStringList ChildOrdering
+    {
+      c: SplitterPane9
+      c: SplitterPane10
+    }
+  ]
+}

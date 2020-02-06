@@ -1,0 +1,120 @@
+Quintiq file version 2.0
+Component List3
+{
+  #keys: '[530.0.3532170]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles3
+    Component GUIDataExtractor3
+    {
+      #keys: '[530.0.3532174]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'dpTypeInterface'
+        DataType: 'internal[UITypeInterface]'
+        PosX: 2
+        PosY: 25
+        SizePosition: 'lt2 28 25 51'
+        Transformation: 'Relations'
+      ]
+    }
+    Component GUIDataSetLevel3
+    {
+      #keys: '[530.0.3532175]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        AutoSelectColumns: false
+        Columns: 'UITypeDataCols'
+        DataExtractor: 'GUIDataExtractor3'
+        PosX: 2
+        PosY: 57
+        SizePosition: 'lt2 28 57 83'
+        SortCriteria: 'Name'
+        Transformation: 'Relations'
+      ]
+    }
+    Component popupLstRelations
+    {
+      #keys: '[892.10.9972623]'
+      BaseType: 'PopupMenu'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[892.10.9972624]'
+          BaseType: 'Menu'
+          Children:
+          [
+            Component menuTraverse { #keys: '[530.1.23212532]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Shortcut: 'Enter' Text: 'Traverse' ] }
+            Component menuClearTraverse { #keys: '[530.0.11230669]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Text: 'Clear traverse' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: menuTraverse
+              c: menuClearTraverse
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 2
+        PosY: 89
+        SizePosition: 'lt2 28 89 115'
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoSizeColumns: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupLstRelations'
+    FullRowSelect: true
+    SizePosition: 'ss0 0 0 0'
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles3
+      c: GUIDataExtractor3
+      c: GUIDataSetLevel3
+      c: popupLstRelations
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_List3_Menu_OnClick
+    {
+      #keys: '[530.0.3532176]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[644.0.17496715]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_List3_GUIButtonBase_OnClick
+    {
+      #keys: '[530.0.3532177]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[644.0.17496716]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

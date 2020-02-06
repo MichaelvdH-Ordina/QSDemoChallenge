@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/MenuSelectDatasetGlobally
+Response OnClick () id:Response_mbMainMenu_MenuSelectDatasetGlobally_OnClick
+{
+  #keys: '[141928.0.93790902]'
+  Body:
+  [*
+    dlg := construct( dlgSelectDataset );
+    dlg.SelectDataSet( Application );
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+}

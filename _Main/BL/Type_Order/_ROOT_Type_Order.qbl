@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization Order
+{
+  #keys: '2[107600.0.334624197][107600.0.334624190]'
+  Description: 'An order for a specified amount of articles.'
+  Parent: PlanUnit
+  StructuredName: 'Orders'
+}

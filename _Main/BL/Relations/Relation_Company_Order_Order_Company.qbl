@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation Company_Order_Order_Company
+{
+  #keys: '1[107600.0.334624232]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide Order
+  {
+    #keys: '3[107600.0.334624228][107600.0.334624225][107600.0.334624229]'
+    Cardinality: '1toN'
+    ObjectDefinition: Company
+    OwningSide: 'Owned'
+  }
+  RelationSide.RightSide Company
+  {
+    #keys: '3[107600.0.334624248][107600.0.334624245][107600.0.334624249]'
+    Cardinality: '0to1'
+    ObjectDefinition: Order
+    OwningSide: 'Reference'
+  }
+}

@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/menuBCGotoHome
+Response OnClick () id:Response_SplitterWnd1_menuBCGotoHome_OnClick
+{
+  #keys: '[530.1.9533313]'
+  Body:
+  [*
+    AnalysisBarChart.GoHome()
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanGoHome();
+  *]
+}

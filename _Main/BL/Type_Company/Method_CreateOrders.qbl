@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+Method CreateOrders
+{
+  Description: 'Create a set of orders based on the details in a knowledge table'
+  TextBody:
+  [*
+    orderset := ERPOrderTable::Table();
+    
+    traverse( orderset, Rows, order )
+    {
+      Order::Create( this, order.OrderNr() );
+    }
+  *]
+}

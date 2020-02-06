@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: lstAttributes
+Response OnClick () id:Response_lstAttributes_menuAttributeListRemoveQuantor_OnClick
+{
+  #keys: '[530.0.3532166]'
+  Body:
+  [*
+    AnalysisBarChart.ClearQuantor()
+  *]
+  DefinitionID => /lstAttributes/Responsedef_lstAttributes_Menu_OnClick
+  Initiator: 'menuAttributeListRemoveQuantor'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanClearQuantor()
+  *]
+}

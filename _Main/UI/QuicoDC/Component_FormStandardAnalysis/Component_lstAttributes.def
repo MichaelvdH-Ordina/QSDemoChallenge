@@ -1,0 +1,183 @@
+Quintiq file version 2.0
+Component lstAttributes
+{
+  #keys: '[530.0.3532140]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles2
+    Component GUIDataExtractor2
+    {
+      #keys: '[530.0.3532155]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'dpTypeInterface'
+        DataType: 'internal[UITypeInterface]'
+        PosX: 2
+        PosY: 25
+        SizePosition: 'lt2 28 25 51'
+        Transformation: 'Data'
+      ]
+    }
+    Component GUIDataSetLevel2
+    {
+      #keys: '[530.0.3532156]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        AutoSelectColumns: false
+        Columns: 'UITypeDataCols'
+        DataExtractor: 'GUIDataExtractor2'
+        PosX: 2
+        PosY: 57
+        SizePosition: 'lt2 28 57 83'
+        SortCriteria: 'Name'
+        Transformation: 'Data'
+      ]
+    }
+    Component popupLstAttributes
+    {
+      #keys: '[892.10.9972621]'
+      BaseType: 'PopupMenu'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[892.10.9972622]'
+          BaseType: 'Menu'
+          Children:
+          [
+            Component menuSum { #keys: '[530.0.3532145]' BaseType: 'Menu' Properties: [ Image: 'SUM2' Text: 'Set sum quantor' ] }
+            Component menuAverage { #keys: '[530.0.3532146]' BaseType: 'Menu' Properties: [ Text: 'Set average quantor' ] }
+            Component menuAttributeListRemoveQuantor { #keys: '[530.0.3532147]' BaseType: 'Menu' Properties: [ Text: 'Remove quantor' ] }
+            Component menuALSeperator1 { #keys: '[530.0.3532148]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+            Component menuGroupBy { #keys: '[530.1.23212436]' BaseType: 'Menu' Properties: [ Shortcut: 'Enter' Text: 'Group by' ] }
+            Component menuExtendGroupBy { #keys: '[530.1.23212437]' BaseType: 'Menu' Properties: [ Shortcut: 'Shift+Enter' Text: 'Extend group by' ] }
+            Component menuGroupDiscreteDate
+            {
+              #keys: '[530.0.3532149]'
+              BaseType: 'Menu'
+              Children:
+              [
+                Component menuMonth { #keys: '[530.0.3532150]' BaseType: 'Menu' Properties: [ Text: 'Month' ] }
+                Component menuWeek { #keys: '[530.0.3532151]' BaseType: 'Menu' Properties: [ Text: 'Week' ] }
+                Component menuDay { #keys: '[530.0.3532152]' BaseType: 'Menu' Properties: [ Text: 'Day' ] }
+                Component menuDayOfWeek { #keys: '[530.0.3532153]' BaseType: 'Menu' Properties: [ Text: 'Day of week' ] }
+              ]
+              Properties:
+              [
+                Text: 'Group by discrete value'
+                ModeledStringList ChildOrdering
+                {
+                  c: menuMonth
+                  c: menuWeek
+                  c: menuDay
+                  c: menuDayOfWeek
+                }
+              ]
+            }
+            Component menuGroupDiscreteDate1
+            {
+              #keys: '[530.1.10392816]'
+              BaseType: 'Menu'
+              Children:
+              [
+                Component menuExtendMonth { #keys: '[530.1.10392817]' BaseType: 'Menu' Properties: [ Text: 'Month' ] }
+                Component menuExtendWeek { #keys: '[530.1.10392818]' BaseType: 'Menu' Properties: [ Text: 'Week' ] }
+                Component menuExtendDay { #keys: '[530.1.10392819]' BaseType: 'Menu' Properties: [ Text: 'Day' ] }
+                Component menuExtendDayOfWeek { #keys: '[530.1.10392820]' BaseType: 'Menu' Properties: [ Text: 'Day of week' ] }
+              ]
+              Properties:
+              [
+                Text: 'Extend group by discrete value'
+                ModeledStringList ChildOrdering
+                {
+                  c: menuExtendMonth
+                  c: menuExtendWeek
+                  c: menuExtendDay
+                  c: menuExtendDayOfWeek
+                }
+              ]
+            }
+            Component menuClearGroupBy { #keys: '[530.0.11230374]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Text: 'Clear group by' ] }
+            Component Menu1 { #keys: '[530.0.4886174]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+            Component menuSelectFavorites { #keys: '[530.1.4622415]' BaseType: 'Menu' Properties: [ Text: 'Select favorites...' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: menuSum
+              c: menuAverage
+              c: menuAttributeListRemoveQuantor
+              c: menuALSeperator1
+              c: menuGroupBy
+              c: menuExtendGroupBy
+              c: menuGroupDiscreteDate
+              c: menuGroupDiscreteDate1
+              c: menuClearGroupBy
+              c: Menu1
+              c: menuSelectFavorites
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 2
+        PosY: 89
+        SizePosition: 'lt2 28 89 115'
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    AutoSizeColumns: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupLstAttributes'
+    FullRowSelect: true
+    SizePosition: 'ss0 0 0 0'
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles2
+      c: GUIDataExtractor2
+      c: GUIDataSetLevel2
+      c: popupLstAttributes
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_lstAttributes_Menu_OnClick
+    {
+      #keys: '[530.0.3532157]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[644.0.17496713]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_lstAttributes_GUIButtonBase_OnClick
+    {
+      #keys: '[530.0.3532158]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[644.0.17496714]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation Article_Order_Order_Article
+{
+  #keys: '1[107600.0.334727998]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide Order
+  {
+    #keys: '3[107600.0.334727995][107600.0.334727992][107600.0.334727996]'
+    Cardinality: '1toN'
+    ObjectDefinition: Article
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide Article
+  {
+    #keys: '3[107600.0.334728014][107600.0.334728011][107600.0.334728015]'
+    Cardinality: '0to1'
+    ObjectDefinition: Order
+    OwningSide: 'Reference'
+  }
+}

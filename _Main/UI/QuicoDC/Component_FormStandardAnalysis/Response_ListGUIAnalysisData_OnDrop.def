@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: ListGUIAnalysisData
+Response OnDrop (internal[GUIAnalysisBarChart] information) id:Response_ListGUIAnalysisData_OnDrop
+{
+  #keys: '[530.1.25480349]'
+  Body:
+  [*
+    if ( dropaction.IsCopy() )
+    {
+      dlg := construct(dlgEditGUIAnalysisData);
+      dlg.Data(information.CurrentAnalysis());
+      if ( dlg.DoModal(this) > 0 )
+      {
+        information.CurrentAnalysis().Store();
+      }
+    }
+    else
+    {
+      information.CurrentAnalysis().Store();
+    }
+  *]
+  DefinitionID: 'Responsedef_GUIComponent_OnDrop'
+}

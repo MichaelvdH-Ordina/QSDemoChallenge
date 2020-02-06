@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: lstAttributes
+Response OnClick (internal[UITypeDataMember] selection) id:Response_lstAttributes_menuExtendDay_OnClick
+{
+  #keys: '[530.0.3532164]'
+  Body:
+  [*
+    AnalysisBarChart.ExtendDiscreteGroupBy(selection, 'day');
+  *]
+  CanBindMultiple: false
+  DefinitionID => /lstAttributes/Responsedef_lstAttributes_Menu_OnClick
+  Initiator: 'menuExtendDay'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanGroupByDiscrete(selection);
+  *]
+}

@@ -1,0 +1,34 @@
+Quintiq file version 2.0
+#parent: #root
+KnowledgeTable ERPOrder
+{
+  #keys: '6[10046.0.72996475][10046.0.72996464][0.0.0][10046.0.72996466][0.0.0][10046.0.72996468]'
+  Description: 'Contains test data for orders'
+  ColumnDefinitions:
+  [
+    Column OrderNr
+    {
+      ColumnWeight: 1
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column Quantity
+    {
+      ColumnWeight: 1
+      ISODefaultValue: '*'
+      Type: Number
+    }
+    Column DueDateOffset
+    {
+      ColumnWeight: 1
+      ISODefaultValue: '*'
+      Type: Number
+    }
+    Column ArticleNr
+    {
+      ColumnWeight: 1
+      ISODefaultValue: '*'
+      Type: String
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: lstAttributes
+Response OnClick (internal[UITypeDataMember] selection) id:Response_lstAttributes_menuExtendWeek_OnClick
+{
+  #keys: '[530.1.10393522]'
+  Body:
+  [*
+    AnalysisBarChart.ExtendDiscreteGroupBy(selection, 'week');
+  *]
+  CanBindMultiple: false
+  DefinitionID => /lstAttributes/Responsedef_lstAttributes_Menu_OnClick
+  Initiator: 'menuExtendWeek'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanGroupByDiscrete(selection);
+  *]
+}

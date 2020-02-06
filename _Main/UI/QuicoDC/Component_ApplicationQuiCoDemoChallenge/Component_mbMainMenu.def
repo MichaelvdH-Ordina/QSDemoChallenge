@@ -1,0 +1,249 @@
+Quintiq file version 2.0
+Component mbMainMenu
+{
+  #keys: '[514.0.2181]'
+  BaseType: 'MenuBar'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 0 id: 754 parent: 0 }
+      GBFlow.Column { grow: 0 id: 188 parent: 0 }
+      GBFlow.Column { grow: 0 id: 284 parent: 0 }
+      GBFlow.Column { grow: 0 id: 111 parent: 0 }
+      GBFlow.Column { grow: 0 id: 588 parent: 0 }
+    ]
+    Gaps: [ left: 5 right: 5 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 322 parent: 0 }
+      GBFlow.Row { grow: 0 id: 681 parent: 0 }
+      GBFlow.Row { grow: 0 id: 471 parent: 0 }
+      GBFlow.Row { grow: 0 id: 162 parent: 0 }
+      GBFlow.Row { grow: 0 id: 188 parent: 0 }
+      GBFlow.Row { grow: 0 id: 585 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    Component MenuFile
+    {
+      #keys: '[514.0.2182]'
+      BaseType: 'Menu'
+      Children:
+      [
+        Component ComponentMenuViewServerOutput { #keys: '[514.0.2193917]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'dlgServerMessages' Image: 'viewobject' Text: 'View server output' ] }
+        Component MenuFileSeparator1 { #keys: '[536.0.1157473]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+        Component MenuFileSeparator2 { #keys: '[558.0.592614]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+        Component MenuChangePassword { #keys: '[536.0.1157470]' BaseType: 'Menu' Properties: [ Image: 'PASSWORD_FIELD' Text: 'Change password' ] }
+        Component MenuUserPreferences { #keys: '[536.0.1172596]' BaseType: 'Menu' Properties: [ Image: 'Preferences' Text: 'User preferences' ] }
+        Component MenuQuintiqChat { #keys: '[536.0.1160124]' BaseType: 'Menu' Properties: [ Image: 'MESSAGES' Text: 'Quintiq Chat' ] }
+        Component MenuBroadcastMessage { #keys: '[530.0.2556036]' BaseType: 'Menu' Properties: [ Image: 'MEGAPHONE' Text: 'Broadcast message' ] }
+        Component MenuSeparatorFile3 { #keys: '[678.0.8616364]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+        Component MenuFileSeparator4 { #keys: '[514.0.2141307]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+        Component menuExit { #keys: '[514.0.2183]' BaseType: 'Menu' Properties: [ Shortcut: 'Alt+F4' Text: 'E&xit' ] }
+        Component ComponentMenuPrintBirtReports { #keys: '[141928.0.93781295]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'dlgPrintBirtReport' Shortcut: 'Ctrl+P' Text: 'Print report' Tooltip: 'Print reports' ] }
+        Component MenuDevelopment
+        {
+          #keys: '[141928.0.93785568]'
+          BaseType: 'Menu'
+          Children:
+          [
+            Component MenuFileDevelopmentSeparator1 { #keys: '[141928.0.93820448]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuCreateData { #keys: '[141928.0.93820950]' BaseType: 'Menu' Properties: [ Image: 'NEW' Text: '&Create data' ] }
+            Component MenuDeleteData { #keys: '[141928.0.93821031]' BaseType: 'Menu' Properties: [ Image: 'DOCUMENT_DELETE' Text: '&Delete data' ] }
+            Component MenuRunTest { #keys: '[141928.0.93821561]' BaseType: 'Menu' Properties: [ Image: 'GEARS_RUN' Shortcut: 'Ctrl+T' Text: 'Run test' ] }
+          ]
+          Properties:
+          [
+            Image: 'GEARS'
+            Text: 'Development'
+            ModeledStringList ChildOrdering
+            {
+              c: MenuCreateData
+              c: MenuDeleteData
+              c: MenuFileDevelopmentSeparator1
+              c: MenuRunTest
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        Text: '&File'
+        ModeledStringList ChildOrdering
+        {
+          c: MenuChangePassword
+          c: MenuUserPreferences
+          c: MenuFileSeparator1
+          c: ComponentMenuPrintBirtReports
+          c: MenuFileSeparator2
+          c: MenuQuintiqChat
+          c: MenuBroadcastMessage
+          c: MenuSeparatorFile3
+          c: ComponentMenuViewServerOutput
+          c: MenuDevelopment
+          c: MenuFileSeparator4
+          c: menuExit
+        }
+      ]
+    }
+    Component MenuEdit
+    {
+      #keys: '[514.0.118230]'
+      BaseType: 'Menu'
+      Children:
+      [
+        Component menuUndo { #keys: '[514.0.118231]' BaseType: 'Menu' Properties: [ Image: 'undo' Shortcut: 'Ctrl+Z' Text: '&Undo' ] }
+        Component menuRedo { #keys: '[514.0.118232]' BaseType: 'Menu' Properties: [ Image: 'redo' Shortcut: 'Ctrl+Y' Text: '&Redo' ] }
+        Component MenuEditSeparator1 { #keys: '[514.0.118233]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+        Component MenuEditSeparator2 { #keys: '[952.1.18503348]' BaseType: 'Menu' Properties: [ Separator: true ] }
+        Component MenuUpgrade { #keys: '[514.0.1072138]' BaseType: 'Menu' Properties: [ Image: 'PENCIL' Text: 'Upgrade to readwrite' ] }
+        Component MenuDowngrade { #keys: '[514.0.1072139]' BaseType: 'Menu' Properties: [ Image: 'VIEW' Text: 'Downgrade to readonly' ] }
+        Component MenuConfiguration
+        {
+          #keys: '[141928.0.93788368]'
+          BaseType: 'Menu'
+          Children:
+          [
+            Component MenuSelectDatasetGlobally { #keys: '[141928.0.93789757]' BaseType: 'Menu' Properties: [ Image: 'FOLDERS' Text: 'Select &dataset globally' ] }
+            Component MenuSelectDatasetForActiveWindow { #keys: '[141928.0.93791672]' BaseType: 'Menu' Properties: [ Image: 'FOLDER_WINDOW' Text: 'Select dataset for &active window' ] }
+            Component MenuEditKnowledgeGlobally { #keys: '[141928.0.93792729]' BaseType: 'Menu' Properties: [ Image: 'BRIEFCASE' Text: 'Edit &knowledge globally' ] }
+            Component MenuEditKnowledgeForActiveWindow { #keys: '[141928.0.93803616]' BaseType: 'Menu' Properties: [ Image: 'BRIEFCASE_DOCUMENT' Text: 'Edit knowledge for active &window' ] }
+            Component MenuEditConfigurationSeparator1 { #keys: '[141928.0.93804409]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component ComponentMenuEditRepresentations { #keys: '[141928.0.93808076]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'dlgRepresentations' Text: 'Edit r&epresentations' ] }
+            Component ComponentMenuEditDataModel { #keys: '[141928.0.93809911]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'frmDataModelEnrichment' Text: 'Edit &image attributes' ] }
+            Component MenuEditColorSceheme { #keys: '[141928.0.93812956]' BaseType: 'Menu' Properties: [ Image: 'COLORS' Text: 'Edit color &sceheme' ] }
+          ]
+          Properties:
+          [
+            Image: 'GEARS'
+            Text: 'Configuration'
+            ModeledStringList ChildOrdering
+            {
+              c: MenuSelectDatasetGlobally
+              c: MenuSelectDatasetForActiveWindow
+              c: MenuEditKnowledgeGlobally
+              c: MenuEditKnowledgeForActiveWindow
+              c: MenuEditConfigurationSeparator1
+              c: ComponentMenuEditRepresentations
+              c: ComponentMenuEditDataModel
+              c: MenuEditColorSceheme
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        Text: '&Edit'
+        ModeledStringList ChildOrdering
+        {
+          c: menuUndo
+          c: menuRedo
+          c: MenuEditSeparator1
+          c: MenuConfiguration
+          c: MenuEditSeparator2
+          c: MenuUpgrade
+          c: MenuDowngrade
+        }
+      ]
+    }
+    Component MenuForms
+    {
+      #keys: '[514.0.2184]'
+      BaseType: 'Menu'
+      Children:
+      [
+        Component MenuFormArticlesAndOrders { #keys: '[11196.0.109131908]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormArticlesAndOrders' Image: 'list' Text: '' ] }
+        Component MenuFormsSeparator1 { #keys: '[141928.0.63776324]' BaseType: 'Menu' Properties: [ Separator: true ] }
+        Component MenuFormStandardAnalysis { #keys: '[141928.0.63776702]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormStandardAnalysis' Text: '' ] }
+      ]
+      Properties:
+      [
+        Text: 'F&orms'
+        ModeledStringList ChildOrdering
+        {
+          c: MenuFormArticlesAndOrders
+          c: MenuFormsSeparator1
+          c: MenuFormStandardAnalysis
+        }
+      ]
+    }
+    Component MenuDialogs { #keys: '[514.0.2185]' BaseType: 'Menu' Properties: [ Text: '&Dialogs' Visible: false ] }
+    Component MenuReports { #keys: '[536.0.1059376]' BaseType: 'Menu' Properties: [ Text: '&Reports' Visible: false ] }
+    Component MenuViews
+    {
+      #keys: '[514.0.18851]'
+      BaseType: 'Menu'
+      Children:
+      [
+        Component menuManageViews { #keys: '[514.0.18852]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'dlgManageViews' Image: 'smalllist' Text: '&Manage views...' ] }
+      ]
+      Properties:
+      [
+        Text: '&Views'
+      ]
+    }
+    Component MenuWindows
+    {
+      #keys: '[514.0.55500]'
+      BaseType: 'Menu'
+      Children:
+      [
+        Component menuTileHorizontally { #keys: '[514.0.55501]' BaseType: 'Menu' Properties: [ Image: 'tilehoRIZONTALLY' Text: 'Tile &horizontally' ] }
+        Component menuTileVertically { #keys: '[514.0.55502]' BaseType: 'Menu' Properties: [ Image: 'tileverTICALLY' Text: 'Tile &vertically' ] }
+        Component menuCascade { #keys: '[514.0.55503]' BaseType: 'Menu' Properties: [ Image: 'casCADE' Text: '&Cascade' ] }
+        Component menuCloseAll { #keys: '[514.0.298605]' BaseType: 'Menu' Properties: [ Text: 'Close a&ll' ] }
+      ]
+      Properties:
+      [
+        Text: '&Window'
+        ModeledStringList ChildOrdering
+        {
+          c: menuTileHorizontally
+          c: menuTileVertically
+          c: menuCascade
+          c: menuCloseAll
+        }
+      ]
+    }
+    Component MenuHelp
+    {
+      #keys: '[514.0.2186]'
+      BaseType: 'Menu'
+      Children:
+      [
+        Component Menu2 { #keys: '[514.0.842970]' BaseType: 'Menu' Properties: [ Image: 'QUESTIONMARK' Text: '&Index' ] }
+        Component Menu1 { #keys: '[514.0.842969]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+        Component menuAboutQuintiq { #keys: '[108180.0.36582571]' BaseType: 'Menu' Properties: [ Image: 'QUINTIQSMALL' Text: 'About &Quintiq' ] }
+      ]
+      Properties:
+      [
+        Text: '&Help'
+        ModeledStringList ChildOrdering
+        {
+          c: Menu2
+          c: Menu1
+          c: menuAboutQuintiq
+        }
+      ]
+    }
+  ]
+  Properties:
+  [
+    Priority: -3
+    Size: 25
+    ModeledStringList ChildOrdering
+    {
+      c: MenuFile
+      c: MenuEdit
+      c: MenuForms
+      c: MenuDialogs
+      c: MenuReports
+      c: MenuViews
+      c: MenuWindows
+      c: MenuHelp
+    }
+  ]
+}

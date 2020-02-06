@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/GUIAnalysisBarChartPath1
+Response OnClick () id:Response_SplitterWnd1_menuBCPGoto_OnClick
+{
+  #keys: '[530.1.22258244]'
+  Body:
+  [*
+    this.Goto();
+  *]
+  DefinitionID => /SplitterWnd1/Responsedef_SplitterWnd1_GUIAnalysisBarChartPath1_Menu_OnClick
+  Initiator: 'menuBCPGoto'
+  Precondition:
+  [*
+    return this.CanGoto();
+  *]
+}

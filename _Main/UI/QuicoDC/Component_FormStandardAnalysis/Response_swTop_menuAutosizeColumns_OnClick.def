@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: swTop/AnalysisGrid
+Response OnClick () id:Response_swTop_menuAutosizeColumns_OnClick
+{
+  #keys: '[531.0.794914]'
+  Body:
+  [*
+    this.AutoSizeColumns();
+  *]
+  DefinitionID => /swTop/Responsedef_swTop_AnalysisGrid_Menu_OnClick
+  Initiator: 'menuAutosizeColumns'
+}

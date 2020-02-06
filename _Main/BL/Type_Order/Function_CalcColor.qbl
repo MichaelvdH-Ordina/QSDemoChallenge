@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcColor
+{
+  TextBody:
+  [*
+    value := '';
+    if( not isnull( this.Article() ) )
+    {
+      value := this.Article().Color();
+    }
+    
+    this.Color( value );
+  *]
+}

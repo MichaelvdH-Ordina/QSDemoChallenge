@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: List1
+Response OnClick () id:Response_List1_menuClearAnalysisFilter_OnClick
+{
+  #keys: '[530.0.3531962]'
+  Body:
+  [*
+    AnalysisBarChart.ClearFilter();
+  *]
+  DefinitionID => /List1/Responsedef_List1_Menu_OnClick
+  InheritSecurity: false
+  Initiator: 'menuClearAnalysisFilter'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanClearFilter()
+  *]
+}

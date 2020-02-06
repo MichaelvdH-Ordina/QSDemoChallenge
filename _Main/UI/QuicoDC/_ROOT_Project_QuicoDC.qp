@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: #root
+Project id:QuicoDC
+{
+  ProjectProperties
+  {
+    BuildVersion: '6.0.2.0'
+    Description: 'Quico Demo Challenge'
+    DisplayName: 'Quico Demo Challenge'
+    ProjectKind: 'DesktopClient'
+  }
+}

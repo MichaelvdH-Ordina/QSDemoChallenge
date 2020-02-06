@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/GUIAnalysisBarChartPath1
+Response OnClick () id:Response_SplitterWnd1_menuBCPEditFilter_OnClick
+{
+  #keys: '[530.1.22258245]'
+  Body:
+  [*
+    this.AddFilter();
+    
+    Application.ToolPaneManager().ShowFiltering( Application );
+  *]
+  DefinitionID => /SplitterWnd1/Responsedef_SplitterWnd1_GUIAnalysisBarChartPath1_Menu_OnClick
+  Initiator: 'menuBCPEditFilter'
+  Precondition:
+  [*
+    return this.CanAddFilter();
+  *]
+}

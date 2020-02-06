@@ -1,0 +1,7 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Density
+{
+  #keys: '3[107600.0.334697459][107600.0.334697456][107600.0.334697460]'
+  ValueType: Number
+}

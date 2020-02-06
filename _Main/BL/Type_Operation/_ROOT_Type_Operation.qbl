@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type Operation
+{
+  #keys: '5[107600.0.334624021][107600.0.334624019][0.0.0][107600.0.334624020][107600.0.334624022]'
+  BaseType: Object
+  Description: 'The routing steps for an order or a roll'
+  StructuredName: 'Operations'
+}

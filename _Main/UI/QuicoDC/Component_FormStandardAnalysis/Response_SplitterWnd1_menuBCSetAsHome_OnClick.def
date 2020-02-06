@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/AnalysisBarChart
+Response OnClick () id:Response_SplitterWnd1_menuBCSetAsHome_OnClick
+{
+  #keys: '[530.0.6938867]'
+  Body:
+  [*
+    this.SetHome();
+  *]
+  DefinitionID => /SplitterWnd1/Responsedef_SplitterWnd1_AnalysisBarChart_Menu_OnClick
+  Initiator: 'menuBCSetAsHome'
+  Precondition:
+  [*
+    return this.CanSetHome()
+  *]
+}

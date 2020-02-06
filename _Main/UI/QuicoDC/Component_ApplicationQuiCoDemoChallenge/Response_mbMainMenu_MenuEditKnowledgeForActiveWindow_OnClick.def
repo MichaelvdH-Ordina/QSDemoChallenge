@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/MenuEditKnowledgeForActiveWindow
+Response OnClick () id:Response_mbMainMenu_MenuEditKnowledgeForActiveWindow_OnClick
+{
+  #keys: '[141928.0.93803815]'
+  Body:
+  [*
+    dlg := construct( dlgKnowledge );
+    dlg.EditKnowledge( Application.ActiveWindow() );
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+  Precondition:
+  [*
+    return Application.HasActiveWindow();
+  *]
+}

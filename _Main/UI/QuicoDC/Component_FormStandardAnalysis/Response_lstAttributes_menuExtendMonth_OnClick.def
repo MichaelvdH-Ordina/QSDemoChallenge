@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: lstAttributes
+Response OnClick (internal[UITypeDataMember] selection) id:Response_lstAttributes_menuExtendMonth_OnClick
+{
+  #keys: '[530.1.10393044]'
+  Body:
+  [*
+    AnalysisBarChart.ExtendDiscreteGroupBy(selection, 'month');
+  *]
+  CanBindMultiple: false
+  DefinitionID => /lstAttributes/Responsedef_lstAttributes_Menu_OnClick
+  Initiator: 'menuExtendMonth'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanGroupByDiscrete(selection);
+  *]
+}

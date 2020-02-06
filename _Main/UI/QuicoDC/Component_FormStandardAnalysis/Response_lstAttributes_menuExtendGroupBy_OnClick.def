@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: lstAttributes
+Response OnClick (internal[UITypeDataMember] selection) id:Response_lstAttributes_menuExtendGroupBy_OnClick
+{
+  #keys: '[530.1.23212440]'
+  Body:
+  [*
+    AnalysisBarChart.ExtendGroupBy(selection);
+  *]
+  CanBindMultiple: false
+  DefinitionID => /lstAttributes/Responsedef_lstAttributes_Menu_OnClick
+  Initiator: 'menuExtendGroupBy'
+}

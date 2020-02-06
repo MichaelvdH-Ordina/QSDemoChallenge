@@ -1,0 +1,22 @@
+Quintiq file version 2.0
+#parent: #root
+TableFunction ERPArticles
+{
+  DefaultOutputFunction: '// no default needed'
+  Description: 'This functions sets all attributes (except article number) based on the knowledge table'
+  OutputFunction:
+  [*
+    this.Color( Color );
+    this.Density( Density );
+    this.Length( Length );
+    this.Thickness( Thickness );
+    this.Width( Width );
+  *]
+  TableDefinition: ERPArticle
+  FunctionColumnMatch
+  {
+    ColumnDefinition: ArticleNr
+    MatchExpression: 'this.ArticleNr()'
+    Operator: '='
+  }
+}

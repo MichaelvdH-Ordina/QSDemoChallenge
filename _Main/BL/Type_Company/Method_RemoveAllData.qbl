@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: #root
+Method RemoveAllData
+{
+  Description: 'Deletes all test data from the system'
+  TextBody:
+  [*
+    this.Order( relflush );
+    this.Article( relflush );
+  *]
+}

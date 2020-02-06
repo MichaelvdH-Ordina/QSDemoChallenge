@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/MenuSelectDatasetForActiveWindow
+Response OnClick () id:Response_mbMainMenu_MenuSelectDatasetForActiveWindow_OnClick
+{
+  #keys: '[141928.0.93792280]'
+  Body:
+  [*
+    dlg := construct( dlgSelectDataset );
+    dlg.SelectDataSet( Application.ActiveWindow() );
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+  Precondition:
+  [*
+    return Application.HasActiveWindow();
+  *]
+}

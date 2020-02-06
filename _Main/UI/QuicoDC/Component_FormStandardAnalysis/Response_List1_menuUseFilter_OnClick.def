@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+#parent: List1
+Response OnClick () id:Response_List1_menuUseFilter_OnClick
+{
+  #keys: '[100664.0.619915169]'
+  Body:
+  [*
+    filter := GUIDataSetLevel1.FilterObject();
+    AnalysisBarChart.SetFilter( filter, true );
+  *]
+  CanBindMultiple: false
+  DefinitionID => /List1/Responsedef_List1_Menu_OnClick
+  Initiator: 'menuUseFilter'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanSetFilter()
+        and GUIDataSetLevel1.FilterObject().IsFiltered();
+  *]
+}

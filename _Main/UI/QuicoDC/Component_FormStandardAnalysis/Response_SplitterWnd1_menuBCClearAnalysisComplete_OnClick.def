@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/menuBCClearAnalysisComplete
+Response OnClick () id:Response_SplitterWnd1_menuBCClearAnalysisComplete_OnClick
+{
+  #keys: '[530.1.5501362]'
+  Body:
+  [*
+    Analysis.ClearComplete();
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+}

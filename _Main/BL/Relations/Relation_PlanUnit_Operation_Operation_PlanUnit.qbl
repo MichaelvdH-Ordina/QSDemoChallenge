@@ -1,0 +1,24 @@
+Quintiq file version 2.0
+#parent: #root
+Relation PlanUnit_Operation_Operation_PlanUnit
+{
+  #keys: '1[107600.0.334729077]'
+  ProceduralSequenceRelationStrategy
+  {
+    #keys: '13[0.0.0][107600.0.334729170][107600.0.334729164][107600.0.334729171][107600.0.334729165][107600.0.334729172][107600.0.334729166][107600.0.334729173][107600.0.334729167][107600.0.334729174][107600.0.334729168][107600.0.334729175][107600.0.334729169]'
+  }
+  RelationSide.LeftSide Operation
+  {
+    #keys: '3[107600.0.334729073][107600.0.334729070][107600.0.334729074]'
+    Cardinality: '1toN'
+    ObjectDefinition: PlanUnit
+    OwningSide: 'Owned'
+  }
+  RelationSide.RightSide PlanUnit
+  {
+    #keys: '3[107600.0.334729093][107600.0.334729090][107600.0.334729094]'
+    Cardinality: '0to1'
+    ObjectDefinition: Operation
+    OwningSide: 'Reference'
+  }
+}

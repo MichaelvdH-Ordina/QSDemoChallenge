@@ -1,0 +1,20 @@
+Quintiq file version 2.0
+#parent: #root
+TableFunction ERPOrders
+{
+  DefaultOutputFunction: '// No default needed'
+  Description: 'This function sets all attributes (except order number) for an order based on the knowledge table'
+  OutputFunction:
+  [*
+    this.Quantity( Quantity );
+    this.DueDate( this.Company().Time().Date() + DueDateOffset );
+    this.ArticleNr( ArticleNr );
+  *]
+  TableDefinition: ERPOrder
+  FunctionColumnMatch
+  {
+    ColumnDefinition: OrderNr
+    MatchExpression: 'this.OrderNr()'
+    Operator: '='
+  }
+}

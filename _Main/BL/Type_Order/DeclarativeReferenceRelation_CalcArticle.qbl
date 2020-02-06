@@ -1,0 +1,9 @@
+Quintiq file version 2.0
+#parent: #root
+DeclarativeReferenceRelation CalcArticle
+{
+  #keys: '1[107600.0.334728057]'
+  Description: "Look up an article based on the order's article number"
+  Expression: 'return select( this.Company(), Article, art, art.ArticleNr() = this.ArticleNr() );'
+  Relation: Article
+}

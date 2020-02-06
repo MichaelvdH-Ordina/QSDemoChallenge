@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/AnalysisBarChart
+Response OnEditAnalysis () id:Response_SplitterWnd1_AnalysisBarChart_OnEditAnalysis
+{
+  #keys: '[530.0.7511706]'
+  Body:
+  [*
+    dlg := construct(dlgEditAnalysisData);
+    dlg.Data(analysis);
+    dlg.DoModal(this);
+  *]
+  DefinitionID: 'Responsedef_GUIAnalysisBarChart_OnEditAnalysis'
+}

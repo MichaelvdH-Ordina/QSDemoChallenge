@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/MenuBack
+Response OnClick () id:Response_SplitterWnd1_MenuBack_OnClick
+{
+  #keys: '[530.1.7995124]'
+  Body:
+  [*
+    Analysis.GoBack();
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+  Precondition:
+  [*
+    return Analysis.CanGoBack();
+  *]
+}

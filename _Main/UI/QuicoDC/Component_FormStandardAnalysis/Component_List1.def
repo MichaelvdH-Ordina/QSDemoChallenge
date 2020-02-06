@@ -1,0 +1,121 @@
+Quintiq file version 2.0
+Component List1
+{
+  #keys: '[530.0.3531950]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles1
+    Component popupList1
+    {
+      #keys: '[530.0.5957094]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component menuOLSeparator0 { #keys: '[530.0.3531954]' BaseType: 'Menu' Properties: [ Enabled: false Separator: true ] }
+            Component menuUseFilter { #keys: '[530.0.3531955]' BaseType: 'Menu' Properties: [ Shortcut: 'Ctrl+U' Text: '&Use filter in analysis' ] }
+            Component menuAppendFilter { #keys: '[530.1.68181133]' BaseType: 'Menu' Properties: [ Text: '&Append filter to analysis' ] }
+            Component menuClearAnalysisFilter { #keys: '[530.0.3531956]' BaseType: 'Menu' Properties: [ Text: 'Clear analysis filter' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+              c: menuOLSeparator0
+              c: menuUseFilter
+              c: menuAppendFilter
+              c: menuClearAnalysisFilter
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 2
+        PosY: 25
+        SizePosition: 'lt2 28 25 51'
+      ]
+    }
+    Component GUIDataExtractor1
+    {
+      #keys: '[530.0.3531957]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'Analysis'
+        PosX: 2
+        PosY: 57
+        SizePosition: 'lt2 28 57 83'
+      ]
+    }
+    Component GUIDataSetLevel1
+    {
+      #keys: '[530.0.3531958]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        DataExtractor: 'GUIDataExtractor1'
+        PosX: 2
+        PosY: 89
+        SizePosition: 'lt2 28 89 115'
+      ]
+    }
+  ]
+  Properties:
+  [
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList1'
+    FullRowSelect: true
+    SizePosition: 'ss0 0 0 0'
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles1
+      c: popupList1
+      c: GUIDataExtractor1
+      c: GUIDataSetLevel1
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_List1_Menu_OnClick
+    {
+      #keys: '[530.0.3531959]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[644.0.17496717]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_List1_GUIButtonBase_OnClick
+    {
+      #keys: '[530.0.3531960]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[644.0.17496718]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

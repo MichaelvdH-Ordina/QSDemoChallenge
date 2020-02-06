@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: lstAttributes
+Response OnClick (internal[UITypeDataMember] selection) id:Response_lstAttributes_menuDayOfWeek_OnClick
+{
+  #keys: '[530.1.10393283]'
+  Body:
+  [*
+    AnalysisBarChart.DiscreteGroupBy(selection, 'dayofweek');
+  *]
+  CanBindMultiple: false
+  DefinitionID => /lstAttributes/Responsedef_lstAttributes_Menu_OnClick
+  Initiator: 'menuDayOfWeek'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanGroupByDiscrete(selection);
+  *]
+}

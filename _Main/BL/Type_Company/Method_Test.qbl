@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: #root
+Method Test
+{
+  Description: 'This method is use for testing only.'
+  TextBody:
+  [*
+    // ljg1 Nov-12-2019 (created)
+    info( "This is a test method" );
+  *]
+}

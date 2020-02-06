@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/MenuBroadcastMessage
+Response OnClick () id:Response_mbMainMenu_MenuBroadcastMessage_OnClick
+{
+  #keys: '[530.0.2556037]'
+  Body:
+  [*
+    dlg := construct(dlgInformUsers);
+    dlg.DoModal(Application.Frame());
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+}

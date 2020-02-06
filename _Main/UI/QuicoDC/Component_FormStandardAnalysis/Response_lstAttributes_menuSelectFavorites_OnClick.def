@@ -1,0 +1,22 @@
+Quintiq file version 2.0
+#parent: lstAttributes
+Response OnClick () id:Response_lstAttributes_menuSelectFavorites_OnClick
+{
+  #keys: '[530.1.4622416]'
+  Body:
+  [*
+    typeinfo      := AnalysisBarChart.TypeInfo();
+    typeinterface := AnalysisBarChart.TypeInterface();
+    
+    dlg := construct(dlgSelectFavoriteDataMembers);
+    dlg.Data(typeinfo);
+    dlg.dpTypeInterface().Data(&typeinterface);
+    dlg.DoModal(this);
+  *]
+  DefinitionID => /lstAttributes/Responsedef_lstAttributes_Menu_OnClick
+  Initiator: 'menuSelectFavorites'
+  Precondition:
+  [*
+    return not isnull(AnalysisBarChart.TypeInfo());
+  *]
+}

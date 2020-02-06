@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (Company owner, String ordernr) as Order
+{
+  Description: 'Create a new order'
+  TextBody:
+  [*
+    result := owner.Order( relnew, 
+                           OrderNr := ordernr );
+    
+    return result;
+                          
+  *]
+}

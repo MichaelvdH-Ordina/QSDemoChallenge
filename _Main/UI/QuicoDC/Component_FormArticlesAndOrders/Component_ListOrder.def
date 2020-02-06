@@ -1,0 +1,103 @@
+Quintiq file version 2.0
+Component ListOrder
+{
+  #keys: '[11196.0.109137303]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles1
+    Component popupList1
+    {
+      #keys: '[11196.0.109138586]'
+      BaseType: 'popupList'
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+        SizePosition: 'lt35 61 60 86'
+      ]
+    }
+    Component GUIDataExtractorOrder
+    {
+      #keys: '[11196.0.109139867]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'ListArticle'
+        DataType: 'Article'
+        PosX: 5
+        PosY: 30
+        SizePosition: 'lt5 31 30 56'
+        Transformation: 'Order'
+      ]
+    }
+    Component GUIDataSetLevelOrder
+    {
+      #keys: '[11196.0.109139880]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        AutoSelectColumns: false
+        Columns: 'OrderColumns'
+        DataExtractor: 'GUIDataExtractorOrder'
+        PosX: 35
+        PosY: 30
+        SizePosition: 'lt35 61 30 56'
+        SortCriteria: 'OrderNr'
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'White'
+    ContextMenu: 'popupList1'
+    FullRowSelect: true
+    SizePosition: 'ss0 0 0 0'
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles1
+      c: popupList1
+      c: GUIDataExtractorOrder
+      c: GUIDataSetLevelOrder
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrder_Menu_OnClick
+    {
+      #keys: '[11196.0.109139881]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[11196.0.109139882]'
+          Binding: 'this.Selection()'
+        }
+        ResponseDefinitionArgument masterselection
+        {
+          #keys: '[11196.0.109139976]'
+          Binding: 'ListArticle.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrder_GUIButtonBase_OnClick
+    {
+      #keys: '[11196.0.109139889]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[11196.0.109139890]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

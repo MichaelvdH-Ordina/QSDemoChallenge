@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: lstAttributes
+Response OnClick (internal[UITypeDataMember] selection) id:Response_lstAttributes_menuSum_OnClick
+{
+  #keys: '[530.0.3532160]'
+  Body:
+  [*
+    AnalysisBarChart.SumQuantor(selection);
+  *]
+  CanBindMultiple: false
+  DefinitionID => /lstAttributes/Responsedef_lstAttributes_Menu_OnClick
+  Initiator: 'menuSum'
+}

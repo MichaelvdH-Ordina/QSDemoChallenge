@@ -1,0 +1,20 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/AnalysisBarChart
+Response OnClick () id:Response_SplitterWnd1_menuBCAddGroup_OnClick
+{
+  #keys: '[530.0.3532195]'
+  Body:
+  [*
+    dlg := construct(dlgEnterAnalysisGroupValue);
+    if ( dlg.DoModal(this) > 0 )
+    {
+      this.AddGroup(dlg.edtValue().Text());
+    }
+  *]
+  DefinitionID => /SplitterWnd1/Responsedef_SplitterWnd1_AnalysisBarChart_Menu_OnClick
+  Initiator: 'menuBCAddGroup'
+  Precondition:
+  [*
+    return this.CanAddGroup()
+  *]
+}

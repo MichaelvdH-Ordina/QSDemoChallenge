@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/AnalysisBarChart
+Response OnClick () id:Response_SplitterWnd1_menuBCTraverse_OnClick
+{
+  #keys: '[530.1.5505724]'
+  Body:
+  [*
+    dlg := construct(dlgAnalysisTraverse);
+    dlg.Data(this);
+    dlg.DoModal(this);
+  *]
+  DefinitionID => /SplitterWnd1/Responsedef_SplitterWnd1_AnalysisBarChart_Menu_OnClick
+  Initiator: 'menuBCTraverse'
+}

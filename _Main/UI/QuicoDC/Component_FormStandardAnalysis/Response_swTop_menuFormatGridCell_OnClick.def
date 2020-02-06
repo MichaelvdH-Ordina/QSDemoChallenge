@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: swTop/AnalysisGrid
+Response OnClick () id:Response_swTop_menuFormatGridCell_OnClick
+{
+  #keys: '[530.1.574771]'
+  Body:
+  [*
+    cell := this.CurrentFormatting();
+    dlg := construct(dlgFormatAnalysisGridCell);
+    dlg.Data(cell);
+    dlg.dpAnalysisGrid().Data(this);
+    if ( dlg.DoModal(this) > 0 )
+    {
+      this.ApplyFormattingToSelection(cell);
+    }
+  *]
+  DefinitionID => /swTop/Responsedef_swTop_AnalysisGrid_Menu_OnClick
+  Initiator: 'menuFormatGridCell'
+  Precondition:
+  [*
+    return this.CanEditFormatting();
+  *]
+}

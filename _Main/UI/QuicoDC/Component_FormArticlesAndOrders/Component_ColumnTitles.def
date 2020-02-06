@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+Component ColumnTitles
+{
+  #keys: '[11196.0.109134710]'
+  BaseType: 'ColumnTitles'
+  Children:
+  [
+    Component popupColumnTitles
+    {
+      #keys: '[11196.0.109134711]'
+      BaseType: 'popupColumnTitles'
+    }
+  ]
+  Properties:
+  [
+    ContextMenu: 'popupColumnTitles'
+    SizePosition: 'st0 0 0 22'
+  ]
+}

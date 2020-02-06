@@ -1,0 +1,26 @@
+Quintiq file version 2.0
+#parent: List3
+Response OnDrawElement (internal[UITypeData] element) id:Response_List3_OnDrawElement
+{
+  #keys: '[530.0.4886090]'
+  Body:
+  [*
+    if ( element.IsConstraint() )
+    {
+      drawinfo.Image(0, 'CONSTRAINTS');
+    }
+    else if ( element.IsDowncast() )
+    {
+      drawinfo.Image(0, 'ELEMENT_DOWN');
+    }
+    else if ( element.IsRelation() )
+    {
+      drawinfo.Image(0, 'ELEMENT_INTO');
+    }
+    else
+    {
+      drawinfo.Image(0, '');
+    }
+  *]
+  DefinitionID: 'Responsedef_List_OnDrawElement'
+}

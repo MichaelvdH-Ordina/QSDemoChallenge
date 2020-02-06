@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: List3
+Response OnClick (internal[UITypeDataRelation] selection) id:Response_List3_menuTraverse_OnClick
+{
+  #keys: '[530.1.23212803]'
+  Body:
+  [*
+    AnalysisBarChart.Traverse(selection);
+  *]
+  DefinitionID => /List3/Responsedef_List3_Menu_OnClick
+  Initiator: 'menuTraverse'
+}

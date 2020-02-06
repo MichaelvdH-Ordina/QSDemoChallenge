@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (Company owner, String articlenr) as Article
+{
+  Description: 'Create a new article'
+  TextBody:
+  [*
+    result := owner.Article( relnew, 
+                             ArticleNr := articlenr );
+    
+    return result;
+                          
+  *]
+}

@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: swTop/AnalysisGrid
+Response OnClick () id:Response_swTop_menuInsertGroupLabels_OnClick
+{
+  #keys: '[530.1.10432038]'
+  Body:
+  [*
+    AnalysisBarChart.InsertGroupLabels(this);
+  *]
+  DefinitionID => /swTop/Responsedef_swTop_AnalysisGrid_Menu_OnClick
+  Initiator: 'menuInsertGroupLabels'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanInsertGroupLabels(this);
+  *]
+}

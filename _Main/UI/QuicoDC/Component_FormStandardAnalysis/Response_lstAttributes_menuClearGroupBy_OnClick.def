@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: lstAttributes/menuClearGroupBy
+Response OnClick () id:Response_lstAttributes_menuClearGroupBy_OnClick
+{
+  #keys: '[530.0.11230524]'
+  Body:
+  [*
+    AnalysisBarChart.ClearGroupBy()
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanClearGroupBy()
+  *]
+}

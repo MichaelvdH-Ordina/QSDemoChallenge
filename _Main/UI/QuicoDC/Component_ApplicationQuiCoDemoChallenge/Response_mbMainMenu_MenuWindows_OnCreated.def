@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/MenuWindows
+Response OnCreated () id:Response_mbMainMenu_MenuWindows_OnCreated
+{
+  #keys: '[558.0.592620]'
+  Body:
+  [*
+    Application.SetWindowsMenu(this);
+  *]
+  DefinitionID: 'Responsedef_GUIComponent_OnCreated'
+}

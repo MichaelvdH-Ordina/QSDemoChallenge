@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: #root
+Method CreateTestData
+{
+  Description: 'Create all instances needed for testing'
+  TextBody:
+  [*
+    this.CreateArticles();
+    this.CreateOrders();
+  *]
+}

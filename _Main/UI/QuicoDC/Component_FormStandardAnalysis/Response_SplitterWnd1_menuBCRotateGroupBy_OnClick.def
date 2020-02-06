@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: SplitterWnd1/AnalysisBarChart
+Response OnClick () id:Response_SplitterWnd1_menuBCRotateGroupBy_OnClick
+{
+  #keys: '[531.0.1218461]'
+  Body:
+  [*
+    this.RotateGroupCriteria();
+  *]
+  DefinitionID => /SplitterWnd1/Responsedef_SplitterWnd1_AnalysisBarChart_Menu_OnClick
+  Initiator: 'menuBCRotateGroupBy'
+  Precondition:
+  [*
+    return this.CanRotateGroupCriteria();
+  *]
+}

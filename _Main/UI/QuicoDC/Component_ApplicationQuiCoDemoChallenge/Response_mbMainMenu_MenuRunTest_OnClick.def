@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/MenuRunTest
+Response OnClick () id:Response_mbMainMenu_MenuRunTest_OnClick
+{
+  #keys: '[141928.0.93824158]'
+  Body:
+  [*
+    // Run test
+    Company.Test();
+  *]
+  CanBindMultiple: false
+  DefinitionID: 'Responsedef_Menu_OnClick'
+  Precondition:
+  [*
+    not isnull( Company );
+  *]
+}

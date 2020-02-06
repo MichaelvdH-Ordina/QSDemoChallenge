@@ -1,0 +1,41 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent FormArticlesAndOrders
+{
+  #keys: '[11196.0.109131905]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 1 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => SplitterWndArticle_Order
+        Position { startcolumn: 1 startrow: 1 endcolumn: 1 endrow: 1 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 1 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: SplitterWndArticle_Order
+  ]
+  Properties:
+  [
+    Height: 397
+    IncludeInView: true
+    InitialPlacement: 'workspace'
+    Title: 'Articles and orders'
+    Width: 483
+  ]
+}

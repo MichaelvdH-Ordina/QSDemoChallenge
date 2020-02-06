@@ -1,0 +1,22 @@
+Quintiq file version 2.0
+#parent: swTop/AnalysisGrid
+Response OnClick () id:Response_swTop_menuInsertQuantorMatrix_OnClick
+{
+  #keys: '[530.1.10431957]'
+  Body:
+  [*
+    dlg := construct(dlgSelectInsertQuantor);
+    dlg.dpUITypeInterface().Data(&dpTypeInterface.Data().Copy());
+    if ( dlg.DoModal(this) > 0 )
+    {
+      AnalysisBarChart.InsertQuantorMatrix(this, dlg.selQuantor().BoundValue(), dlg.dpDataMember().Data(), dlg.selHorizontalTotal().BoundValue(),
+              dlg.edtHorizontalLabel().Text(), dlg.selVerticalTotal().BoundValue(), dlg.edtVerticalLabel().Text());
+    }
+  *]
+  DefinitionID => /swTop/Responsedef_swTop_AnalysisGrid_Menu_OnClick
+  Initiator: 'menuInsertQuantorMatrix'
+  Precondition:
+  [*
+    return AnalysisBarChart.CanInsertMatrix(this);
+  *]
+}

@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: mbMainMenu/MenuQuintiqChat
+Response OnClick () id:Response_mbMainMenu_MenuQuintiqChat_OnClick
+{
+  #keys: '[536.0.1160265]'
+  Body:
+  [*
+    dlg := construct(dlgQuintiqChat);
+    Application.Frame().ShowDialog(&dlg);
+  *]
+  DefinitionID: 'Responsedef_Menu_OnClick'
+}

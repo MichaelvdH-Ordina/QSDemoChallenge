@@ -1,0 +1,88 @@
+Quintiq file version 2.0
+Component swTopMost
+{
+  #keys: '[530.0.3531801]'
+  BaseType: 'SplitterWnd'
+  Children:
+  [
+    Component SplitterPane1
+    {
+      #keys: '[530.0.3531802]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 100 id: 1 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /swTop
+            Position { startcolumn: 1 startrow: 1 endcolumn: 1 endrow: 1 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 100 id: 1 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: swTop
+      ]
+      Properties:
+      [
+        DoubleBuffering: false
+      ]
+    }
+    Component SplitterPane2
+    {
+      #keys: '[530.0.3531803]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 100 id: 1 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /swBottom
+            Position { startcolumn: 1 startrow: 1 endcolumn: 1 endrow: 1 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 100 id: 1 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: swBottom
+      ]
+      Properties:
+      [
+        DoubleBuffering: false
+      ]
+    }
+  ]
+  Properties:
+  [
+    DoubleBuffering: false
+    HorizontalSplit: false
+    SizePosition: 'ss0 0 0 0'
+    ModeledStringList ChildOrdering
+    {
+      c: SplitterPane1
+      c: SplitterPane2
+    }
+  ]
+}
