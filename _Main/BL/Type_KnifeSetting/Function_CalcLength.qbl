@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcLength
+{
+  TextBody:
+  [*
+    // mho23702 Feb-13-2020 (created)
+    
+    value := max( this, OrderInKnifeSetting, oiks, oiks.Order().Length() );
+    
+    this.Length( value );
+  *]
+}

@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcThickness
+{
+  Description: 'Determine thickness'
+  TextBody:
+  [*
+    // mho23702 Feb-13-2020 (created)
+    order := this.SelectOrder();
+    
+    value := guard( order.Thickness(), 0);
+    
+    this.Thickness( value );
+  *]
+}

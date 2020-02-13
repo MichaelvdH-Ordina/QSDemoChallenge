@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+Method SelectOrder () declarative as Order
+{
+  Description: 'Selects an order from OrderInKnifeSetting'
+  TextBody:
+  [*
+    // mho23702 Feb-13-2020 (created)
+    oiks := select( this, OrderInKnifeSetting, order, true)
+    
+    result := guard( oiks.Order(), null( Order ) );
+    
+    return result;
+  *]
+}

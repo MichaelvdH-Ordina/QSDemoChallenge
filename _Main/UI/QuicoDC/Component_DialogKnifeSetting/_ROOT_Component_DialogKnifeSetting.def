@@ -18,17 +18,17 @@ OrphanComponent DialogKnifeSetting
     [
       GBElement
       {
-        Component => Label260
+        Component => LabelIdentifier
         Position { startcolumn: 707 startrow: 104 endcolumn: 707 endrow: 104 }
       }
       GBElement
       {
-        Component => Label986
+        Component => LabelColor
         Position { startcolumn: 707 startrow: 477 endcolumn: 707 endrow: 477 }
       }
       GBElement
       {
-        Component => Label935
+        Component => LabelDensity
         Position { startcolumn: 707 startrow: 135 endcolumn: 707 endrow: 135 }
       }
       GBElement
@@ -38,7 +38,7 @@ OrphanComponent DialogKnifeSetting
       }
       GBElement
       {
-        Component => Label288
+        Component => LabelThickness
         Position { startcolumn: 707 startrow: 400 endcolumn: 707 endrow: 400 }
       }
       GBElement
@@ -53,7 +53,7 @@ OrphanComponent DialogKnifeSetting
       }
       GBElement
       {
-        Component => Label165
+        Component => LabelLength
         Position { startcolumn: 707 startrow: 373 endcolumn: 707 endrow: 373 }
       }
       GBElement
@@ -80,7 +80,7 @@ OrphanComponent DialogKnifeSetting
   Children:
   [
     #child: EditorIdentifier
-    Component Label260
+    Component LabelIdentifier
     {
       #keys: '[409348.0.109252181]'
       BaseType: 'Label'
@@ -92,7 +92,7 @@ OrphanComponent DialogKnifeSetting
       ]
     }
     #child: EditorColor
-    Component Label986
+    Component LabelColor
     {
       #keys: '[409348.0.109252185]'
       BaseType: 'Label'
@@ -104,7 +104,7 @@ OrphanComponent DialogKnifeSetting
       ]
     }
     #child: EditorDensity
-    Component Label935
+    Component LabelDensity
     {
       #keys: '[409348.0.109252189]'
       BaseType: 'Label'
@@ -116,7 +116,7 @@ OrphanComponent DialogKnifeSetting
       ]
     }
     #child: EditorThickness
-    Component Label288
+    Component LabelThickness
     {
       #keys: '[409348.0.109252193]'
       BaseType: 'Label'
@@ -128,7 +128,7 @@ OrphanComponent DialogKnifeSetting
       ]
     }
     #child: EditorLength
-    Component Label165
+    Component LabelLength
     {
       #keys: '[409348.0.109252197]'
       BaseType: 'Label'
@@ -146,20 +146,20 @@ OrphanComponent DialogKnifeSetting
     EnterButton: 'btnOk'
     EscapeButton: 'btnCancel'
     Height: 220
-    Title: 'DialogKnifeSetting'
+    Title: 'Edit knife setting'
     Width: 220
     ModeledStringList ChildOrdering
     {
       c: EditorIdentifier
       c: EditorColor
-      c: Label260
+      c: LabelIdentifier
       c: EditorDensity
       c: EditorThickness
       c: EditorLength
-      c: Label986
-      c: Label935
-      c: Label288
-      c: Label165
+      c: LabelColor
+      c: LabelDensity
+      c: LabelThickness
+      c: LabelLength
       c: Toolbar619
     }
   ]

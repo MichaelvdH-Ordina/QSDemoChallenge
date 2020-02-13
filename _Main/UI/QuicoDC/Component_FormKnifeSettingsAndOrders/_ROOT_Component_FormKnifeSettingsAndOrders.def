@@ -32,10 +32,10 @@ OrphanComponent FormKnifeSettingsAndOrders
   ]
   Properties:
   [
-    Height: 323
+    Height: 408
     Image: 'LIST'
     IncludeInView: true
     Title: 'Knife settings and Orders'
-    Width: 330
+    Width: 610
   ]
 }

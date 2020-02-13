@@ -10,6 +10,31 @@ Component ListOrder
     {
       #keys: '[409348.0.109250631]'
       BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuDeleteOrder { #keys: '[409348.0.114262917]' BaseType: 'Menu' Properties: [ Image: 'DELETE' Shortcut: 'Del' Text: 'Delete' ] }
+            Component menuSeparator { #keys: '[409348.0.114265133]' BaseType: 'Menu' Properties: [ Separator: true ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+              c: menuSeparator
+              c: MenuDeleteOrder
+            }
+          ]
+        }
+      ]
       Properties:
       [
         PosX: 35

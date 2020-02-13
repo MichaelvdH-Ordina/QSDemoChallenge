@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: ListKnifeSetting
+Response OnDrop (Order information, KnifeSetting target) id:Response_ListKnifeSetting_OnDrop
+{
+  #keys: '[409348.0.109265179]'
+  Body:
+  [*
+    // Add order to KnifeSetting
+    target.AddOrder( information, 1 );
+  *]
+  CanBindMultiple: false
+  DefinitionID: 'Responsedef_GUIComponent_OnDrop'
+}

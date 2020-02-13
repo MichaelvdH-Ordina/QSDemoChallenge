@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcColor
+{
+  Description: 'Determine color of KS'
+  TextBody:
+  [*
+    // mho23702 Feb-13-2020 (created)
+    order := this.SelectOrder();
+    
+    value := guard( order.Color(), 'purple' );
+    
+    this.Color( value );
+  *]
+}

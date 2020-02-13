@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+Method AddOrder (Order order, Number amountks) as OrderInKnifeSetting
+{
+  Description: 'Add an order to the knife setting'
+  TextBody:
+  [*
+    // mho23702 Feb-13-2020 (created)
+    result := order.OrderInKnifeSetting( relnew,
+                                         AmountInKnifeSetting := amountks,
+                                         KnifeSetting := this );
+    
+    return result;
+  *]
+}
