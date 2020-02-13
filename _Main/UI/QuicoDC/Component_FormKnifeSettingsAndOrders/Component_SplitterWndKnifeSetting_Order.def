@@ -1,0 +1,90 @@
+Quintiq file version 2.0
+Component SplitterWndKnifeSetting_Order
+{
+  #keys: '[409348.0.109250614]'
+  BaseType: 'SplitterWnd'
+  Children:
+  [
+    Component SplitterPaneKs
+    {
+      #keys: '[409348.0.109250615]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 575 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListKnifeSetting
+            Position { startcolumn: 575 startrow: 764 endcolumn: 575 endrow: 764 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 764 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListKnifeSetting
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Title: 'Knife settings'
+      ]
+    }
+    Component SplitterPaneOrder_IKS
+    {
+      #keys: '[409348.0.109250616]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 916 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListOrder
+            Position { startcolumn: 916 startrow: 858 endcolumn: 916 endrow: 858 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 858 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListOrder
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Title: 'Orders'
+      ]
+    }
+  ]
+  Properties:
+  [
+    DoubleBuffering: false
+    ModeledStringList ChildOrdering
+    {
+      c: SplitterPaneKs
+      c: SplitterPaneOrder_IKS
+    }
+  ]
+}

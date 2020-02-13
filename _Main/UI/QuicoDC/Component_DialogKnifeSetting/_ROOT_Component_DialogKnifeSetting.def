@@ -1,0 +1,166 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent DialogKnifeSetting
+{
+  #keys: '[409348.0.109252176]'
+  BaseType: 'Dialog'
+  Databinding: 'shadow[KnifeSetting]'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 0 id: 707 parent: 0 }
+      GBFlow.Column { grow: 128 id: 151 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => Label260
+        Position { startcolumn: 707 startrow: 104 endcolumn: 707 endrow: 104 }
+      }
+      GBElement
+      {
+        Component => Label986
+        Position { startcolumn: 707 startrow: 477 endcolumn: 707 endrow: 477 }
+      }
+      GBElement
+      {
+        Component => Label935
+        Position { startcolumn: 707 startrow: 135 endcolumn: 707 endrow: 135 }
+      }
+      GBElement
+      {
+        Component => EditorIdentifier
+        Position { startcolumn: 151 startrow: 104 endcolumn: 151 endrow: 104 }
+      }
+      GBElement
+      {
+        Component => Label288
+        Position { startcolumn: 707 startrow: 400 endcolumn: 707 endrow: 400 }
+      }
+      GBElement
+      {
+        Component => EditorColor
+        Position { startcolumn: 151 startrow: 477 endcolumn: 151 endrow: 477 }
+      }
+      GBElement
+      {
+        Component => EditorDensity
+        Position { startcolumn: 151 startrow: 135 endcolumn: 151 endrow: 135 }
+      }
+      GBElement
+      {
+        Component => Label165
+        Position { startcolumn: 707 startrow: 373 endcolumn: 707 endrow: 373 }
+      }
+      GBElement
+      {
+        Component => EditorThickness
+        Position { startcolumn: 151 startrow: 400 endcolumn: 151 endrow: 400 }
+      }
+      GBElement
+      {
+        Component => EditorLength
+        Position { startcolumn: 151 startrow: 373 endcolumn: 151 endrow: 373 }
+      }
+    ]
+    Gaps: [ left: 10 right: 10 top: 10 bottom: 10 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 104 parent: 0 }
+      GBFlow.Row { grow: 0 id: 477 parent: 0 }
+      GBFlow.Row { grow: 0 id: 135 parent: 0 }
+      GBFlow.Row { grow: 0 id: 400 parent: 0 }
+      GBFlow.Row { grow: 0 id: 373 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: EditorIdentifier
+    Component Label260
+    {
+      #keys: '[409348.0.109252181]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Identifier'
+        Transparent: true
+      ]
+    }
+    #child: EditorColor
+    Component Label986
+    {
+      #keys: '[409348.0.109252185]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Color'
+        Transparent: true
+      ]
+    }
+    #child: EditorDensity
+    Component Label935
+    {
+      #keys: '[409348.0.109252189]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Density'
+        Transparent: true
+      ]
+    }
+    #child: EditorThickness
+    Component Label288
+    {
+      #keys: '[409348.0.109252193]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Thickness'
+        Transparent: true
+      ]
+    }
+    #child: EditorLength
+    Component Label165
+    {
+      #keys: '[409348.0.109252197]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Length'
+        Transparent: true
+      ]
+    }
+    #child: Toolbar619
+  ]
+  Properties:
+  [
+    EnterButton: 'btnOk'
+    EscapeButton: 'btnCancel'
+    Height: 220
+    Title: 'DialogKnifeSetting'
+    Width: 220
+    ModeledStringList ChildOrdering
+    {
+      c: EditorIdentifier
+      c: EditorColor
+      c: Label260
+      c: EditorDensity
+      c: EditorThickness
+      c: EditorLength
+      c: Label986
+      c: Label935
+      c: Label288
+      c: Label165
+      c: Toolbar619
+    }
+  ]
+}

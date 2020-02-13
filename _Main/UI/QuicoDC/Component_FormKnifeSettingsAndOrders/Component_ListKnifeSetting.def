@@ -1,0 +1,121 @@
+Quintiq file version 2.0
+Component ListKnifeSetting
+{
+  #keys: '[409348.0.109250617]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles953
+    Component popupList392
+    {
+      #keys: '[409348.0.109250621]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuSeparator { #keys: '[409348.0.109250638]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuNewKnifeSetting { #keys: '[409348.0.109250639]' BaseType: 'Menu' Properties: [ Image: 'NEW' Shortcut: 'Ins' Text: '&New...' ] }
+            Component MenuEditKnifeSetting { #keys: '[409348.0.109250640]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
+            Component MenuDeleteKnifeSetting { #keys: '[409348.0.109250641]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+              c: MenuSeparator
+              c: MenuNewKnifeSetting
+              c: MenuEditKnifeSetting
+              c: MenuDeleteKnifeSetting
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor555
+    {
+      #keys: '[409348.0.109250623]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 5
+        PosY: 30
+        Transformation: 'KnifeSetting'
+      ]
+    }
+    Component GUIDataSetLevel655
+    {
+      #keys: '[409348.0.109250624]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'KnifeSettingColumns1'
+        DataExtractor: 'GUIDataExtractor555'
+        PosX: 35
+        PosY: 30
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList392'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles953
+      c: popupList392
+      c: GUIDataExtractor555
+      c: GUIDataSetLevel655
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListKnifeSetting_Menu_OnClick
+    {
+      #keys: '[409348.0.109250625]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[341.0.1118103]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListKnifeSetting_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.109250626]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[341.0.1118148]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

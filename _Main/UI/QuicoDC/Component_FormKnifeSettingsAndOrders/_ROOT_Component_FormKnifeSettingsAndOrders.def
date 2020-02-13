@@ -1,0 +1,41 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent FormKnifeSettingsAndOrders
+{
+  #keys: '[409348.0.109211361]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 934 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => SplitterWndKnifeSetting_Order
+        Position { startcolumn: 934 startrow: 308 endcolumn: 934 endrow: 308 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 308 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: SplitterWndKnifeSetting_Order
+  ]
+  Properties:
+  [
+    Height: 323
+    Image: 'LIST'
+    IncludeInView: true
+    Title: 'Knife settings and Orders'
+    Width: 330
+  ]
+}
