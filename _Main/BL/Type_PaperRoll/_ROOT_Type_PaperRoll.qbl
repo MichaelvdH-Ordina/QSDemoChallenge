@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization PaperRoll
+{
+  #keys: '2[409348.0.98300056][409348.0.98300055]'
+  Description: 'Paper roll for orders to be cut'
+  Parent: PlanUnit
+  StructuredName: 'PaperRolls'
+}

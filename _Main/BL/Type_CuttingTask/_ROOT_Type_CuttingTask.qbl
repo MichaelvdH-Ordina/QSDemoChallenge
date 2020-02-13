@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization CuttingTask
+{
+  #keys: '2[409348.0.98300216][409348.0.98300215]'
+  Description: 'Task for cutting a Paper Roll'
+  Parent: Task
+  StructuredName: 'CuttingTasks'
+}

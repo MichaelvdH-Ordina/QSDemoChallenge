@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation KnifeSetting_Company_Company_KnifeSetting
+{
+  #keys: '1[409348.0.98300037]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide Company
+  {
+    #keys: '3[409348.0.98300039][409348.0.98300038][409348.0.98300040]'
+    Cardinality: '0to1'
+    ObjectDefinition: KnifeSetting
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide KnifeSetting
+  {
+    #keys: '3[409348.0.98300042][409348.0.98300041][409348.0.98300043]'
+    Cardinality: '1toN'
+    ObjectDefinition: Company
+    OwningSide: 'Owned'
+  }
+}

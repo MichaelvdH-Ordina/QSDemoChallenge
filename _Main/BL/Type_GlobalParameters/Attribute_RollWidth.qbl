@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute RollWidth
+{
+  #keys: '3[409348.0.98300225][409348.0.98300224][409348.0.98300226]'
+  Description: 'RollWidth of Paper Rolls produces in cm'
+  ValueType: String
+}

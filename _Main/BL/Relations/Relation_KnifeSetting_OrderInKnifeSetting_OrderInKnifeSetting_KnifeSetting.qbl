@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation KnifeSetting_OrderInKnifeSetting_OrderInKnifeSetting_KnifeSetting
+{
+  #keys: '1[409348.0.98300085]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide OrderInKnifeSetting
+  {
+    #keys: '3[409348.0.98300087][409348.0.98300086][409348.0.98300088]'
+    Cardinality: '1toN'
+    ObjectDefinition: KnifeSetting
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide KnifeSetting
+  {
+    #keys: '3[409348.0.98300090][409348.0.98300089][409348.0.98300091]'
+    Cardinality: '0to1'
+    ObjectDefinition: OrderInKnifeSetting
+    OwningSide: 'Reference'
+  }
+}

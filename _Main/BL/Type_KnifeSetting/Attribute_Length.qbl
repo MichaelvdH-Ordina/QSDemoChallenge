@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Length
+{
+  #keys: '3[409348.0.98300246][409348.0.98300245][409348.0.98300247]'
+  Description: 'Length of the KS (cm)'
+  ValueType: Number
+}

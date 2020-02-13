@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type Task
+{
+  #keys: '5[409348.0.98300153][409348.0.98300151][0.0.0][409348.0.98300152][409348.0.98300154]'
+  BaseType: Object
+  Description: 'Tasks to be performed by machines, based on operations'
+  StructuredName: 'Tasks'
+}

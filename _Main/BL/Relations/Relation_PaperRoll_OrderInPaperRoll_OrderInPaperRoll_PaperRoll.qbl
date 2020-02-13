@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation PaperRoll_OrderInPaperRoll_OrderInPaperRoll_PaperRoll
+{
+  #keys: '1[409348.0.98300140]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide OrderInPaperRoll
+  {
+    #keys: '3[409348.0.98300142][409348.0.98300141][409348.0.98300143]'
+    Cardinality: '1toN'
+    ObjectDefinition: PaperRoll
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide PaperRoll
+  {
+    #keys: '3[409348.0.98300145][409348.0.98300144][409348.0.98300146]'
+    Cardinality: '0to1'
+    ObjectDefinition: OrderInPaperRoll
+    OwningSide: 'Reference'
+  }
+}

@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization RollingTask
+{
+  #keys: '2[409348.0.98300213][409348.0.98300212]'
+  Description: 'Task for rolling a Paper roll'
+  Parent: Task
+  StructuredName: 'RollingTasks'
+}

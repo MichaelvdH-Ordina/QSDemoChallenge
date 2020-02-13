@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Identifier
+{
+  #keys: '3[409348.0.98300258][409348.0.98300257][409348.0.98300259]'
+  Description: 'Identifier for the KS in the form " \'number of times order is cut\' x \'orderNr\' "'
+  ValueType: String
+}

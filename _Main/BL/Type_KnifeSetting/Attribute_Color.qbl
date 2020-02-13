@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Color
+{
+  #keys: '3[409348.0.98300234][409348.0.98300233][409348.0.98300235]'
+  Description: 'Main color for KS'
+  ValueType: String
+}

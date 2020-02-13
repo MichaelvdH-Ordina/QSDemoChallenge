@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation Operation_Task_Task_Operation
+{
+  #keys: '1[409348.0.98300183]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide Task
+  {
+    #keys: '3[409348.0.98300185][409348.0.98300184][409348.0.98300186]'
+    Cardinality: '0to1'
+    ObjectDefinition: Operation
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide Operation
+  {
+    #keys: '3[409348.0.98300188][409348.0.98300187][409348.0.98300189]'
+    Cardinality: '0to1'
+    ObjectDefinition: Task
+    OwningSide: 'Reference'
+  }
+}

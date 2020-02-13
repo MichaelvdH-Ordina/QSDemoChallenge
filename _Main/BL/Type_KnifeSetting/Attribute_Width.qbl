@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Width
+{
+  #keys: '3[409348.0.98300264][409348.0.98300263][409348.0.98300265]'
+  Description: 'The total width of the KS (cm)'
+  ValueType: Number
+}

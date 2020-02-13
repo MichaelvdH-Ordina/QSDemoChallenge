@@ -1,0 +1,9 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type OrderInKnifeSetting
+{
+  #keys: '5[409348.0.98300071][409348.0.98300069][0.0.0][409348.0.98300070][409348.0.98300072]'
+  BaseType: Object
+  StructuredName: 'OrderInKnifeSettings'
+}

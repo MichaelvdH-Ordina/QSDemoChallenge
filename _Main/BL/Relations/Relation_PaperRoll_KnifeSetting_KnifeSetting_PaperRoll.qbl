@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation PaperRoll_KnifeSetting_KnifeSetting_PaperRoll
+{
+  #keys: '1[409348.0.98300058]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide KnifeSetting
+  {
+    #keys: '3[409348.0.98300060][409348.0.98300059][409348.0.98300061]'
+    Cardinality: '0to1'
+    ObjectDefinition: PaperRoll
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide PaperRoll
+  {
+    #keys: '3[409348.0.98300063][409348.0.98300062][409348.0.98300064]'
+    Cardinality: '0to1'
+    ObjectDefinition: KnifeSetting
+    OwningSide: 'Owned'
+  }
+}
