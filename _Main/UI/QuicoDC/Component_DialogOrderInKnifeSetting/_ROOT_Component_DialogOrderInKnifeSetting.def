@@ -1,0 +1,66 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent DialogOrderInKnifeSetting
+{
+  #keys: '[409348.0.114287216]'
+  BaseType: 'Dialog'
+  Databinding: 'shadow[OrderInKnifeSetting]'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 0 id: 329 parent: 0 }
+      GBFlow.Column { grow: 128 id: 236 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => Label497
+        Position { startcolumn: 329 startrow: 939 endcolumn: 329 endrow: 939 }
+      }
+      GBElement
+      {
+        Component => EditorAmountInKnifeSetting
+        Position { startcolumn: 236 startrow: 939 endcolumn: 236 endrow: 939 }
+      }
+    ]
+    Gaps: [ left: 10 right: 10 top: 10 bottom: 10 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 939 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: EditorAmountInKnifeSetting
+    Component Label497
+    {
+      #keys: '[409348.0.114287221]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: '#Width in Knife setting'
+        Transparent: true
+      ]
+    }
+    #child: Toolbar589
+  ]
+  Properties:
+  [
+    EnterButton: 'btnOk'
+    EscapeButton: 'btnCancel'
+    Height: 113
+    Title: 'Edit amount'
+    Width: 315
+    ModeledStringList ChildOrdering
+    {
+      c: EditorAmountInKnifeSetting
+      c: Label497
+      c: Toolbar589
+    }
+  ]
+}

@@ -8,7 +8,7 @@ Function CalcColor
     // mho23702 Feb-13-2020 (created)
     order := this.SelectOrder();
     
-    value := guard( order.Color(), 'purple' );
+    value := guard( order.Color(), '' );
     
     this.Color( value );
   *]

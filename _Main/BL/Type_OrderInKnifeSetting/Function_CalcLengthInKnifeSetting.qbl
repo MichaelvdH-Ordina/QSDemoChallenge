@@ -1,0 +1,21 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcLengthInKnifeSetting
+{
+  Description: 'Determine how many times an order fits in the length of the KS'
+  TextBody:
+  [*
+    // mho23702 Feb-14-2020 (created)
+    // Since we only allow multiples of each other
+    value := 1;
+    kslength := this.KnifeSetting().Length();
+    orderlength := this.Order().Length();
+    
+    if( this.KnifeSetting().NumberOfOrders() > 0 and kslength > orderlength )
+    {
+      value := floor( this.KnifeSetting().Length()/this.Order().Length() );
+    }
+    
+    this.LengthInKnifeSetting( value );
+  *]
+}

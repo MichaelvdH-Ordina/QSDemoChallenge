@@ -1,8 +1,0 @@
-Quintiq file version 2.0
-#parent: #root
-Attribute RollWidth
-{
-  #keys: '3[107736.0.48062438][10046.0.73420004][10046.0.73166988]'
-  Description: 'The standard value for the width of rolls.'
-  ValueType: Real
-}

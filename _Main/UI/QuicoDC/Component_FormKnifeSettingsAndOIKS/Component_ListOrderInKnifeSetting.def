@@ -1,14 +1,14 @@
 Quintiq file version 2.0
-Component ListOrder
+Component ListOrderInKnifeSetting
 {
-  #keys: '[409348.0.109250627]'
+  #keys: '[409348.0.116706771]'
   BaseType: 'List'
   Children:
   [
-    #child: ColumnTitles349
-    Component popupList328
+    #child: ColumnTitles948
+    Component popupList900
     {
-      #keys: '[409348.0.109250631]'
+      #keys: '[409348.0.116706775]'
       BaseType: 'popupList'
       Children:
       [
@@ -19,8 +19,9 @@ Component ListOrder
           IsDerived: true
           Children:
           [
-            Component MenuDeleteOrder { #keys: '[409348.0.114262917]' BaseType: 'Menu' Properties: [ Image: 'DELETE' Shortcut: 'Del' Text: 'Delete' ] }
-            Component menuSeparator { #keys: '[409348.0.114265133]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuDelete { #keys: '[409348.0.116713858]' BaseType: 'Menu' Properties: [ Image: 'Delete' Shortcut: 'Del' Text: 'Delete' ] }
+            Component MenuEditOIKS { #keys: '[409348.0.116715381]' BaseType: 'Menu' Properties: [ Image: 'Edit' Shortcut: 'Enter' Text: 'Edit' ] }
+            Component menuSeparator { #keys: '[409348.0.116715550]' BaseType: 'Menu' Properties: [ Separator: true ] }
           ]
           Properties:
           [
@@ -30,7 +31,8 @@ Component ListOrder
               c: MenuFilter
               c: menuListQuintiqSetQuantor
               c: menuSeparator
-              c: MenuDeleteOrder
+              c: MenuEditOIKS
+              c: MenuDelete
             }
           ]
         }
@@ -41,9 +43,9 @@ Component ListOrder
         PosY: 60
       ]
     }
-    Component GUIDataExtractor938
+    Component GUIDataExtractor256
     {
-      #keys: '[409348.0.109250633]'
+      #keys: '[409348.0.116706777]'
       BaseType: 'GUIDataExtractor'
       Properties:
       [
@@ -51,20 +53,20 @@ Component ListOrder
         DataType: 'KnifeSetting'
         PosX: 5
         PosY: 30
-        Transformation: 'OrderInKnifeSetting.Order'
+        Transformation: 'OrderInKnifeSetting'
       ]
     }
-    Component GUIDataSetLevel763
+    Component GUIDataSetLevel444
     {
-      #keys: '[409348.0.109250634]'
+      #keys: '[409348.0.116706778]'
       BaseType: 'GUIDataSetLevel'
       Properties:
       [
-        Columns: 'OrderColumns2'
-        DataExtractor: 'GUIDataExtractor938'
+        Columns: 'OrderInKnifeSettingColumns'
+        DataExtractor: 'GUIDataExtractor256'
         PosX: 35
         PosY: 30
-        SortCriteria: "datamember:'OrderNr'"
+        SortCriteria: "datamember:'Order.OrderNr'"
       ]
     }
   ]
@@ -72,21 +74,21 @@ Component ListOrder
   [
     AutoDrag: true
     BackgroundColor: 'Window'
-    ContextMenu: 'popupList328'
+    ContextMenu: 'popupList900'
     FullRowSelect: true
     ModeledStringList ChildOrdering
     {
-      c: ColumnTitles349
-      c: popupList328
-      c: GUIDataExtractor938
-      c: GUIDataSetLevel763
+      c: ColumnTitles948
+      c: popupList900
+      c: GUIDataExtractor256
+      c: GUIDataSetLevel444
     }
   ]
   ResponseDefinitions:
   [
-    DelegatedResponseDefinition OnClick id:Responsedef_ListOrder_Menu_OnClick
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrderInKnifeSetting_Menu_OnClick
     {
-      #keys: '[409348.0.109250635]'
+      #keys: '[409348.0.116706779]'
       Initiator: 'Menu'
       IsInherited: false
       ResponseType: 'OnClick'
@@ -94,19 +96,19 @@ Component ListOrder
       [
         ResponseDefinitionArgument selection
         {
-          #keys: '[341.0.1121322]'
+          #keys: '[357.0.1343136]'
           Binding: 'this.Selection()'
         }
         ResponseDefinitionArgument masterselection
         {
-          #keys: '[341.0.1121936]'
+          #keys: '[357.0.1343740]'
           Binding: 'ListKnifeSetting.Selection()'
         }
       ]
     }
-    DelegatedResponseDefinition OnClick id:Responsedef_ListOrder_GUIButtonBase_OnClick
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrderInKnifeSetting_GUIButtonBase_OnClick
     {
-      #keys: '[409348.0.109250636]'
+      #keys: '[409348.0.116706780]'
       Initiator: 'GUIButtonBase'
       IsInherited: false
       ResponseType: 'OnClick'
@@ -114,7 +116,7 @@ Component ListOrder
       [
         ResponseDefinitionArgument selection
         {
-          #keys: '[341.0.1121367]'
+          #keys: '[357.0.1343181]'
           Binding: 'this.Selection()'
         }
       ]

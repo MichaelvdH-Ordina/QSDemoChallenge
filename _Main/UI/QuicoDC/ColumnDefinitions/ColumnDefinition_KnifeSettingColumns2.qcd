@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: #root
+ColumnDefinition
+{
+  #keys: '1[409348.0.116706781]'
+  Name: 'KnifeSettingColumns2'
+  Type: 'KnifeSetting'
+  Columns:
+  [
+    Column { #keys: '1[409348.0.116706790]' DataPath: Identifier }
+    Column { #keys: '1[409348.0.116706791]' DataPath: Color }
+    Column { #keys: '1[409348.0.116706792]' DataPath: Density }
+    Column { #keys: '1[409348.0.116706793]' DataPath: Thickness }
+    Column { #keys: '1[409348.0.116706794]' DataPath: Length }
+    Column { #keys: '1[409348.0.116706795]' DataPath: Width }
+    Column { #keys: '1[409348.0.116706796]' DataPath: Scrap }
+  ]
+}

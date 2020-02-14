@@ -158,7 +158,7 @@ Component mbMainMenu
         Component MenuFormArticlesAndOrders { #keys: '[11196.0.109131908]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormArticlesAndOrders' Image: 'list' Text: '' ] }
         Component MenuFormsSeparator1 { #keys: '[141928.0.63776324]' BaseType: 'Menu' Properties: [ Separator: true ] }
         Component MenuFormStandardAnalysis { #keys: '[141928.0.63776702]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormStandardAnalysis' Text: '' ] }
-        Component MenuFormKnifeSettingsAndOrders { #keys: '[409348.0.109260605]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormKnifeSettingsAndOrders' Text: 'Knife settings and orders' ] }
+        Component MenuFormKnifeSettingsAndOrders { #keys: '[409348.0.109260605]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormKnifeSettingsAndOIKS' Text: 'Knife settings and orders' ] }
       ]
       Properties:
       [

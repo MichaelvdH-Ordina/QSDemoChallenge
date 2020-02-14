@@ -5,8 +5,12 @@ Function CalcLength
   TextBody:
   [*
     // mho23702 Feb-13-2020 (created)
+    value := 0;
     
-    value := max( this, OrderInKnifeSetting, oiks, oiks.Order().Length() );
+    if( this.NumberOfOrders() > 0)
+    {
+      value := max( this, OrderInKnifeSetting, oiks, oiks.Order().Length() );
+    }
     
     this.Length( value );
   *]

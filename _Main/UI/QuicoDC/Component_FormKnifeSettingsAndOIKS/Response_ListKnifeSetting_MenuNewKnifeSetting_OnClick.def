@@ -2,12 +2,11 @@ Quintiq file version 2.0
 #parent: ListKnifeSetting
 Response OnClick () id:Response_ListKnifeSetting_MenuNewKnifeSetting_OnClick
 {
-  #keys: '[409348.0.109250642]'
+  #keys: '[409348.0.116706786]'
   Body:
   [*
     // Create a new KnifeSetting
-    dlg := construct( DialogKnifeSetting );
-    dlg.New( this, Company );
+    KnifeSetting::Create( Company );
   *]
   DefinitionID => /ListKnifeSetting/Responsedef_ListKnifeSetting_Menu_OnClick
   Initiator: 'MenuNewKnifeSetting'

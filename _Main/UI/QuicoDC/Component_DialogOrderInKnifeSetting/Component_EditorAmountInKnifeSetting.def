@@ -1,0 +1,28 @@
+Quintiq file version 2.0
+Component EditorAmountInKnifeSetting
+{
+  #keys: '[409348.0.114287218]'
+  BaseType: 'Editor'
+  Children:
+  [
+    Component popupEdit659
+    {
+      #keys: '[409348.0.114287219]'
+      BaseType: 'popupEdit'
+      Properties:
+      [
+        PosX: 5
+        PosY: 5
+      ]
+    }
+  ]
+  Properties:
+  [
+    BackgroundColor: 'Window'
+    Border: true
+    ContextMenu: 'popupEdit659'
+    DataBinding: 'Dialog.Data.AmountInKnifeSetting'
+    Mask: 'POSNUMBER'
+    WordWrap: true
+  ]
+}

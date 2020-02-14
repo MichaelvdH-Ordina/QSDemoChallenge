@@ -1,33 +1,33 @@
 Quintiq file version 2.0
-Component SplitterWndKnifeSetting_Order
+Component SplitterWndKnifeSetting_OrderInKnifeSetting
 {
-  #keys: '[409348.0.109250614]'
+  #keys: '[409348.0.116706758]'
   BaseType: 'SplitterWnd'
   Children:
   [
-    Component SplitterPaneKs
+    Component SplitterPaneKS
     {
-      #keys: '[409348.0.109250615]'
+      #keys: '[409348.0.116706759]'
       BaseType: 'SplitterPane'
       GBLayout
       {
         Type: 'GBLayoutDefinition'
         Columns:
         [
-          GBFlow.Column { grow: 128 id: 575 parent: 0 }
+          GBFlow.Column { grow: 128 id: 725 parent: 0 }
         ]
         Elements:
         [
           GBElement
           {
             Component => /ListKnifeSetting
-            Position { startcolumn: 575 startrow: 764 endcolumn: 575 endrow: 764 }
+            Position { startcolumn: 725 startrow: 398 endcolumn: 725 endrow: 398 }
           }
         ]
         Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
         Rows:
         [
-          GBFlow.Row { grow: 128 id: 764 parent: 0 }
+          GBFlow.Row { grow: 128 id: 398 parent: 0 }
         ]
       }
       Children:
@@ -38,37 +38,37 @@ Component SplitterWndKnifeSetting_Order
       [
         Border: true
         DoubleBuffering: false
-        Title: 'Knife settings'
+        Title: 'Knife Settings'
       ]
     }
-    Component SplitterPaneOrder_IKS
+    Component SplitterPaneOIKS
     {
-      #keys: '[409348.0.109250616]'
+      #keys: '[409348.0.116706760]'
       BaseType: 'SplitterPane'
       GBLayout
       {
         Type: 'GBLayoutDefinition'
         Columns:
         [
-          GBFlow.Column { grow: 128 id: 916 parent: 0 }
+          GBFlow.Column { grow: 128 id: 193 parent: 0 }
         ]
         Elements:
         [
           GBElement
           {
-            Component => /ListOrder
-            Position { startcolumn: 916 startrow: 858 endcolumn: 916 endrow: 858 }
+            Component => /ListOrderInKnifeSetting
+            Position { startcolumn: 193 startrow: 152 endcolumn: 193 endrow: 152 }
           }
         ]
         Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
         Rows:
         [
-          GBFlow.Row { grow: 128 id: 858 parent: 0 }
+          GBFlow.Row { grow: 128 id: 152 parent: 0 }
         ]
       }
       Children:
       [
-        #child: ListOrder
+        #child: ListOrderInKnifeSetting
       ]
       Properties:
       [
@@ -83,8 +83,8 @@ Component SplitterWndKnifeSetting_Order
     DoubleBuffering: false
     ModeledStringList ChildOrdering
     {
-      c: SplitterPaneKs
-      c: SplitterPaneOrder_IKS
+      c: SplitterPaneKS
+      c: SplitterPaneOIKS
     }
   ]
 }

@@ -7,7 +7,8 @@ Function CalcWidth
   [*
     // mho23702 Feb-13-2020 (created)
     
-    value := sum( this, OrderInKnifeSetting, oiks, true, oiks.Order().Width()*oiks.AmountInKnifeSetting() );
+    value := sum( this, OrderInKnifeSetting, oiks, true,
+                  oiks.Order().Width()*oiks.WidthInKnifeSetting() );
     
     this.Width( value );
   *]

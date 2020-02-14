@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: Toolbar589/btnCancel
+Response OnClick () id:Response_Toolbar589_btnCancel_OnClick
+{
+  #keys: '[409348.0.114287232]'
+  Body:
+  [*
+    Dialog.EndModal(-1);
+  *]
+  DefinitionID: 'Responsedef_GUIButtonBase_OnClick'
+}

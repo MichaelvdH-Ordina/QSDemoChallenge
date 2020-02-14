@@ -2,6 +2,6 @@ Quintiq file version 2.0
 #parent: #root
 DefaultValue
 {
-  ISOValue: '95'
-  TargetAttribute: RollWidth
+  ISOValue: '0'
+  TargetAttribute: NumberOfOrders
 }

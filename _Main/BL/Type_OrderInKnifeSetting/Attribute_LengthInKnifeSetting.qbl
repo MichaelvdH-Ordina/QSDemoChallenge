@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute LengthInKnifeSetting
+{
+  #keys: '3[409348.0.116841012][409348.0.116841011][409348.0.116841013]'
+  Description: 'The number of times an Order can fit in the length of the KnifeSetting'
+  ValueType: Number
+}

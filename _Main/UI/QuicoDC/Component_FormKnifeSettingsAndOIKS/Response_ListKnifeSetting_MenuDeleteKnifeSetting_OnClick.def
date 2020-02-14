@@ -1,16 +1,21 @@
 Quintiq file version 2.0
 #parent: ListKnifeSetting
-Response OnClick (KnifeSetting selection) id:Response_ListKnifeSetting_MenuDeleteKnifeSetting_OnClick
+Response OnClick (structured[KnifeSetting] selection) id:Response_ListKnifeSetting_MenuDeleteKnifeSetting_OnClick
 {
-  #keys: '[409348.0.109250644]'
+  #keys: '[409348.0.116706788]'
   Body:
   [*
-    // Delete a KnifeSetting
+    // Delete selected KnifeSettings
     if ( MessageBox::Question( this, 'Are you sure you want to delete the selected KnifeSetting?', '&Yes|&No' ) = 0 )
     {
-      selection.Delete();
+      traverse( selection, Elements, ks)
+      {
+        ks.Delete();
+      }
     }
   *]
+  CanBindMultiple: false
   DefinitionID => /ListKnifeSetting/Responsedef_ListKnifeSetting_Menu_OnClick
+  GroupServerCalls: true
   Initiator: 'MenuDeleteKnifeSetting'
 }

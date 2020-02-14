@@ -1,14 +1,14 @@
 Quintiq file version 2.0
 Component ListKnifeSetting
 {
-  #keys: '[409348.0.109250617]'
+  #keys: '[409348.0.116706761]'
   BaseType: 'List'
   Children:
   [
-    #child: ColumnTitles953
-    Component popupList392
+    #child: ColumnTitles644
+    Component popupList556
     {
-      #keys: '[409348.0.109250621]'
+      #keys: '[409348.0.116706765]'
       BaseType: 'popupList'
       Children:
       [
@@ -19,10 +19,10 @@ Component ListKnifeSetting
           IsDerived: true
           Children:
           [
-            Component MenuSeparator { #keys: '[409348.0.109250638]' BaseType: 'Menu' Properties: [ Separator: true ] }
-            Component MenuNewKnifeSetting { #keys: '[409348.0.109250639]' BaseType: 'Menu' Properties: [ Image: 'NEW' Shortcut: 'Ins' Text: '&New...' ] }
-            Component MenuEditKnifeSetting { #keys: '[409348.0.109250640]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
-            Component MenuDeleteKnifeSetting { #keys: '[409348.0.109250641]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
+            Component MenuSeparator { #keys: '[409348.0.116706782]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuNewKnifeSetting { #keys: '[409348.0.116706783]' BaseType: 'Menu' Properties: [ Image: 'NEW' Shortcut: 'Ins' Text: '&New...' ] }
+            Component MenuEditKnifeSetting { #keys: '[409348.0.116706784]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
+            Component MenuDeleteKnifeSetting { #keys: '[409348.0.116706785]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
           ]
           Properties:
           [
@@ -45,9 +45,9 @@ Component ListKnifeSetting
         PosY: 60
       ]
     }
-    Component GUIDataExtractor555
+    Component GUIDataExtractor695
     {
-      #keys: '[409348.0.109250623]'
+      #keys: '[409348.0.116706767]'
       BaseType: 'GUIDataExtractor'
       Properties:
       [
@@ -58,14 +58,14 @@ Component ListKnifeSetting
         Transformation: 'KnifeSetting'
       ]
     }
-    Component GUIDataSetLevel655
+    Component GUIDataSetLevel527
     {
-      #keys: '[409348.0.109250624]'
+      #keys: '[409348.0.116706768]'
       BaseType: 'GUIDataSetLevel'
       Properties:
       [
-        Columns: 'KnifeSettingColumns1'
-        DataExtractor: 'GUIDataExtractor555'
+        Columns: 'KnifeSettingColumns2'
+        DataExtractor: 'GUIDataExtractor695'
         PosX: 35
         PosY: 30
       ]
@@ -75,21 +75,21 @@ Component ListKnifeSetting
   [
     AutoDrag: true
     BackgroundColor: 'Window'
-    ContextMenu: 'popupList392'
+    ContextMenu: 'popupList556'
     FullRowSelect: true
     ModeledStringList ChildOrdering
     {
-      c: ColumnTitles953
-      c: popupList392
-      c: GUIDataExtractor555
-      c: GUIDataSetLevel655
+      c: ColumnTitles644
+      c: popupList556
+      c: GUIDataExtractor695
+      c: GUIDataSetLevel527
     }
   ]
   ResponseDefinitions:
   [
     DelegatedResponseDefinition OnClick id:Responsedef_ListKnifeSetting_Menu_OnClick
     {
-      #keys: '[409348.0.109250625]'
+      #keys: '[409348.0.116706769]'
       Initiator: 'Menu'
       IsInherited: false
       ResponseType: 'OnClick'
@@ -97,14 +97,14 @@ Component ListKnifeSetting
       [
         ResponseDefinitionArgument selection
         {
-          #keys: '[341.0.1118103]'
+          #keys: '[357.0.1339921]'
           Binding: 'this.Selection()'
         }
       ]
     }
     DelegatedResponseDefinition OnClick id:Responsedef_ListKnifeSetting_GUIButtonBase_OnClick
     {
-      #keys: '[409348.0.109250626]'
+      #keys: '[409348.0.116706770]'
       Initiator: 'GUIButtonBase'
       IsInherited: false
       ResponseType: 'OnClick'
@@ -112,7 +112,7 @@ Component ListKnifeSetting
       [
         ResponseDefinitionArgument selection
         {
-          #keys: '[341.0.1118148]'
+          #keys: '[357.0.1339966]'
           Binding: 'this.Selection()'
         }
       ]

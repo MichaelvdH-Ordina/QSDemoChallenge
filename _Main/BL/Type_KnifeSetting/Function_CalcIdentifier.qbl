@@ -7,7 +7,7 @@ Function CalcIdentifier
   [*
     // mho23702 Feb-13-2020 (created)
     orderslist := selectvalues( this, OrderInKnifeSetting, oiks, true,
-                                [String]oiks.AmountInKnifeSetting() + 'x' + oiks.Order().OrderNr() );
+                                [String]oiks.WidthInKnifeSetting() + 'x' + oiks.Order().OrderNr() );
     
     value := orderslist.ToString('+');
     

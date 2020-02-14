@@ -1,0 +1,20 @@
+Quintiq file version 2.0
+#parent: ListOrderInKnifeSetting
+Response OnClick (structured[OrderInKnifeSetting] selection) id:Response_ListOrderInKnifeSetting_MenuDelete_OnClick
+{
+  #keys: '[409348.0.116713859]'
+  Body:
+  [*
+    // Delete selected Orders from Knife Setting
+    if ( MessageBox::Question( this, 'Are you sure you want to delete the selected KnifeSetting?', '&Yes|&No' ) = 0 )
+    {
+      traverse( selection, Elements, ks)
+      {
+        ks.Delete();
+      }
+    }
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListOrderInKnifeSetting/Responsedef_ListOrderInKnifeSetting_Menu_OnClick
+  Initiator: 'MenuDelete'
+}
