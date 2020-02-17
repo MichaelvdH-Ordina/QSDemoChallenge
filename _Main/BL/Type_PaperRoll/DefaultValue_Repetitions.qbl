@@ -2,6 +2,6 @@ Quintiq file version 2.0
 #parent: #root
 DefaultValue
 {
-  ISOValue: '0'
-  TargetAttribute: NumberOfOrders
+  ISOValue: '1'
+  TargetAttribute: Repetitions
 }

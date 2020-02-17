@@ -1,0 +1,119 @@
+Quintiq file version 2.0
+Component ListPaperRoll
+{
+  #keys: '[409348.0.142277822]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles622
+    Component popupList500
+    {
+      #keys: '[409348.0.142277826]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuSeparator { #keys: '[409348.0.142277843]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuEditPaperRoll { #keys: '[409348.0.142277845]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
+            Component MenuDeletePaperRoll { #keys: '[409348.0.142277846]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+              c: MenuSeparator
+              c: MenuEditPaperRoll
+              c: MenuDeletePaperRoll
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor985
+    {
+      #keys: '[409348.0.142277828]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 5
+        PosY: 30
+        Transformation: 'KnifeSetting.PaperRoll'
+      ]
+    }
+    Component GUIDataSetLevel629
+    {
+      #keys: '[409348.0.142277829]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'PaperRollColumns1'
+        DataExtractor: 'GUIDataExtractor985'
+        PosX: 35
+        PosY: 30
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList500'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles622
+      c: popupList500
+      c: GUIDataExtractor985
+      c: GUIDataSetLevel629
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListPaperRoll_Menu_OnClick
+    {
+      #keys: '[409348.0.142277830]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[443.0.1341224]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListPaperRoll_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.142277831]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[443.0.1341269]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

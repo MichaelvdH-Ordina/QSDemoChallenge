@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+Method IsThicknessEqual (Order order) declarative remote as Boolean
+{
+  Description: 'Checks if order thickness equals Ks thickness'
+  TextBody:
+  [*
+    // mho23702 Feb-14-2020 (created)
+    fbo := FeedbackObject::LocalFeedback();
+    value := ( this.Thickness() = order.Thickness() or this.Thickness() = 0 );
+    text := Translations::CheckThickness( this, order );
+    fbo.AddSoft( value, text );
+    return fbo.IsAllowed();
+  *]
+}

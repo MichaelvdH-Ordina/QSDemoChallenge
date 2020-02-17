@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+#parent: #root
+Method New (GUIComponent parent, KnifeSetting owner) as PaperRoll id:Method_DialogPaperRoll_New
+{
+  #keys: '[409348.0.142278220]'
+  Body:
+  [*
+    data := owner.PaperRoll( relshadow );
+    
+    Dialog.Data( data );
+    
+    if ( Dialog.DoModal( parent ) > 0 )
+    {
+      data.Commit();
+    }
+    
+    return data.WrappedInstance();
+  *]
+}

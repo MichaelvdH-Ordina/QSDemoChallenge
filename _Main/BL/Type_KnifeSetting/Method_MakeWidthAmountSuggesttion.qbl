@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+Method MakeWidthAmountSuggesttion (Order order) declarative remote as Number
+{
+  Description: 'Makes an suggestion for how many times you can add an order to a KS.'
+  TextBody:
+  [*
+    // mho23702 Feb-14-2020 (created)
+    value := floor( this.AvailableWidth() / order.Width() );
+    
+    return value;
+  *]
+}

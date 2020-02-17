@@ -1,0 +1,90 @@
+Quintiq file version 2.0
+Component SplitterWndPaperRoll_OrderInPaperRoll
+{
+  #keys: '[409348.0.142277819]'
+  BaseType: 'SplitterWnd'
+  Children:
+  [
+    Component SplitterPanePaperRoll
+    {
+      #keys: '[409348.0.142277820]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 283 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListPaperRoll
+            Position { startcolumn: 283 startrow: 222 endcolumn: 283 endrow: 222 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 222 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListPaperRoll
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Title: 'Paper rolls'
+      ]
+    }
+    Component SplitterPaneOrdersInPaperRoll
+    {
+      #keys: '[409348.0.142277821]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 464 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListOrderInPaperRoll
+            Position { startcolumn: 464 startrow: 245 endcolumn: 464 endrow: 245 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 245 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListOrderInPaperRoll
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Title: 'Orders'
+      ]
+    }
+  ]
+  Properties:
+  [
+    DoubleBuffering: false
+    ModeledStringList ChildOrdering
+    {
+      c: SplitterPanePaperRoll
+      c: SplitterPaneOrdersInPaperRoll
+    }
+  ]
+}

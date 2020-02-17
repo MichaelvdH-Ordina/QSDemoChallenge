@@ -6,13 +6,14 @@ Response OnDrop (Order information, KnifeSetting target) id:Response_ListKnifeSe
   Body:
   [*
     // Add an Order to an KnifeSetting
-    numberoforders := target.NumberOfOrders();
     dlg := construct( DialogOrderInKnifeSetting );
-    value := dlg.GetAmount( this );
-    
-    target.AddOrder( information, value);
-    
-    target.NumberOfOrders( numberoforders + 1 );
+    dlg.New( this, information, target );
   *]
   DefinitionID: 'Responsedef_GUIComponent_OnDrop'
+  Precondition:
+  [*
+    target.IsOrderAllowedInSetting( information );
+    
+    return FeedbackObject::IsAllowedWithOverride( dropaction.IsControl() );
+  *]
 }

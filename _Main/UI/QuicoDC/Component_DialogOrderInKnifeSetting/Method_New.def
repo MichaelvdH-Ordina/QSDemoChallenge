@@ -1,6 +1,6 @@
 Quintiq file version 2.0
 #parent: #root
-Method New (GUIComponent parent, Order owner) as OrderInKnifeSetting id:Method_DialogOrderInKnifeSetting_New
+Method New (GUIComponent parent, Order owner, KnifeSetting knifesetting) as OrderInKnifeSetting id:Method_DialogOrderInKnifeSetting_New
 {
   #keys: '[409348.0.114287222]'
   Body:
@@ -9,9 +9,13 @@ Method New (GUIComponent parent, Order owner) as OrderInKnifeSetting id:Method_D
     
     Dialog.Data( data );
     
+    suggestion := [String]knifesetting.MakeWidthAmountSuggesttion( owner );
+    
+    EditorAmountInKnifeSetting.Text( suggestion );
+    
     if ( Dialog.DoModal( parent ) > 0 )
     {
-      data.Commit();
+      knifesetting.AddOrder( owner, [Number]EditorAmountInKnifeSetting.Text() );
     }
     
     return data.WrappedInstance();

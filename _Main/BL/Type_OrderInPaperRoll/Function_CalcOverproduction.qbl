@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcOverproduction
+{
+  Description: 'Calculate the amount of overproduction'
+  TextBody:
+  [*
+    // mho23702 Feb-17-2020 (created)
+    
+    value := this.QuibiProduced() - this.Order().Quantity()
+    
+    this.Overproduction( value );
+  *]
+}

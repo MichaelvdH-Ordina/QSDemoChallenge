@@ -159,6 +159,8 @@ Component mbMainMenu
         Component MenuFormsSeparator1 { #keys: '[141928.0.63776324]' BaseType: 'Menu' Properties: [ Separator: true ] }
         Component MenuFormStandardAnalysis { #keys: '[141928.0.63776702]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormStandardAnalysis' Text: '' ] }
         Component MenuFormKnifeSettingsAndOrders { #keys: '[409348.0.109260605]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormKnifeSettingsAndOIKS' Text: 'Knife settings and orders' ] }
+        Component ComponentMenuPaperRollsAndOIPR { #keys: '[409348.0.142279995]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormPaperRollsAndOIPR' Text: 'Paper rolls and orders' ] }
+        Component ComponentMenuOrders { #keys: '[409348.0.147242424]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormOrders' Text: 'Orders' ] }
       ]
       Properties:
       [
@@ -167,6 +169,8 @@ Component mbMainMenu
         {
           c: MenuFormArticlesAndOrders
           c: MenuFormKnifeSettingsAndOrders
+          c: ComponentMenuPaperRollsAndOIPR
+          c: ComponentMenuOrders
           c: MenuFormsSeparator1
           c: MenuFormStandardAnalysis
         }

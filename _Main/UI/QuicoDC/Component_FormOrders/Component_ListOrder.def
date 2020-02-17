@@ -1,0 +1,94 @@
+Quintiq file version 2.0
+Component ListOrder
+{
+  #keys: '[409348.0.147241391]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles500
+    Component popupList252
+    {
+      #keys: '[409348.0.147241395]'
+      BaseType: 'popupList'
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor932
+    {
+      #keys: '[409348.0.147241397]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 5
+        PosY: 30
+        Transformation: 'Order'
+      ]
+    }
+    Component GUIDataSetLevel144
+    {
+      #keys: '[409348.0.147241398]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'OrderColumns3'
+        DataExtractor: 'GUIDataExtractor932'
+        PosX: 35
+        PosY: 30
+        SortCriteria: "datamember:'ArticleNr';datamember:'OrderNr'"
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    Border: true
+    ContextMenu: 'popupList252'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles500
+      c: popupList252
+      c: GUIDataExtractor932
+      c: GUIDataSetLevel144
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrder_Menu_OnClick
+    {
+      #keys: '[409348.0.147241399]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[457.0.1041366]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrder_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.147241400]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[457.0.1041411]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

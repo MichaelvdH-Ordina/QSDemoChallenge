@@ -7,7 +7,7 @@ Function CalcScrap
   [*
     // mho23702 Feb-13-2020 (created)
     
-    value := this.Company().GlobalParameters().RollWidth() - this.Width();
+    value := this.AvailableWidth()*this.Length();
     
     this.Scrap( value );
   *]

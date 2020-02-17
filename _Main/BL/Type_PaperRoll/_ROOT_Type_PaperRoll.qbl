@@ -5,6 +5,14 @@ TypeSpecialization PaperRoll
 {
   #keys: '2[409348.0.98300056][409348.0.98300055]'
   Description: 'Paper roll for orders to be cut'
+  OnCreate:
+  [*
+    traverse( this,KnifeSetting.OrderInKnifeSetting, oiks )
+    {
+      oiks.Order().OrderInPaperRoll( relnew,
+                                     PaperRoll := this );
+    }
+  *]
   Parent: PlanUnit
   StructuredName: 'PaperRolls'
 }

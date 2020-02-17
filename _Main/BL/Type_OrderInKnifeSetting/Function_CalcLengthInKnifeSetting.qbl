@@ -8,10 +8,10 @@ Function CalcLengthInKnifeSetting
     // mho23702 Feb-14-2020 (created)
     // Since we only allow multiples of each other
     value := 1;
-    kslength := this.KnifeSetting().Length();
+    kslength := guard( this.KnifeSetting().Length(), 0);
     orderlength := this.Order().Length();
     
-    if( this.KnifeSetting().NumberOfOrders() > 0 and kslength > orderlength )
+    if( kslength > orderlength )
     {
       value := floor( this.KnifeSetting().Length()/this.Order().Length() );
     }

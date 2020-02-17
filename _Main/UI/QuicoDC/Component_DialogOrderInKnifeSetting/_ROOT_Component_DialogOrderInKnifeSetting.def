@@ -53,7 +53,7 @@ OrphanComponent DialogOrderInKnifeSetting
   [
     EnterButton: 'btnOk'
     EscapeButton: 'btnCancel'
-    Height: 113
+    Height: 108
     Title: 'Edit amount'
     Width: 315
     ModeledStringList ChildOrdering

@@ -1,0 +1,39 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent FormOrders
+{
+  #keys: '[409348.0.147215790]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 279 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => ListOrder
+        Position { startcolumn: 279 startrow: 527 endcolumn: 279 endrow: 527 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 527 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: ListOrder
+  ]
+  Properties:
+  [
+    Image: 'SHOPPINGCART'
+    IncludeInView: true
+    Title: 'Orders'
+  ]
+}

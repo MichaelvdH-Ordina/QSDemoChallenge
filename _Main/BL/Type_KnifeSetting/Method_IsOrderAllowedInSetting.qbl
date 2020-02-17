@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+#parent: #root
+Method IsOrderAllowedInSetting (Order order) declarative remote as Boolean
+{
+  Description: 'Check whether an order complies to all the settings conditions'
+  TextBody:
+  [*
+    // mho23702 Feb-14-2020 (created)
+    fbo := FeedbackObject::LocalFeedback();
+    this.IsColorEqual( order );
+    this.IsDensityEqual( order );
+    this.IsThicknessEqual( order );
+    this.IsWidthAllowed( order );
+    this.IsOrdersBelowMax();
+    this.IsLengthAllowed( order );
+    
+    return fbo.IsAllowed();
+  *]
+}

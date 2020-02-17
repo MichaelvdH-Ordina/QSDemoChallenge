@@ -1,8 +1,0 @@
-Quintiq file version 2.0
-#parent: #root
-Attribute NumberOfOrders
-{
-  #keys: '3[409348.0.116851036][409348.0.116851035][409348.0.116851037]'
-  Description: 'Number of orders in a KS'
-  ValueType: Number
-}

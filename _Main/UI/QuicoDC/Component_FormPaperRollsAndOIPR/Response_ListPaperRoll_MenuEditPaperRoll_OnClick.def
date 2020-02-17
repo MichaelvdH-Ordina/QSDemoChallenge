@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: ListPaperRoll
+Response OnClick (PaperRoll selection) id:Response_ListPaperRoll_MenuEditPaperRoll_OnClick
+{
+  #keys: '[409348.0.142277848]'
+  Body:
+  [*
+    // Edit a PaperRoll
+    dlg := construct( DialogPaperRoll );
+    dlg.Edit( this, selection );
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListPaperRoll/Responsedef_ListPaperRoll_Menu_OnClick
+  Initiator: 'MenuEditPaperRoll'
+}

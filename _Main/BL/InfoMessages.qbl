@@ -1,0 +1,29 @@
+Quintiq file version 2.0
+#parent: #root
+InfoMessages id:#InfoMessages #extension
+{
+  InfoMessage CheckAmountOrders (const KnifeSetting ks)
+  {
+    DefaultText: 'Too many orders: There are already @@ks.NumberOfOrders()@@ orders in the knife setting, while @ks.Company().GlobalParameters().MaxOrdersInKnifeSetting()@ is the maximum allowed.'
+  }
+  InfoMessage CheckColor (const KnifeSetting knifesetting, const Order order)
+  {
+    DefaultText: 'Color difference: The selected Order has color @order.Color()@, while at least one order in the Knife Setting has color @knifesetting.Color()@.'
+  }
+  InfoMessage CheckDensity (const KnifeSetting knifesetting, const Order order)
+  {
+    DefaultText: 'Density difference: The selected Order has color @order.Density()@, while at least one order in the Knife Setting has density @knifesetting.Density()@.'
+  }
+  InfoMessage CheckLength (const Order order, const KnifeSetting ks)
+  {
+    DefaultText: 'Invalid length combination: Order length equals @order.Length()@, which cannot be divided by length @ks.Length()@.'
+  }
+  InfoMessage CheckThickness (const KnifeSetting knifesetting, const Order order)
+  {
+    DefaultText: 'Thickness difference: The selected Order has thickness @order.Thickness()@, while at least one order in the Knife Setting has thickness @knifesetting.Thickness()@.'
+  }
+  InfoMessage CheckWidth (const Order order, const KnifeSetting ks)
+  {
+    DefaultText: 'Roll width exceeded: The selected order has a width of @order.Width()@.  However, only a width of @ks.AvailableWidth()@ remains before exceeding the maximum roll width of @ks.Company.GlobalParameters.RollWidth()@.'
+  }
+}

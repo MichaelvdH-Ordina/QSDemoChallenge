@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+#parent: #root
+ColumnDefinition
+{
+  #keys: '1[409348.0.147241401]'
+  Name: 'OrderColumns3'
+  Type: 'Order'
+  Columns:
+  [
+    Column { #keys: '1[409348.0.147241402]' DataPath: OrderNr }
+    Column { #keys: '1[409348.0.147241403]' DataPath: Color }
+    Column { #keys: '1[409348.0.147241404]' DataPath: DueDate }
+    Column { #keys: '1[409348.0.147241405]' DataPath: Quantity }
+    Column { #keys: '1[409348.0.147241406]' DataPath: Thickness }
+    Column { #keys: '1[409348.0.147241407]' DataPath: Width }
+    Column { #keys: '1[409348.0.147241408]' DataPath: Density }
+    Column { #keys: '1[409348.0.147241409]' DataPath: 'Article.ArticleNr' }
+  ]
+}
