@@ -13,6 +13,5 @@ ColumnDefinition
     Column { #keys: '1[409348.0.116706793]' DataPath: Thickness }
     Column { #keys: '1[409348.0.116706794]' DataPath: Length }
     Column { #keys: '1[409348.0.116706795]' DataPath: Width }
-    Column { #keys: '1[409348.0.116706796]' DataPath: Scrap }
   ]
 }

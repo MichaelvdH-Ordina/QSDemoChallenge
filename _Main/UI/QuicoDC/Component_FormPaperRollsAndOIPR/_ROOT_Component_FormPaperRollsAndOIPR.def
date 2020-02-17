@@ -10,20 +10,20 @@ OrphanComponent FormPaperRollsAndOIPR
     Type: 'GBLayoutDefinition'
     Columns:
     [
-      GBFlow.Column { grow: 128 id: 642 parent: 0 }
+      GBFlow.Column { grow: 128 id: 906 parent: 0 }
     ]
     Elements:
     [
       GBElement
       {
         Component => SplitterWndPaperRoll_OrderInPaperRoll
-        Position { startcolumn: 642 startrow: 764 endcolumn: 642 endrow: 764 }
+        Position { startcolumn: 906 startrow: 727 endcolumn: 906 endrow: 727 }
       }
     ]
     Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
     Rows:
     [
-      GBFlow.Row { grow: 128 id: 764 parent: 0 }
+      GBFlow.Row { grow: 128 id: 727 parent: 0 }
     ]
   }
   Children:

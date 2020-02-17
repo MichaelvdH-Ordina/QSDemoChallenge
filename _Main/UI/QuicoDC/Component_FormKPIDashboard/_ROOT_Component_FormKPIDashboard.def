@@ -1,0 +1,39 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent FormKPIDashboard
+{
+  #keys: '[409348.0.161202692]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 101 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => DashboardKPIs
+        Position { startcolumn: 101 startrow: 405 endcolumn: 101 endrow: 405 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 405 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: DashboardKPIs
+  ]
+  Properties:
+  [
+    Image: 'EDITOR_KPI'
+    IncludeInView: true
+    Title: 'KPI Dashboard'
+  ]
+}

@@ -1,47 +1,47 @@
 Quintiq file version 2.0
-Component Toolbar731
+Component Toolbar897
 {
-  #keys: '[409348.0.142278224]'
+  #keys: '[409348.0.147276350]'
   BaseType: 'Toolbar'
   GBLayout
   {
     Type: 'GBLayoutDefinition'
     Columns:
     [
-      GBFlow.Column { grow: 128 id: 440 parent: 0 }
-      GBFlow.Column { grow: 0 id: 692 parent: 0 }
-      GBFlow.Column { grow: 0 id: 542 parent: 0 }
-      GBFlow.Column { grow: 0 id: 770 parent: 0 }
+      GBFlow.Column { grow: 128 id: 355 parent: 0 }
+      GBFlow.Column { grow: 0 id: 129 parent: 0 }
+      GBFlow.Column { grow: 0 id: 520 parent: 0 }
+      GBFlow.Column { grow: 0 id: 772 parent: 0 }
     ]
     Elements:
     [
       GBElement
       {
         Component => btnApply
-        Position { startcolumn: 692 startrow: 784 endcolumn: 692 endrow: 784 }
+        Position { startcolumn: 129 startrow: 456 endcolumn: 129 endrow: 456 }
       }
       GBElement
       {
         Component => btnOk
-        Position { startcolumn: 542 startrow: 784 endcolumn: 542 endrow: 784 }
+        Position { startcolumn: 520 startrow: 456 endcolumn: 520 endrow: 456 }
       }
       GBElement
       {
         Component => btnCancel
-        Position { startcolumn: 770 startrow: 784 endcolumn: 770 endrow: 784 }
+        Position { startcolumn: 772 startrow: 456 endcolumn: 772 endrow: 456 }
       }
     ]
     Gaps: [ left: 5 right: 5 top: 0 bottom: 0 inner: 5 ]
     Rows:
     [
-      GBFlow.Row { grow: 0 id: 784 parent: 0 }
+      GBFlow.Row { grow: 0 id: 456 parent: 0 }
     ]
   }
   Children:
   [
     Component btnApply
     {
-      #keys: '[409348.0.142278225]'
+      #keys: '[409348.0.147276351]'
       BaseType: 'Button'
       Properties:
       [
@@ -52,7 +52,7 @@ Component Toolbar731
     }
     Component btnOk
     {
-      #keys: '[409348.0.142278227]'
+      #keys: '[409348.0.147276353]'
       BaseType: 'Button'
       Properties:
       [
@@ -63,7 +63,7 @@ Component Toolbar731
     }
     Component btnCancel
     {
-      #keys: '[409348.0.142278229]'
+      #keys: '[409348.0.147276355]'
       BaseType: 'Button'
       Properties:
       [

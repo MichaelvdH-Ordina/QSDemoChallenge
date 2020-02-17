@@ -161,6 +161,7 @@ Component mbMainMenu
         Component MenuFormKnifeSettingsAndOrders { #keys: '[409348.0.109260605]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormKnifeSettingsAndOIKS' Text: 'Knife settings and orders' ] }
         Component ComponentMenuPaperRollsAndOIPR { #keys: '[409348.0.142279995]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormPaperRollsAndOIPR' Text: 'Paper rolls and orders' ] }
         Component ComponentMenuOrders { #keys: '[409348.0.147242424]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormOrders' Text: 'Orders' ] }
+        Component ComponentMenuKPI { #keys: '[409348.0.161204243]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormKPIDashboard' Text: 'KPI Dashboard' ] }
       ]
       Properties:
       [
@@ -173,6 +174,7 @@ Component mbMainMenu
           c: ComponentMenuOrders
           c: MenuFormsSeparator1
           c: MenuFormStandardAnalysis
+          c: ComponentMenuKPI
         }
       ]
     }

@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcQuibiPerRoll
+{
+  Description: 'Calc quibi per roll that uses this KS'
+  TextBody:
+  [*
+    // mho23702 Feb-17-2020 (created)
+    
+    value := this.WidthInKnifeSetting() * this.LengthInKnifeSetting();
+    
+    this.QuibiPerRoll( value );
+  *]
+}

@@ -9,6 +9,5 @@ ColumnDefinition
   [
     Column { #keys: '1[409348.0.142268216]' DataPath: 'Order.OrderNr' }
     Column { #keys: '1[409348.0.142268217]' DataPath: 'Order.Quantity' }
-    Column { #keys: '1[409348.0.142268218]' DataPath: QuibiProduced }
   ]
 }

@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+ColumnDefinition
+{
+  #keys: '1[409348.0.147275958]'
+  Name: 'PaperRollColumns2'
+  Type: 'PaperRoll'
+  Columns:
+  [
+    Column { #keys: '1[409348.0.147275973]' DataPath: 'KnifeSetting.Identifier' }
+    Column { #keys: '1[409348.0.147275974]' DataPath: Repetitions }
+    Column { #keys: '1[409348.0.147275975]' DataPath: Length }
+  ]
+}

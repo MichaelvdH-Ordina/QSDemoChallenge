@@ -1,14 +1,14 @@
 Quintiq file version 2.0
 Component ListOrderInPaperRoll
 {
-  #keys: '[409348.0.142277832]'
+  #keys: '[409348.0.147275948]'
   BaseType: 'List'
   Children:
   [
-    #child: ColumnTitles729
-    Component popupList578
+    #child: ColumnTitles871
+    Component popupList309
     {
-      #keys: '[409348.0.142277836]'
+      #keys: '[409348.0.147275952]'
       BaseType: 'popupList'
       Properties:
       [
@@ -16,9 +16,9 @@ Component ListOrderInPaperRoll
         PosY: 60
       ]
     }
-    Component GUIDataExtractor690
+    Component GUIDataExtractor539
     {
-      #keys: '[409348.0.142277838]'
+      #keys: '[409348.0.147275954]'
       BaseType: 'GUIDataExtractor'
       Properties:
       [
@@ -29,14 +29,14 @@ Component ListOrderInPaperRoll
         Transformation: 'OrderInPaperRoll'
       ]
     }
-    Component GUIDataSetLevel649
+    Component GUIDataSetLevel600
     {
-      #keys: '[409348.0.142277839]'
+      #keys: '[409348.0.147275955]'
       BaseType: 'GUIDataSetLevel'
       Properties:
       [
-        Columns: 'OrderInPaperRollColumns1'
-        DataExtractor: 'GUIDataExtractor690'
+        Columns: 'OrderInPaperRollColumns2'
+        DataExtractor: 'GUIDataExtractor539'
         PosX: 35
         PosY: 30
         SortCriteria: "datamember:'Order.OrderNr'"
@@ -47,21 +47,21 @@ Component ListOrderInPaperRoll
   [
     AutoDrag: true
     BackgroundColor: 'Window'
-    ContextMenu: 'popupList578'
+    ContextMenu: 'popupList309'
     FullRowSelect: true
     ModeledStringList ChildOrdering
     {
-      c: ColumnTitles729
-      c: popupList578
-      c: GUIDataExtractor690
-      c: GUIDataSetLevel649
+      c: ColumnTitles871
+      c: popupList309
+      c: GUIDataExtractor539
+      c: GUIDataSetLevel600
     }
   ]
   ResponseDefinitions:
   [
     DelegatedResponseDefinition OnClick id:Responsedef_ListOrderInPaperRoll_Menu_OnClick
     {
-      #keys: '[409348.0.142277840]'
+      #keys: '[409348.0.147275956]'
       Initiator: 'Menu'
       IsInherited: false
       ResponseType: 'OnClick'
@@ -69,19 +69,19 @@ Component ListOrderInPaperRoll
       [
         ResponseDefinitionArgument selection
         {
-          #keys: '[443.0.1344439]'
+          #keys: '[457.0.1234056]'
           Binding: 'this.Selection()'
         }
         ResponseDefinitionArgument masterselection
         {
-          #keys: '[443.0.1345040]'
+          #keys: '[457.0.1234651]'
           Binding: 'ListPaperRoll.Selection()'
         }
       ]
     }
     DelegatedResponseDefinition OnClick id:Responsedef_ListOrderInPaperRoll_GUIButtonBase_OnClick
     {
-      #keys: '[409348.0.142277841]'
+      #keys: '[409348.0.147275957]'
       Initiator: 'GUIButtonBase'
       IsInherited: false
       ResponseType: 'OnClick'
@@ -89,7 +89,7 @@ Component ListOrderInPaperRoll
       [
         ResponseDefinitionArgument selection
         {
-          #keys: '[443.0.1344484]'
+          #keys: '[457.0.1234101]'
           Binding: 'this.Selection()'
         }
       ]

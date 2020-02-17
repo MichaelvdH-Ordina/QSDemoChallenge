@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+ColumnDefinition
+{
+  #keys: '1[409348.0.147275966]'
+  Name: 'OrderInPaperRollColumns2'
+  Type: 'OrderInPaperRoll'
+  Columns:
+  [
+    Column { #keys: '1[409348.0.147275976]' DataPath: 'Order.OrderNr' }
+    Column { #keys: '1[409348.0.147275978]' DataPath: QuibiProduced }
+  ]
+}

@@ -8,9 +8,9 @@ Response OnClick (structured[OrderInKnifeSetting] selection) id:Response_ListOrd
     // Delete selected Orders from Knife Setting
     if ( MessageBox::Question( this, 'Are you sure you want to delete the selected KnifeSetting?', '&Yes|&No' ) = 0 )
     {
-      traverse( selection, Elements, ks)
+      traverse( selection, Elements, order)
       {
-        ks.Delete();
+        order.Delete();
       }
     }
   *]

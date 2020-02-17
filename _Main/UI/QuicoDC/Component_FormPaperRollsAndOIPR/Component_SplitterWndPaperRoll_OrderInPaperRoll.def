@@ -1,33 +1,33 @@
 Quintiq file version 2.0
 Component SplitterWndPaperRoll_OrderInPaperRoll
 {
-  #keys: '[409348.0.142277819]'
+  #keys: '[409348.0.147275935]'
   BaseType: 'SplitterWnd'
   Children:
   [
-    Component SplitterPanePaperRoll
+    Component SplitterPane484
     {
-      #keys: '[409348.0.142277820]'
+      #keys: '[409348.0.147275936]'
       BaseType: 'SplitterPane'
       GBLayout
       {
         Type: 'GBLayoutDefinition'
         Columns:
         [
-          GBFlow.Column { grow: 128 id: 283 parent: 0 }
+          GBFlow.Column { grow: 128 id: 300 parent: 0 }
         ]
         Elements:
         [
           GBElement
           {
             Component => /ListPaperRoll
-            Position { startcolumn: 283 startrow: 222 endcolumn: 283 endrow: 222 }
+            Position { startcolumn: 300 startrow: 903 endcolumn: 300 endrow: 903 }
           }
         ]
         Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
         Rows:
         [
-          GBFlow.Row { grow: 128 id: 222 parent: 0 }
+          GBFlow.Row { grow: 128 id: 903 parent: 0 }
         ]
       }
       Children:
@@ -38,32 +38,31 @@ Component SplitterWndPaperRoll_OrderInPaperRoll
       [
         Border: true
         DoubleBuffering: false
-        Title: 'Paper rolls'
       ]
     }
-    Component SplitterPaneOrdersInPaperRoll
+    Component SplitterPane542
     {
-      #keys: '[409348.0.142277821]'
+      #keys: '[409348.0.147275937]'
       BaseType: 'SplitterPane'
       GBLayout
       {
         Type: 'GBLayoutDefinition'
         Columns:
         [
-          GBFlow.Column { grow: 128 id: 464 parent: 0 }
+          GBFlow.Column { grow: 128 id: 586 parent: 0 }
         ]
         Elements:
         [
           GBElement
           {
             Component => /ListOrderInPaperRoll
-            Position { startcolumn: 464 startrow: 245 endcolumn: 464 endrow: 245 }
+            Position { startcolumn: 586 startrow: 469 endcolumn: 586 endrow: 469 }
           }
         ]
         Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
         Rows:
         [
-          GBFlow.Row { grow: 128 id: 245 parent: 0 }
+          GBFlow.Row { grow: 128 id: 469 parent: 0 }
         ]
       }
       Children:
@@ -74,7 +73,6 @@ Component SplitterWndPaperRoll_OrderInPaperRoll
       [
         Border: true
         DoubleBuffering: false
-        Title: 'Orders'
       ]
     }
   ]
@@ -83,8 +81,8 @@ Component SplitterWndPaperRoll_OrderInPaperRoll
     DoubleBuffering: false
     ModeledStringList ChildOrdering
     {
-      c: SplitterPanePaperRoll
-      c: SplitterPaneOrdersInPaperRoll
+      c: SplitterPane484
+      c: SplitterPane542
     }
   ]
 }

@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute QuibiPerRoll
+{
+  #keys: '3[409348.0.147251339][409348.0.147251338][409348.0.147251340]'
+  Description: 'The number of quibi produced when using this knife setting on one roll'
+  ValueType: Number
+}

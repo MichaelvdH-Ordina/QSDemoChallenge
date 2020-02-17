@@ -1,13 +1,13 @@
 Quintiq file version 2.0
 Component EditorRepetitions
 {
-  #keys: '[409348.0.142278216]'
+  #keys: '[409348.0.147276342]'
   BaseType: 'Editor'
   Children:
   [
-    Component popupEdit133
+    Component popupEdit952
     {
-      #keys: '[409348.0.142278217]'
+      #keys: '[409348.0.147276343]'
       BaseType: 'popupEdit'
       Properties:
       [
@@ -20,9 +20,9 @@ Component EditorRepetitions
   [
     BackgroundColor: 'Window'
     Border: true
-    ContextMenu: 'popupEdit133'
-    DataBinding: 'Dialog.Data.Repetitions'
-    Mask: 'NUMBER'
+    ContextMenu: 'popupEdit952'
+    DataBinding: 'DialogPaperRoll.Data.Repetitions'
+    Mask: 'POSNUMBER'
     WordWrap: true
   ]
 }

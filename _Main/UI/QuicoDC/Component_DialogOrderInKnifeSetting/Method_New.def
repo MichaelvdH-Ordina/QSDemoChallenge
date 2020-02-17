@@ -6,12 +6,9 @@ Method New (GUIComponent parent, Order owner, KnifeSetting knifesetting) as Orde
   Body:
   [*
     data := owner.OrderInKnifeSetting( relshadow );
+    data.WidthInKnifeSetting( knifesetting.MakeWidthAmountSuggesttion( owner ) );
     
     Dialog.Data( data );
-    
-    suggestion := [String]knifesetting.MakeWidthAmountSuggesttion( owner );
-    
-    EditorAmountInKnifeSetting.Text( suggestion );
     
     if ( Dialog.DoModal( parent ) > 0 )
     {

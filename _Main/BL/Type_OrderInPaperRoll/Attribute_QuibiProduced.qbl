@@ -2,7 +2,7 @@ Quintiq file version 2.0
 #parent: #root
 Attribute QuibiProduced
 {
-  #keys: '3[409348.0.142200301][409348.0.142200300][409348.0.142200302]'
-  Description: 'Amount of Quibi produced by the paper roll (#width order * #length order * repetitions )'
+  #keys: '3[409348.0.147251378][409348.0.147251377][409348.0.147251379]'
+  Description: 'The amount of quibi produced with the roll.'
   ValueType: Number
 }

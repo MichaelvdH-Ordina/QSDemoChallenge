@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcRemainingProduction
+{
+  Description: 'Calc the amount of QuiBi of the order already produced.'
+  TextBody:
+  [*
+    // mho23702 Feb-17-2020 (created)
+    
+    value := maxvalue( this.Quantity() - this.AmountProduced(), 0 );
+    
+    this.RemaingProduction( value );
+  *]
+}

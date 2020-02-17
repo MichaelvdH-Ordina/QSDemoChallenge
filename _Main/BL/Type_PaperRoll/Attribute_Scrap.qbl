@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Scrap
+{
+  #keys: '3[409348.0.147261038][409348.0.147261037][409348.0.147261039]'
+  Description: 'The total amount of scrap produced with the rolls.'
+  ValueType: Real
+}

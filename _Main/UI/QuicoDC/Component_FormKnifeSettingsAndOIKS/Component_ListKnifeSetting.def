@@ -21,7 +21,6 @@ Component ListKnifeSetting
           [
             Component MenuSeparator { #keys: '[409348.0.116706782]' BaseType: 'Menu' Properties: [ Separator: true ] }
             Component MenuNewKnifeSetting { #keys: '[409348.0.116706783]' BaseType: 'Menu' Properties: [ Image: 'NEW' Shortcut: 'Ins' Text: '&New...' ] }
-            Component MenuEditKnifeSetting { #keys: '[409348.0.116706784]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
             Component MenuDeleteKnifeSetting { #keys: '[409348.0.116706785]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
             Component MenuCreatePaperRoll { #keys: '[409348.0.147212223]' BaseType: 'Menu' Properties: [ Image: 'PAPER_ROLL' Shortcut: 'Ctrl+P' Text: 'Create Paper roll' ] }
             Component menuSeparator436 { #keys: '[409348.0.147212993]' BaseType: 'Menu' Properties: [ Separator: true ] }
@@ -34,11 +33,10 @@ Component ListKnifeSetting
               c: MenuFilter
               c: menuListQuintiqSetQuantor
               c: MenuSeparator
-              c: MenuNewKnifeSetting
-              c: MenuEditKnifeSetting
-              c: MenuDeleteKnifeSetting
-              c: menuSeparator436
               c: MenuCreatePaperRoll
+              c: menuSeparator436
+              c: MenuNewKnifeSetting
+              c: MenuDeleteKnifeSetting
             }
           ]
         }

@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+HighlightRules
+{
+  HighlightRule
+  {
+    #keys: '1[409348.0.162417907]'
+    Bidirectional: true
+    Groups: Default
+    HighlightPathString: 'PaperRoll'
+    StartTypeString: 'KnifeSetting'
+  }
+}

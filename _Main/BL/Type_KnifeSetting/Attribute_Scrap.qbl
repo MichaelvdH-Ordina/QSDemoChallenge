@@ -1,8 +1,0 @@
-Quintiq file version 2.0
-#parent: #root
-Attribute Scrap
-{
-  #keys: '3[409348.0.98300252][409348.0.98300251][409348.0.98300253]'
-  Description: 'The amount of scrap based on the orders (cm²)'
-  ValueType: Real
-}

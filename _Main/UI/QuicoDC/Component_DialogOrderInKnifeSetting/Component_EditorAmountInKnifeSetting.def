@@ -21,7 +21,7 @@ Component EditorAmountInKnifeSetting
     BackgroundColor: 'Window'
     Border: true
     ContextMenu: 'popupEdit659'
-    DataBinding: 'Dialog.Data.AmountInKnifeSetting'
+    DataBinding: 'Dialog.Data.WidthInKnifeSetting'
     Mask: 'POSNUMBER'
     WordWrap: true
   ]

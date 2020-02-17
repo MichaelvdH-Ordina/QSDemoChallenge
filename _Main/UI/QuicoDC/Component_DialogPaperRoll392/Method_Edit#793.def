@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: #root
+Method Edit (GUIComponent parent, shadow[PaperRoll] selection) id:Method_DialogPaperRoll_Edit_793
+{
+  #keys: '[409348.0.147276349]'
+  Body:
+  [*
+    Dialog.Data( selection );
+    
+    Dialog.DoModal( parent );
+  *]
+}

@@ -2,7 +2,7 @@ Quintiq file version 2.0
 #parent: #root
 Method New (GUIComponent parent, KnifeSetting owner) as PaperRoll id:Method_DialogPaperRoll_New
 {
-  #keys: '[409348.0.142278220]'
+  #keys: '[409348.0.147276346]'
   Body:
   [*
     data := owner.PaperRoll( relshadow );
