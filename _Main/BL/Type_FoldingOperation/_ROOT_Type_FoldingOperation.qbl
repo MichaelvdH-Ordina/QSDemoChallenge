@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization FoldingOperation
+{
+  #keys: '2[409348.0.167351017][409348.0.167351016]'
+  Description: 'Folding operation'
+  Parent: Operation
+  StructuredName: 'FoldingOperations'
+}

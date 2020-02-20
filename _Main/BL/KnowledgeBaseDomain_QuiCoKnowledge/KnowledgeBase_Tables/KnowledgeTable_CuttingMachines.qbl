@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+KnowledgeTable CuttingMachines
+{
+  #keys: '6[409348.0.180700054][409348.0.180700051][0.0.0][409348.0.180700052][0.0.0][409348.0.180700053]'
+  Description: 'The info for the cutting machines/'
+  EnforceColumnOrder: true
+  ColumnDefinitions:
+  [
+    Column Name
+    {
+      ColumnWeight: 1
+      Description: 'Name of the machine'
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column Speed
+    {
+      ColumnWeight: 1
+      Description: 'Quantity that can be produced per minute'
+      ISODefaultValue: '*'
+      Type: Number
+    }
+  ]
+}

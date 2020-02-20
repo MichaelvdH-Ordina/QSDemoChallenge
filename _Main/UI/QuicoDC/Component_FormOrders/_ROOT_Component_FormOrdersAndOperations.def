@@ -1,7 +1,7 @@
 Quintiq file version 2.0
 #root
 #parent: QuicoDC
-OrphanComponent FormOrders
+OrphanComponent FormOrdersAndOperations
 {
   #keys: '[409348.0.147215790]'
   BaseType: 'Form'
@@ -10,30 +10,32 @@ OrphanComponent FormOrders
     Type: 'GBLayoutDefinition'
     Columns:
     [
-      GBFlow.Column { grow: 128 id: 279 parent: 0 }
+      GBFlow.Column { grow: 128 id: 890 parent: 0 }
     ]
     Elements:
     [
       GBElement
       {
-        Component => ListOrder
-        Position { startcolumn: 279 startrow: 527 endcolumn: 279 endrow: 527 }
+        Component => SplitterWnd907
+        Position { startcolumn: 890 startrow: 346 endcolumn: 890 endrow: 346 }
       }
     ]
     Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
     Rows:
     [
-      GBFlow.Row { grow: 128 id: 527 parent: 0 }
+      GBFlow.Row { grow: 128 id: 346 parent: 0 }
     ]
   }
   Children:
   [
-    #child: ListOrder
+    #child: SplitterWnd907
   ]
   Properties:
   [
+    Height: 264
     Image: 'SHOPPINGCART'
     IncludeInView: true
     Title: 'Orders'
+    Width: 351
   ]
 }

@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcWeigth
+{
+  Description: 'Calculate the weight of a roll'
+  TextBody:
+  [*
+    // mho23702 Feb-18-2020 (created)
+    
+    value := this.Volume() * this.KnifeSetting().Density();
+    
+    this.Weigth( value );
+  *]
+}

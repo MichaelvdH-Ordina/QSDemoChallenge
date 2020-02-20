@@ -79,6 +79,7 @@ Component ListKnifeSetting
     BackgroundColor: 'Window'
     ContextMenu: 'popupList556'
     FullRowSelect: true
+    ImageWidth: 50
     ModeledStringList ChildOrdering
     {
       c: ColumnTitles644

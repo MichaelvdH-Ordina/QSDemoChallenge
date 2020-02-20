@@ -14,14 +14,14 @@ Component SplitterWndKnifeSetting_OrderInKnifeSetting
         Type: 'GBLayoutDefinition'
         Columns:
         [
-          GBFlow.Column { grow: 128 id: 725 parent: 0 }
+          GBFlow.Column { grow: 128 id: 920 parent: 0 }
         ]
         Elements:
         [
           GBElement
           {
             Component => /ListKnifeSetting
-            Position { startcolumn: 725 startrow: 398 endcolumn: 725 endrow: 398 }
+            Position { startcolumn: 920 startrow: 398 endcolumn: 920 endrow: 398 }
           }
         ]
         Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
@@ -38,6 +38,7 @@ Component SplitterWndKnifeSetting_OrderInKnifeSetting
       [
         Border: true
         DoubleBuffering: false
+        Size: 32.7607013110093
         Title: 'Knife Settings'
       ]
     }
@@ -50,14 +51,14 @@ Component SplitterWndKnifeSetting_OrderInKnifeSetting
         Type: 'GBLayoutDefinition'
         Columns:
         [
-          GBFlow.Column { grow: 128 id: 193 parent: 0 }
+          GBFlow.Column { grow: 128 id: 236 parent: 0 }
         ]
         Elements:
         [
           GBElement
           {
             Component => /ListOrderInKnifeSetting
-            Position { startcolumn: 193 startrow: 152 endcolumn: 193 endrow: 152 }
+            Position { startcolumn: 236 startrow: 152 endcolumn: 236 endrow: 152 }
           }
         ]
         Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
@@ -74,17 +75,95 @@ Component SplitterWndKnifeSetting_OrderInKnifeSetting
       [
         Border: true
         DoubleBuffering: false
+        Size: 24.405623124309
         Title: 'Orders'
+      ]
+    }
+    Component SplitterPanePaperRolls
+    {
+      #keys: '[409348.0.198106951]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 659 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListPaperRoll
+            Position { startcolumn: 659 startrow: 589 endcolumn: 659 endrow: 589 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 589 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListPaperRoll
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Size: 22.8336755646817
+        Title: 'Paper rolls'
+      ]
+    }
+    Component SplitterPaneRollOperations
+    {
+      #keys: '[409348.0.198108257]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 752 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListOperation
+            Position { startcolumn: 752 startrow: 267 endcolumn: 752 endrow: 267 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 267 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListOperation
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Size: 20
+        Title: 'Operations'
       ]
     }
   ]
   Properties:
   [
     DoubleBuffering: false
+    PaneOrder: '0;1;2'
     ModeledStringList ChildOrdering
     {
       c: SplitterPaneKS
       c: SplitterPaneOIKS
+      c: SplitterPanePaperRolls
+      c: SplitterPaneRollOperations
     }
   ]
 }

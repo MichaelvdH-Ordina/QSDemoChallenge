@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: #root
+Method IsAllowedOnMachine (Machine machine) declarative as Boolean
+{
+  Description: 'Check if an operation is allowed on a machine'
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    return false;
+  *]
+}

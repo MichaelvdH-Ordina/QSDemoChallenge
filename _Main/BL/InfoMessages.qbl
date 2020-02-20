@@ -18,6 +18,10 @@ InfoMessages id:#InfoMessages #extension
   {
     DefaultText: 'Invalid length combination: Order length equals @order.Length()@, which cannot be divided by length @ks.Length()@.'
   }
+  InfoMessage CheckMachine (const Machine machine, const Operation operation)
+  {
+    DefaultText: 'Wrong machine type: This machine is a @typeofexpression(machine).Name()@, while you want to plan a @typeofexpression(operation).Name()@.'
+  }
   InfoMessage CheckThickness (const KnifeSetting knifesetting, const Order order)
   {
     DefaultText: 'Thickness difference: The selected Order has thickness @order.Thickness()@, while at least one order in the Knife Setting has thickness @knifesetting.Thickness()@.'

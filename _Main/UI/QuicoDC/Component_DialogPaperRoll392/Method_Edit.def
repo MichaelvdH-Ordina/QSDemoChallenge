@@ -9,7 +9,7 @@ Method Edit (GUIComponent parent, PaperRoll selection) id:Method_DialogPaperRoll
     
     Dialog.Data( data );
     
-    if ( Dialog.DoModal( parent ) > 0 )
+    if( Dialog.DoModal( parent ) > 0 )
     {
       data.Commit();
     }

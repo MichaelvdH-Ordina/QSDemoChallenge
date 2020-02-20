@@ -1,0 +1,124 @@
+Quintiq file version 2.0
+Component ListOperation
+{
+  #keys: '[409348.0.198109704]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles836
+    Component popupList232
+    {
+      #keys: '[409348.0.198109708]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuPlan { #keys: '[409348.0.235113366]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_ADD' Shortcut: 'Ctrl+P' Text: 'Plan' ] }
+            Component menuSeparator929 { #keys: '[409348.0.240012012]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuUnplan { #keys: '[409348.0.240012773]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_DELETE' Shortcut: 'Ctrl+U' Text: 'Unplan' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuPlan
+              c: MenuUnplan
+              c: menuSeparator929
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor655
+    {
+      #keys: '[409348.0.198109710]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'ListPaperRoll'
+        DataType: 'PaperRoll'
+        PosX: 5
+        PosY: 30
+        Transformation: 'Operation'
+      ]
+    }
+    Component GUIDataSetLevel496
+    {
+      #keys: '[409348.0.198109711]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'OperationColumns2'
+        DataExtractor: 'GUIDataExtractor655'
+        PosX: 35
+        PosY: 30
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList232'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles836
+      c: popupList232
+      c: GUIDataExtractor655
+      c: GUIDataSetLevel496
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOperation_Menu_OnClick
+    {
+      #keys: '[409348.0.198109712]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[605.0.1673168]'
+          Binding: 'this.Selection()'
+        }
+        ResponseDefinitionArgument masterselection
+        {
+          #keys: '[605.0.1673312]'
+          Binding: 'ListPaperRoll.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOperation_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.198109713]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[605.0.1673213]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute ActualStart
+{
+  #keys: '3[409348.0.172351011][409348.0.172351010][409348.0.172351012]'
+  Description: 'The time at which an operation starts on a machine, without setup time'
+  ValueType: DateTime
+}

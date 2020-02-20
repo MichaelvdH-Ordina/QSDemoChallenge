@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute AreaProduced
+{
+  #keys: '3[409348.0.174700075][409348.0.174700074][409348.0.174700076]'
+  Description: 'The total area produced'
+  ValueType: Number
+}

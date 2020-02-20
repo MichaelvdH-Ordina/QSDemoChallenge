@@ -3,6 +3,7 @@ Quintiq file version 2.0
 #parent: #DomainModel
 KnowledgeBaseDomain QuiCoKnowledge
 {
+  Description: 'Repository for QuiCo knowledge'
   SKBLocalStorageStrategy
   {
   }

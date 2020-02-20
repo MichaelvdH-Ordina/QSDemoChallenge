@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute PreviousColor
+{
+  #keys: '3[409348.0.224241067][409348.0.224241066][409348.0.224241068]'
+  Description: 'The color of the previous rolling task.'
+  ValueType: String
+}

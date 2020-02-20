@@ -1,7 +1,7 @@
 Quintiq file version 2.0
 #root
 #parent: QuicoDC
-OrphanComponent FormKnifeSettingsAndOIKS
+OrphanComponent FormKnifeSettingsPaperRollsAndOIKS
 {
   #keys: '[409348.0.116701210]'
   BaseType: 'Form'
@@ -32,10 +32,10 @@ OrphanComponent FormKnifeSettingsAndOIKS
   ]
   Properties:
   [
-    Height: 392
-    Image: 'LIST'
+    Height: 586
+    Image: 'PAPER_ROLL'
     IncludeInView: true
-    Title: 'Knife Settings and Orders'
-    Width: 482
+    Title: 'Knife settings, Orders and Paper rolls'
+    Width: 816
   ]
 }

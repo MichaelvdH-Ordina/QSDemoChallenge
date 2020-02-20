@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Volume
+{
+  #keys: '3[409348.0.172351072][409348.0.172351071][409348.0.172351073]'
+  Description: 'The volume of a paper roll for determining the rolling speed.'
+  ValueType: Real
+}

@@ -4,7 +4,7 @@ Project id:QuicoDC
 {
   ProjectProperties
   {
-    BuildVersion: '6.0.2.47'
+    BuildVersion: '6.0.2.79'
     Description: 'Quico Demo Challenge'
     DisplayName: 'Quico Demo Challenge'
     ProjectKind: 'DesktopClient'

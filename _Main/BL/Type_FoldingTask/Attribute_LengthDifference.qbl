@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute LengthDifference
+{
+  #keys: '3[409348.0.224241011][409348.0.224241010][409348.0.224241012]'
+  Description: 'The difference between the previous task in lenght.'
+  ValueType: Number
+}

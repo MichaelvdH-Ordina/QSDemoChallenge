@@ -1,0 +1,7 @@
+Quintiq file version 2.0
+#parent: #root
+MethodOverride IsAllowedOnMachine (Machine machine) declarative as Boolean
+{
+  Description: 'Checks if an folding operation is allowed on a folding machine.'
+  TextBody: 'return machine.istype( FoldingMachine );'
+}

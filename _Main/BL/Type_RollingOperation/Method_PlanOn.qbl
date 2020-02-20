@@ -1,0 +1,26 @@
+Quintiq file version 2.0
+#parent: #root
+MethodOverride PlanOn (Machine machine, Task aftertask) as Task
+{
+  TextBody:
+  [*
+    task := this.Task().astype( RollingTask );
+    
+    rollingaftertask := aftertask.astype( RollingTask );
+    rollingmachine := machine.astype( RollingMachine );
+    
+    if( isnull( task ) )
+    {
+      task := RollingTask::Create( rollingmachine, rollingaftertask );
+      this.Task( relset, task );
+    }
+    else
+    {
+      machine.MoveAfterTask( task, aftertask );
+    }
+    
+    this.IsPlanned( true );
+    
+    return task;
+  *]
+}

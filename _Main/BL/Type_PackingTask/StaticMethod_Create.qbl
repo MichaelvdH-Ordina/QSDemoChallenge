@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (PackingMachine owner, PackingTask aftertask) as PackingTask
+{
+  Description: 'Create a Packing task'
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    task := construct( PackingTask );
+    value := task;
+    
+    owner.AddAfterTask( &task, aftertask );
+    
+    return value;
+  *]
+}

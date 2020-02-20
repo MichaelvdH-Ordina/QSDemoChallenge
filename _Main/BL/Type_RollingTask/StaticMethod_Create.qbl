@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (RollingMachine owner, RollingTask aftertask) as RollingTask
+{
+  Description: 'Create a new rolling task'
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    task := construct( RollingTask );
+    value := task;
+    
+    owner.AddAfterTask( &task, aftertask );
+    
+    return value;
+  *]
+}

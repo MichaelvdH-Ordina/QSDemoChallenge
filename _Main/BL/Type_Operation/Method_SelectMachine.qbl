@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#parent: #root
+Method SelectMachine () as Machine
+{
+  TextBody:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    return null( Machine );
+  *]
+}

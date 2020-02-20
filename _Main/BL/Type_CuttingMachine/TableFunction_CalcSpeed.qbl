@@ -1,0 +1,27 @@
+Quintiq file version 2.0
+#parent: #root
+TableFunction CalcSpeed
+{
+  DefaultOutputFunction:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    
+    value := 100;
+    this.Speed( value );
+  *]
+  Description: 'Calculate the speed of the cutting machine.'
+  OutputFunction:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    
+    value := Speed;
+    this.Speed( value );
+  *]
+  TableDefinition: CuttingMachines
+  FunctionColumnMatch
+  {
+    ColumnDefinition: Name
+    MatchExpression: 'this.Name()'
+    Operator: '='
+  }
+}

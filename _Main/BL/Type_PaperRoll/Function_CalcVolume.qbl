@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcVolume
+{
+  Description: 'Calculate the volume of a roll.'
+  TextBody:
+  [*
+    // mho23702 Feb-18-2020 (created)
+    thickness := this.KnifeSetting().Thickness();
+    length := this.Length();
+    rollwidth := this.KnifeSetting().Company().GlobalParameters().RollWidth();
+    
+    value := ( thickness / 1000 ) * ( length / 100 ) * ( rollwidth / 100 );
+    
+    this.Volume( value );
+  *]
+}

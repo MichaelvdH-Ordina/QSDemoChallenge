@@ -5,15 +5,14 @@ Method New (GUIComponent parent, KnifeSetting owner) as PaperRoll id:Method_Dial
   #keys: '[409348.0.147276346]'
   Body:
   [*
-    data := owner.PaperRoll( relshadow );
+    paperroll := null( PaperRoll );
     
-    Dialog.Data( data );
-    
-    if ( Dialog.DoModal( parent ) > 0 )
+    if( Dialog.DoModal( parent ) > 0 )
     {
-      data.Commit();
+      paperroll := PaperRoll::Create( owner, 
+                                      [Number]EditorRepetitions.Text() );
     }
     
-    return data.WrappedInstance();
+    return paperroll;
   *]
 }

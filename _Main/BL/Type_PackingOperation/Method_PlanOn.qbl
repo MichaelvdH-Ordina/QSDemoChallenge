@@ -1,0 +1,24 @@
+Quintiq file version 2.0
+#parent: #root
+MethodOverride PlanOn (Machine machine, Task aftertask) as Task
+{
+  TextBody:
+  [*
+    task := this.Task().astype( PackingTask );
+    
+    packafter := aftertask.astype( PackingTask );
+    packmachine := machine.astype( PackingMachine );
+    
+    if( isnull( task ) )
+    {
+      task := PackingTask::Create( packmachine, packafter );
+      this.Task( relset, task );
+    }
+    else
+    {
+      machine.MoveAfterTask( task, packafter );
+    }
+    
+    return task;
+  *]
+}

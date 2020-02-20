@@ -6,9 +6,8 @@ StaticMethod Create (Company owner, String ordernr) as Order
   TextBody:
   [*
     result := owner.Order( relnew, 
-                           OrderNr := ordernr );
+                           OrderNr := ordernr);
     
     return result;
-                          
   *]
 }

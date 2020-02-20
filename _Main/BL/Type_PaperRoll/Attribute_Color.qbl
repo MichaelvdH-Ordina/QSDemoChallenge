@@ -1,0 +1,7 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Color
+{
+  #keys: '3[409348.0.224241046][409348.0.224241045][409348.0.224241047]'
+  ValueType: String
+}

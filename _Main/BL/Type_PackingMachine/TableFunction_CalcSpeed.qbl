@@ -1,0 +1,27 @@
+Quintiq file version 2.0
+#parent: #root
+TableFunction CalcSpeed
+{
+  DefaultOutputFunction:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    
+    value := 1;
+    this.Speed( value );
+  *]
+  Description: 'Calc the packing speed based on KT.'
+  OutputFunction:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    
+    value := MaximumSpeed;
+    this.Speed( value );
+  *]
+  TableDefinition: FoldingPackingMachines
+  FunctionColumnMatch
+  {
+    ColumnDefinition: Name
+    MatchExpression: 'this.Name();'
+    Operator: '='
+  }
+}

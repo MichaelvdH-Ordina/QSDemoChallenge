@@ -5,41 +5,6 @@ Component SplitterWndPaperRoll_OrderInPaperRoll
   BaseType: 'SplitterWnd'
   Children:
   [
-    Component SplitterPane484
-    {
-      #keys: '[409348.0.147275936]'
-      BaseType: 'SplitterPane'
-      GBLayout
-      {
-        Type: 'GBLayoutDefinition'
-        Columns:
-        [
-          GBFlow.Column { grow: 128 id: 300 parent: 0 }
-        ]
-        Elements:
-        [
-          GBElement
-          {
-            Component => /ListPaperRoll
-            Position { startcolumn: 300 startrow: 903 endcolumn: 300 endrow: 903 }
-          }
-        ]
-        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
-        Rows:
-        [
-          GBFlow.Row { grow: 128 id: 903 parent: 0 }
-        ]
-      }
-      Children:
-      [
-        #child: ListPaperRoll
-      ]
-      Properties:
-      [
-        Border: true
-        DoubleBuffering: false
-      ]
-    }
     Component SplitterPane542
     {
       #keys: '[409348.0.147275937]'
@@ -73,15 +38,34 @@ Component SplitterWndPaperRoll_OrderInPaperRoll
       [
         Border: true
         DoubleBuffering: false
+        Size: 66.6666666666667
+      ]
+    }
+    Component SplitterPanePaperRoll2
+    {
+      #keys: '[409348.0.147275936]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+      }
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Size: 33.3333333333333
+        Title: 'Paper rolls'
       ]
     }
   ]
   Properties:
   [
     DoubleBuffering: false
+    PaneOrder: '1;0'
     ModeledStringList ChildOrdering
     {
-      c: SplitterPane484
+      c: SplitterPanePaperRoll2
       c: SplitterPane542
     }
   ]

@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+MethodOverride IsAllowedOnMachine (Machine machine) declarative as Boolean
+{
+  TextBody:
+  [*
+    fbo := FeedbackObject::LocalFeedback();
+    value := machine.istype( RollingMachine );
+    text := Translations::CheckMachine( machine, this );
+    fbo.AddHard( value, text );
+    
+    return fbo.IsAllowed()
+  *]
+}

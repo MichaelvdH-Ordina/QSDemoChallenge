@@ -1,0 +1,32 @@
+Quintiq file version 2.0
+#parent: #root
+KnowledgeTable RollingSetup
+{
+  #keys: '6[409348.0.180700076][409348.0.180700073][0.0.0][409348.0.180700074][0.0.0][409348.0.180700075]'
+  Description: 'The setup duration for rolling machines'
+  EnforceColumnOrder: true
+  ColumnDefinitions:
+  [
+    Column FromColor
+    {
+      ColumnWeight: 1
+      Description: 'The color of the previous paper roll'
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column ToColor
+    {
+      ColumnWeight: 1
+      Description: 'The color of the new paper roll'
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column SetupDuration
+    {
+      ColumnWeight: 1
+      Description: 'The setup duration between two colors.'
+      ISODefaultValue: '*'
+      Type: Duration
+    }
+  ]
+}

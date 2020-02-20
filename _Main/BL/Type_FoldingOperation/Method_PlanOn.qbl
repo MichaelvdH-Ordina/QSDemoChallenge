@@ -1,0 +1,24 @@
+Quintiq file version 2.0
+#parent: #root
+MethodOverride PlanOn (Machine machine, Task aftertask) as Task
+{
+  TextBody:
+  [*
+    foldingtask := this.Task().astype( FoldingTask );
+    
+    foldingaftertask := aftertask.astype( FoldingTask );
+    foldingmachine := machine.astype( FoldingMachine );
+    
+    if( isnull( foldingtask ) )
+    {
+      foldingtask := FoldingTask::Create( foldingmachine, foldingaftertask );
+      this.Task( relset, foldingtask );
+    }
+    else
+    {
+      machine.MoveAfterTask( foldingtask, foldingaftertask );
+    }
+    
+    return foldingtask;
+  *]
+}

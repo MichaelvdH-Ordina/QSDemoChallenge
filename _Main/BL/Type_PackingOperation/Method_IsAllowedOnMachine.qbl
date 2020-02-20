@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+MethodOverride IsAllowedOnMachine (Machine machine) declarative as Boolean
+{
+  Description: 'Check if the operation is allowed on the right machine'
+  TextBody:
+  [*
+    fbo := FeedbackObject::LocalFeedback();
+    value := machine.istype( PackingMachine );
+    text := Translations::CheckMachine( machine, this );
+    fbo.AddHard( value, text );
+    
+    return fbo.IsAllowed()
+  *]
+}

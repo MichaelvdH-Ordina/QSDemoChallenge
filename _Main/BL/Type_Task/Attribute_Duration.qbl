@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Duration
+{
+  #keys: '3[409348.0.172351030][409348.0.172351029][409348.0.172351031]'
+  Description: 'The duration of a task'
+  ValueType: Duration
+}

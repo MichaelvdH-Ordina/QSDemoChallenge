@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcPreviousColor
+{
+  Description: 'Determine the color of the previous task.'
+  TextBody:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    
+    value := guard( this.PreviousTask().astype( RollingTask ).Color(), 'white' );
+    
+    this.PreviousColor( value );
+  *]
+}

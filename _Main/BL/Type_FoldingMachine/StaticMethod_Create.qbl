@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (Company owner, String name) as FoldingMachine
+{
+  Description: 'Create folding machines'
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    return owner.Machine( relnew,
+                          FoldingMachine,
+                          Name := name );
+  *]
+}

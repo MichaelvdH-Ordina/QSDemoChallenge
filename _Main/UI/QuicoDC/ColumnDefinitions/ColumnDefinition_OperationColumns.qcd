@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: #root
+ColumnDefinition
+{
+  #keys: '1[409348.0.195684709]'
+  Name: 'OperationColumns'
+  Type: 'Operation'
+  Columns:
+  [
+    Column { #keys: '1[409348.0.195684710]' DataPath: OperationType }
+  ]
+}

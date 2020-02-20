@@ -6,6 +6,8 @@ Relation Task_Machine_Machine_Task
   ProceduralSequenceRelationStrategy
   {
     #keys: '13[0.0.0][409348.0.98300173][409348.0.98300167][409348.0.98300174][409348.0.98300168][409348.0.98300175][409348.0.98300169][409348.0.98300176][409348.0.98300170][409348.0.98300177][409348.0.98300171][409348.0.98300178][409348.0.98300172]'
+    SequenceElementSuffix: 'Task'
+    SequenceSuffix: 'Task'
   }
   RelationSide.LeftSide Machine
   {

@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (Company owner, String name) as RollingMachine
+{
+  Description: 'Create new rolling machine'
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    return owner.Machine( relnew,
+                          RollingMachine,
+                          Name := name ) ;
+  *]
+}

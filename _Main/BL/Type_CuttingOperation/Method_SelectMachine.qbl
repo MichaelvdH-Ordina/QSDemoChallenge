@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+MethodOverride SelectMachine () as Machine
+{
+  TextBody:
+  [*
+    result := minselect( this,
+                         PlanUnit.astype( PaperRoll ).KnifeSetting.Company.Machine,
+                         machine,
+                         machine.istype( CuttingMachine ),
+                         machine.EndOfLastTask() );
+    
+    return result;
+  *]
+}

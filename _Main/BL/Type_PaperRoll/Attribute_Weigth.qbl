@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Weigth
+{
+  #keys: '3[409348.0.172351078][409348.0.172351077][409348.0.172351079]'
+  Description: 'The weight of a paper roll.'
+  ValueType: Real
+}

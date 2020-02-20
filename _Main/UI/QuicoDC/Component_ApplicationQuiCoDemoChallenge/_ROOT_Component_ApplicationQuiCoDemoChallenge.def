@@ -34,8 +34,8 @@ OrphanComponent ApplicationQuiCoDemoChallenge
       ]
       Properties:
       [
-        Height: 703
-        Width: 986
+        Height: 28
+        Width: 160
         ModeledStringList ChildOrdering
         {
           c: mbMainMenu

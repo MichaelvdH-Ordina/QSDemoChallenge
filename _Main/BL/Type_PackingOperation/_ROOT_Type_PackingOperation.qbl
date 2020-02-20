@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization PackingOperation
+{
+  #keys: '2[409348.0.167351020][409348.0.167351019]'
+  Description: 'Packing operation'
+  Parent: Operation
+  StructuredName: 'PackingOperations'
+}

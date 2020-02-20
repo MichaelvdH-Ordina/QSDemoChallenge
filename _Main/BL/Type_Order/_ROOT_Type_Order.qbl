@@ -5,6 +5,13 @@ TypeSpecialization Order
 {
   #keys: '2[107600.0.334624197][107600.0.334624190]'
   Description: 'An order for a specified amount of articles.'
+  OnCreate:
+  [*
+    //RollingOperation::Create( this );
+    //CuttingOperation::Create( this );
+    FoldingOperation::Create( this );
+    PackingOperation::Create( this );
+  *]
   Parent: PlanUnit
   StructuredName: 'Orders'
 }

@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+KnowledgeTable FoldingPackingMachines
+{
+  #keys: '6[409348.0.180700066][409348.0.180700063][0.0.0][409348.0.180700064][0.0.0][409348.0.180700065]'
+  Description: 'The info for the folding and packing machines'
+  EnforceColumnOrder: true
+  ColumnDefinitions:
+  [
+    Column Name
+    {
+      ColumnWeight: 1
+      Description: 'Name of the machine'
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column MaximumSpeed
+    {
+      ColumnWeight: 1
+      Description: 'The max speed a machine can produce in units/minute'
+      ISODefaultValue: '*'
+      Type: Number
+    }
+  ]
+}

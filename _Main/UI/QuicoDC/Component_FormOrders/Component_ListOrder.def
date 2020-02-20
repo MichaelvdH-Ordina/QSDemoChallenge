@@ -1,14 +1,13 @@
 Quintiq file version 2.0
 Component ListOrder
 {
-  #keys: '[409348.0.147241391]'
+  #keys: '[409348.0.172348644]'
   BaseType: 'List'
   Children:
   [
-    #child: ColumnTitles500
     Component popupList252
     {
-      #keys: '[409348.0.147241395]'
+      #keys: '[409348.0.172348645]'
       BaseType: 'popupList'
       Properties:
       [
@@ -18,7 +17,7 @@ Component ListOrder
     }
     Component GUIDataExtractor932
     {
-      #keys: '[409348.0.147241397]'
+      #keys: '[409348.0.172348646]'
       BaseType: 'GUIDataExtractor'
       Properties:
       [
@@ -31,7 +30,7 @@ Component ListOrder
     }
     Component GUIDataSetLevel144
     {
-      #keys: '[409348.0.147241398]'
+      #keys: '[409348.0.172348647]'
       BaseType: 'GUIDataSetLevel'
       Properties:
       [
@@ -42,6 +41,7 @@ Component ListOrder
         SortCriteria: "datamember:'ArticleNr';datamember:'OrderNr'"
       ]
     }
+    #child: ColumnTitles500
   ]
   Properties:
   [

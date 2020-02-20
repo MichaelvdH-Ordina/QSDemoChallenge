@@ -7,5 +7,6 @@ Method CreateTestData
   [*
     this.CreateArticles();
     this.CreateOrders();
+    this.CreateMachines();
   *]
 }

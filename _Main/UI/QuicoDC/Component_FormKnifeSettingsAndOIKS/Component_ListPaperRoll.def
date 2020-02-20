@@ -1,14 +1,13 @@
 Quintiq file version 2.0
 Component ListPaperRoll
 {
-  #keys: '[409348.0.147275938]'
+  #keys: '[409348.0.198107530]'
   BaseType: 'List'
   Children:
   [
-    #child: ColumnTitles861
     Component popupList104
     {
-      #keys: '[409348.0.147275942]'
+      #keys: '[409348.0.198107531]'
       BaseType: 'popupList'
       Children:
       [
@@ -19,9 +18,9 @@ Component ListPaperRoll
           IsDerived: true
           Children:
           [
-            Component MenuSeparator { #keys: '[409348.0.147275959]' BaseType: 'Menu' Properties: [ Separator: true ] }
-            Component MenuEditPaperRoll { #keys: '[409348.0.147275961]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
-            Component MenuDeletePaperRoll { #keys: '[409348.0.147275962]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
+            Component MenuSeparator { #keys: '[409348.0.198107532]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuEditPaperRoll { #keys: '[409348.0.198107533]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
+            Component MenuDeletePaperRoll { #keys: '[409348.0.198107534]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
           ]
           Properties:
           [
@@ -45,7 +44,7 @@ Component ListPaperRoll
     }
     Component GUIDataExtractor747
     {
-      #keys: '[409348.0.147275944]'
+      #keys: '[409348.0.198107536]'
       BaseType: 'GUIDataExtractor'
       Properties:
       [
@@ -58,17 +57,18 @@ Component ListPaperRoll
     }
     Component GUIDataSetLevel184
     {
-      #keys: '[409348.0.147275945]'
+      #keys: '[409348.0.198107535]'
       BaseType: 'GUIDataSetLevel'
       Properties:
       [
-        Columns: 'PaperRollColumns2'
+        Columns: 'PaperRollColumns'
         DataExtractor: 'GUIDataExtractor747'
         PosX: 35
         PosY: 30
         SortCriteria: "datamember:'KnifeSetting.Color'"
       ]
     }
+    #child: ColumnTitles861
   ]
   Properties:
   [

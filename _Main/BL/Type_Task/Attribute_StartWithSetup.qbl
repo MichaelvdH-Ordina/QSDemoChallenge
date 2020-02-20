@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute StartWithSetup
+{
+  #keys: '3[409348.0.172351024][409348.0.172351023][409348.0.172351025]'
+  Description: 'The start of a task with setup duration.'
+  ValueType: DateTime
+}
