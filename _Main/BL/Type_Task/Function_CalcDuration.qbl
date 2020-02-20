@@ -8,7 +8,7 @@ Function CalcDuration
     quantity := this.Operation().PlanUnit().astype( Order ).Quantity();
     speed := this.Machine().Speed();
     
-    value := Duration::Hours( quantity / speed );
+    value := Duration::Minutes( quantity / speed );
     
     this.Duration( value );
   *]

@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: GanttChartTask
+Response OnClick (structured[Task] selection) id:Response_GanttChartTask_MenuUnplan_OnClick
+{
+  #keys: '[409348.0.245913166]'
+  Body:
+  [*
+    traverse( selection, Elements, task)
+    {
+      task.Operation().Unplan();
+    }
+  *]
+  CanBindMultiple: false
+  DefinitionID => /GanttChartTask/Responsedef_GanttChartTask_Menu_OnClick
+  Initiator: 'MenuUnplan'
+}

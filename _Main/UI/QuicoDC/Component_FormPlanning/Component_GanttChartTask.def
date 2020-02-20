@@ -9,6 +9,31 @@ Component GanttChartTask
     {
       #keys: '[409348.0.174717770]'
       BaseType: 'popupGanttchart'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.555535]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuUnplan { #keys: '[409348.0.245915077]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_DELETE' Shortcut: 'Del' Text: 'Unplan' ] }
+            Component menuSeparator { #keys: '[409348.0.245915185]' BaseType: 'Menu' Properties: [ Separator: true ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuUnplan
+              c: menuSeparator
+              c: MenuActions
+              c: MenuFilter
+              c: MenuNavigation
+            }
+          ]
+        }
+      ]
     }
     Component GUIDataExtractor204
     {

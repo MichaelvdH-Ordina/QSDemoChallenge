@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: ListPaperRoll
+Response OnClick (PaperRoll selection) id:Response_ListPaperRoll_MenuDeletePaperRoll_OnClick
+{
+  #keys: '[409348.0.147275965]'
+  Body:
+  [*
+    // Delete a PaperRoll
+    if ( MessageBox::Question( this, 'Are you sure you want to delete the selected PaperRoll?', '&Yes|&No' ) = 0 )
+    {
+      selection.Delete();
+    }
+  *]
+  DefinitionID => /ListPaperRoll/Responsedef_ListPaperRoll_Menu_OnClick
+  Initiator: 'MenuDeletePaperRoll'
+}

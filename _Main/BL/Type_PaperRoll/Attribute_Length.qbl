@@ -3,6 +3,6 @@ Quintiq file version 2.0
 Attribute Length
 {
   #keys: '3[409348.0.142200292][409348.0.142200291][409348.0.142200293]'
-  Description: 'The length of a paper roll.'
+  Description: 'The length of a paper roll in cm.'
   ValueType: Number
 }

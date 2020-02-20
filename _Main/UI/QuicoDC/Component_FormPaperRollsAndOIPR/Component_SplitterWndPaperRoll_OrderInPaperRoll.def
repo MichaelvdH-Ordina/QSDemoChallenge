@@ -48,8 +48,28 @@ Component SplitterWndPaperRoll_OrderInPaperRoll
       GBLayout
       {
         Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 590 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListPaperRoll
+            Position { startcolumn: 590 startrow: 501 endcolumn: 590 endrow: 501 }
+          }
+        ]
         Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 501 parent: 0 }
+        ]
       }
+      Children:
+      [
+        #child: ListPaperRoll
+      ]
       Properties:
       [
         Border: true

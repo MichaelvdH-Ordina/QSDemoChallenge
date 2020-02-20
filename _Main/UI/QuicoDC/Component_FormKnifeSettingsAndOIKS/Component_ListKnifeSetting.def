@@ -29,14 +29,14 @@ Component ListKnifeSetting
           [
             ModeledStringList ChildOrdering
             {
-              c: MenuActions
-              c: MenuFilter
-              c: menuListQuintiqSetQuantor
+              c: MenuNewKnifeSetting
+              c: MenuDeleteKnifeSetting
               c: MenuSeparator
               c: MenuCreatePaperRoll
               c: menuSeparator436
-              c: MenuNewKnifeSetting
-              c: MenuDeleteKnifeSetting
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
             }
           ]
         }
