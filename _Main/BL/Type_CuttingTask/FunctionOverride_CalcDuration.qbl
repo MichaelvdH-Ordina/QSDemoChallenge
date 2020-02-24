@@ -4,7 +4,7 @@ FunctionOverride CalcDuration
 {
   TextBody:
   [*
-    prlength := this.Operation().PlanUnit().astype( PaperRoll ).Length();
+    prlength := guard( this.Operation().PlanUnit().astype( PaperRoll ).Length(), 0);
     speed := this.Machine().Speed();
     
     value := Duration::Minutes( prlength / speed );

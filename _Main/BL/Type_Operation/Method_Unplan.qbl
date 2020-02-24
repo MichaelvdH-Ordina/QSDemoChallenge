@@ -7,7 +7,6 @@ Method Unplan
     // mho23702 Feb-20-2020 (created)
     if( this.IsPlanned() )
     {
-      this.IsPlanned( false );
       this.Task().Delete();
     }
   *]

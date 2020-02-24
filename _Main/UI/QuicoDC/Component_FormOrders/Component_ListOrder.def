@@ -9,6 +9,33 @@ Component ListOrder
     {
       #keys: '[409348.0.172348645]'
       BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuPlan924 { #keys: '[409348.0.288661542]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_ADD' Shortcut: 'Ctrl+P' Text: 'Plan' ] }
+            Component menuSeparator125 { #keys: '[409348.0.288661649]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuUnplan572 { #keys: '[409348.0.288662508]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_DELETE' Shortcut: 'Ctrl+U' Text: 'Unplan' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuPlan924
+              c: MenuUnplan572
+              c: menuSeparator125
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+            }
+          ]
+        }
+      ]
       Properties:
       [
         PosX: 35

@@ -1,0 +1,39 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent FormPaperRollsAndOperations
+{
+  #keys: '[409348.0.274256389]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 133 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => SplitterWnd521
+        Position { startcolumn: 133 startrow: 929 endcolumn: 133 endrow: 929 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 929 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: SplitterWnd521
+  ]
+  Properties:
+  [
+    Image: 'PAPER_ROLL'
+    IncludeInView: true
+    Title: 'Paper rolls and Operations'
+  ]
+}

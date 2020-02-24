@@ -8,8 +8,9 @@ FunctionOverride CalcActualStart
     
     endofrolling := guard( this.Operation().PreviousOperation().Task().End(), companytime );
     earlieststart := companytime + this.SetupDuration();
+    endofprevtask := guard( this.PreviousTask().End() + this.SetupDuration(), earlieststart );
     
-    value := maxvalue( endofrolling, earlieststart );
+    value := maxvalue( endofrolling, earlieststart, endofprevtask );
     this.ActualStart( value );
   *]
 }

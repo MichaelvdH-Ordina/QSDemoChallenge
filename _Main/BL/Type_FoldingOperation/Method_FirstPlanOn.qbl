@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+Method FirstPlanOn (Machine machine, Task aftertask) as FoldingTask
+{
+  TextBody:
+  [*
+    // mho23702 Feb-21-2020 (created)
+    foldingtask := this.PlanFolding( machine.astype( FoldingMachine ), aftertask.astype( FoldingTask ) );
+    packoperation := this.NextOperation().astype( PackingOperation );
+    packmachine := packoperation.SelectMachine().astype( PackingMachine );
+    
+    packingtask := packoperation.PlanPacking( packmachine, packmachine.LastTask().astype( PackingTask ) );
+    
+    return foldingtask;
+  *]
+}

@@ -6,6 +6,7 @@ Response OnDrop (Operation source, Machine droprow, Task droptarget,
   #keys: '[409348.0.195644139]'
   Body:
   [*
+    // Plan task on machine.
     source.PlanOn( droprow, beforedroptarget );
   *]
   CanBindMultiple: false

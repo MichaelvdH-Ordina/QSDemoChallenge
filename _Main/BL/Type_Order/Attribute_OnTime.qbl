@@ -1,0 +1,7 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute OnTime
+{
+  #keys: '3[409348.0.288652507][409348.0.288652506][409348.0.288652508]'
+  ValueType: Boolean
+}

@@ -8,7 +8,7 @@ InfoMessages id:#InfoMessages #extension
   }
   InfoMessage CheckColor (const KnifeSetting knifesetting, const Order order)
   {
-    DefaultText: 'Color difference: The selected Order has color @order.Color()@, while at least one order in the Knife Setting has color @knifesetting.Color()@.'
+    DefaultText: 'Color difference: The selected Order has color @@order.Color()@@, while at least one order in the Knife Setting has color @knifesetting.Color()@.'
   }
   InfoMessage CheckDensity (const KnifeSetting knifesetting, const Order order)
   {

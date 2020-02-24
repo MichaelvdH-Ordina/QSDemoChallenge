@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+Method PlanPacking (PackingMachine machine, PackingTask aftertask) as PackingTask
+{
+  Description: 'Plan the packing operation'
+  TextBody:
+  [*
+    // mho23702 Feb-21-2020 (created)
+    packingtask := this.Task().astype( PackingTask );
+    
+    if( isnull( packingtask ) )
+    {
+      packingtask := PackingTask::Create( machine, aftertask );
+      this.Task( relset, packingtask );
+    }
+    else
+    {
+      machine.MoveAfterTask( packingtask, aftertask );
+    }
+    
+    this.IsPlanned( true );
+    
+    return packingtask;
+  *]
+}

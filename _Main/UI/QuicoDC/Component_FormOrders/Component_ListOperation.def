@@ -10,6 +10,33 @@ Component ListOperation
     {
       #keys: '[409348.0.172349640]'
       BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuPlan { #keys: '[409348.0.264504034]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_ADD' Shortcut: 'Ctrl+P' Text: 'Plan' ] }
+            Component menuSeparator { #keys: '[409348.0.264504187]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuUnplan { #keys: '[409348.0.264504733]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_DELETE' Shortcut: 'Ctrl+U' Text: 'Unplan' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuPlan
+              c: MenuUnplan
+              c: menuSeparator
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+            }
+          ]
+        }
+      ]
       Properties:
       [
         PosX: 35

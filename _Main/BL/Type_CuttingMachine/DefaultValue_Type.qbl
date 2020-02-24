@@ -2,5 +2,6 @@ Quintiq file version 2.0
 #parent: #root
 DefaultValue
 {
-  TargetAttribute: Color
+  ISOValue: 'C'
+  TargetAttribute: Type
 }

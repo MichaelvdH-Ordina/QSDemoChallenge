@@ -1,0 +1,7 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute QuillColor
+{
+  #keys: '3[409348.0.254451048][409348.0.254451047][409348.0.254451049]'
+  ValueType: String
+}

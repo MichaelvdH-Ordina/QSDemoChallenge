@@ -4,12 +4,12 @@ Method MakeRepetitionsSuggestion () declarative remote as Number
 {
   TextBody:
   [*
-    // mho23702 Feb-17-2020 (created)
+    // mho23702 Feb-21-2020 (created)
     return min( this,
-                OrderInPaperRoll,
-                oipr,
+                OrderInKnifeSetting,
+                oiks,
                 true,
-                ceil( oipr.Order().RemaingProduction() / oipr.OrderInKnifeSetting().QuibiPerRoll() 
+                ceil( oiks.Order().RemaingProduction() / oiks.QuibiPerRoll() 
                      )
                 );
   *]

@@ -7,8 +7,9 @@ TypeSpecialization Order
   Description: 'An order for a specified amount of articles.'
   OnCreate:
   [*
-    //RollingOperation::Create( this );
-    //CuttingOperation::Create( this );
+    //fold := FoldingOperation::Create( this );
+    //pack := PackingOperation::Create( this );
+    //fold.PackingOperation( relset, pack );
     FoldingOperation::Create( this );
     PackingOperation::Create( this );
   *]

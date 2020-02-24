@@ -15,6 +15,7 @@ Component GanttChartRowDefinition440
         Elements: 'Task'
         Identification: 'Task'
         Legend: 'VALUE(object.Name())'
+        NodeBorder: false
         NodeEndTime:
         [*
           <?xml version="1.0" encoding="UTF-16"?>
@@ -54,6 +55,7 @@ Component GanttChartRowDefinition440
         Nodes: 'Task'
         PosX: 30
         PosY: 30
+        RowColor: 'White'
       ]
     }
   ]

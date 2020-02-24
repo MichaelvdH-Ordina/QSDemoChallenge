@@ -4,20 +4,11 @@ MethodOverride PlanOn (Machine machine, Task aftertask) as Task
 {
   TextBody:
   [*
-    foldingtask := this.Task().astype( FoldingTask );
+    foldingtask := this.PlanFolding( machine.astype( FoldingMachine ), aftertask.astype( FoldingTask ) );
+    packoperation := this.NextOperation().astype( PackingOperation );
+    packmachine := packoperation.SelectMachine().astype( PackingMachine );
     
-    foldingaftertask := aftertask.astype( FoldingTask );
-    foldingmachine := machine.astype( FoldingMachine );
-    
-    if( isnull( foldingtask ) )
-    {
-      foldingtask := FoldingTask::Create( foldingmachine, foldingaftertask );
-      this.Task( relset, foldingtask );
-    }
-    else
-    {
-      machine.MoveAfterTask( foldingtask, foldingaftertask );
-    }
+    packingtask := packoperation.PlanPacking( packmachine, this.GetPackingAftertask( packmachine, foldingtask) );
     
     return foldingtask;
   *]

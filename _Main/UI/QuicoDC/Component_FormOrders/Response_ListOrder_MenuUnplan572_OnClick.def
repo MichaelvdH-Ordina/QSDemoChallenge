@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: ListOrder
+Response OnClick (Order selection) id:Response_ListOrder_MenuUnplan572_OnClick
+{
+  #keys: '[409348.0.288664009]'
+  Body:
+  [*
+    selection.FirstOperation().Unplan();
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListOrder/Responsedef_ListOrder_Menu_OnClick
+  Initiator: 'MenuUnplan572'
+}

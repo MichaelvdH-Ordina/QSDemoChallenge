@@ -6,8 +6,69 @@ HighlightRules
   {
     #keys: '1[409348.0.162417907]'
     Bidirectional: true
+    ContinueHighlighting: true
     Groups: Default
     HighlightPathString: 'PaperRoll'
     StartTypeString: 'KnifeSetting'
+  }
+  HighlightRule
+  {
+    #keys: '1[409348.0.256962481]'
+    Bidirectional: true
+    ContinueHighlighting: true
+    Directional: true
+    Groups: Default
+    HighlightPathString: 'Operation.NextOperation.Task'
+    StartTypeString: 'RollingTask'
+  }
+  HighlightRule
+  {
+    #keys: '1[409348.0.256980178]'
+    BackwardInvisible: true
+    Bidirectional: true
+    ContinueHighlighting: true
+    Groups: Default
+    HighlightPathString: 'Order'
+    Recursive: true
+    StartTypeString: 'OrderInKnifeSetting'
+  }
+  HighlightRule
+  {
+    #keys: '1[409348.0.256981718]'
+    Bidirectional: true
+    ContinueHighlighting: true
+    ForwardInvisible: true
+    Groups: Default
+    HighlightPathString: 'OrderInKnifeSetting'
+    Recursive: true
+    StartTypeString: 'KnifeSetting'
+  }
+  HighlightRule
+  {
+    #keys: '1[409348.0.259517242]'
+    Bidirectional: true
+    ContinueHighlighting: true
+    Directional: true
+    Groups: Default
+    HighlightPathString: 'Operation.PlanUnit.astype(PaperRoll).OrderInPaperRoll.Order.Operation.astype(FoldingOperation).Task'
+    StartTypeString: 'CuttingTask'
+  }
+  HighlightRule
+  {
+    #keys: '1[409348.0.259561361]'
+    Bidirectional: true
+    ContinueHighlighting: true
+    Directional: true
+    Groups: Default
+    HighlightPathString: 'Operation.NextOperation.astype(PackingOperation).Task'
+    StartTypeString: 'FoldingTask'
+  }
+  HighlightRule
+  {
+    #keys: '1[409348.0.264511247]'
+    Bidirectional: true
+    Groups: Default
+    HighlightPathString: 'Task'
+    StartTypeString: 'Operation'
   }
 }

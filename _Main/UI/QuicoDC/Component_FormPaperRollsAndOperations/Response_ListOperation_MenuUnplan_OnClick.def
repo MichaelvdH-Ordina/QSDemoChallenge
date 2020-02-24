@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: ListOperation
+Response OnClick (structured[Operation] selection) id:Response_ListOperation_MenuUnplan_OnClick
+{
+  #keys: '[409348.0.240014055]'
+  Body:
+  [*
+    // Unplan the selected operations
+    traverse( selection, Elements, operation )
+    {
+      operation.Unplan();
+    }
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListOperation/Responsedef_ListOperation_Menu_OnClick
+  Initiator: 'MenuUnplan'
+}

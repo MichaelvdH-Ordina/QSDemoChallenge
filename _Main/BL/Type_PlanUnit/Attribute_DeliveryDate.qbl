@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute DeliveryDate
+{
+  #keys: '3[409348.0.288651850][409348.0.288651849][409348.0.288651851]'
+  Description: 'The date the Quibi are delivered.'
+  ValueType: Date
+}

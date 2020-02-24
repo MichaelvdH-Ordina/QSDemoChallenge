@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcDeliveryDate
+{
+  TextBody:
+  [*
+    // Michael van den Hoogenband Feb-24-2020 (created)
+    
+    value := guard( this.LastOperation().Task().End().Date(), Date::MinDate() );
+    
+    this.DeliveryDate( value );
+  *]
+}

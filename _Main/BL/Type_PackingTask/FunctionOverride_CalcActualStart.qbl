@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcActualStart
+{
+  TextBody:
+  [*
+    foldingstart := guard ( this.FoldingTask().ActualStart(), this.Machine().Company().Time() );
+    endofprevtask := guard( this.PreviousTask().End(), this.Machine().Company().Time() );
+    
+    
+    value := maxvalue( foldingstart, endofprevtask );
+    this.ActualStart( value );
+    //this.ActualStart( value );
+  *]
+}

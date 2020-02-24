@@ -33,7 +33,7 @@ OrphanComponent FormKnifeSettingsPaperRollsAndOIKS
   Properties:
   [
     Height: 586
-    Image: 'PAPER_ROLL'
+    Image: 'CUT'
     IncludeInView: true
     Title: 'Knife settings, Orders and Paper rolls'
     Width: 816

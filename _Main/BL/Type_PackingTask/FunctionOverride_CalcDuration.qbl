@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcDuration
+{
+  TextBody:
+  [*
+    value := guard( this.FoldingTask().Duration(), Duration::Hours( 1 ) );
+    this.Duration( value );
+  *]
+}

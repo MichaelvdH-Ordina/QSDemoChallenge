@@ -7,6 +7,9 @@ Method New (GUIComponent parent, KnifeSetting owner) as PaperRoll id:Method_Dial
   [*
     paperroll := null( PaperRoll );
     
+    number := owner.MakeRepetitionsSuggestion();
+    EditorRepetitions.Text( [String]number );
+    
     if( Dialog.DoModal( parent ) > 0 )
     {
       paperroll := PaperRoll::Create( owner, 

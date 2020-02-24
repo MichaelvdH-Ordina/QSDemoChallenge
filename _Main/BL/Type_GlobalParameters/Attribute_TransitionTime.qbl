@@ -4,5 +4,5 @@ Attribute TransitionTime
 {
   #keys: '3[409348.0.167351046][409348.0.167351045][409348.0.167351047]'
   Description: 'Transport time from cutting to folding machines'
-  ValueType: Number
+  ValueType: Duration
 }
