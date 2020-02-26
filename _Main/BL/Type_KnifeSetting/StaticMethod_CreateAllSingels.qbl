@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod CreateAllSingels (Company company)
+{
+  Description: 'Create all single knife settings'
+  TextBody:
+  [*
+    // Michael van den Hoogenband Feb-25-2020 (created)
+    
+    traverse( company, Order, order )
+    {
+      ks := KnifeSetting::Create( company );
+      suggestion := floor( company.GlobalParameters().RollWidth() / order.Width() ) ;
+      ks.AddOrder( order, suggestion );
+    }
+  *]
+}

@@ -8,7 +8,25 @@ MethodOverride PlanOn (Machine machine, Task aftertask) as Task
     packoperation := this.NextOperation().astype( PackingOperation );
     packmachine := packoperation.SelectMachine().astype( PackingMachine );
     
-    packingtask := packoperation.PlanPacking( packmachine, this.GetPackingAftertask( packmachine, foldingtask) );
+    //t := selectset( this,
+    //                PlanUnit.astype( Order ).Company.Machine.astype( FoldingMachine ).Task,
+    //                task,
+    //                task.Machine() <> this.Task().Machine(),
+    //                task.End() <= this.Task().PreviousTask().End() );
+    //traverse( t, Elements, task )
+    //{
+    //  info( task.Operation().PlanUnit().Idenitifier(), task.Machine().Name() );
+    //}
+    
+    //ts := maxselect( this,
+    //                PlanUnit.astype( Order ).Company.Machine.astype( FoldingMachine ).Task,
+    //                task,
+    //                task.Machine() <> this.Task().Machine()
+    //                and task.End() <= this.Task().PreviousTask().End(),
+    //                task.End() );
+    //info( ts.Operation().PlanUnit().Idenitifier() );
+    
+    packingtask := packoperation.PlanPacking( packmachine, this.GetPackingAftertask( packmachine, foldingtask ) );
     
     return foldingtask;
   *]

@@ -10,7 +10,7 @@ StaticMethod Create (FoldingMachine owner, FoldingTask aftertask) as FoldingTask
     value := task;
     
     owner.AddAfterTask( &task, aftertask );
-    info( "Folding task gemaakt" );
+    
     return value;
   *]
 }

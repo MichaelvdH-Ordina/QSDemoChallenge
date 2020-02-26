@@ -1,0 +1,7 @@
+Quintiq file version 2.0
+#parent: ListKnifeSetting/MenuGenerateKnifeSettings
+Response OnClick () id:Response_ListKnifeSetting_MenuGenerateKnifeSettings_OnClick
+{
+  #keys: '[409348.0.294418091]'
+  DefinitionID: 'Responsedef_Menu_OnClick'
+}

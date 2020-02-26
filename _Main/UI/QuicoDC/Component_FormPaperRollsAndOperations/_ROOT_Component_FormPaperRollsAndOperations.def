@@ -32,8 +32,10 @@ OrphanComponent FormPaperRollsAndOperations
   ]
   Properties:
   [
+    Height: 233
     Image: 'PAPER_ROLL'
     IncludeInView: true
     Title: 'Paper rolls and Operations'
+    Width: 247
   ]
 }

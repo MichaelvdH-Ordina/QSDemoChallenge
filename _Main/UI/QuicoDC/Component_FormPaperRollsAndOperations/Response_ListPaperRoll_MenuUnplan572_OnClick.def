@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: ListPaperRoll
+Response OnClick (PaperRoll selection) id:Response_ListPaperRoll_MenuUnplan572_OnClick
+{
+  #keys: '[409348.0.298253415]'
+  Body:
+  [*
+    // Unplan the operations of the paperroll.
+    traverse( selection, Operation, op )
+    {
+      op.Unplan();
+    }
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListPaperRoll/Responsedef_ListPaperRoll_Menu_OnClick
+  Initiator: 'MenuUnplan572'
+}

@@ -6,7 +6,7 @@ Function CalcOnTime
   [*
     // Michael van den Hoogenband Feb-24-2020 (created)
     
-    value := this.DueDate() - this.DeliveryDate() >= 1;
+    value := this.DueDate() > this.DeliveryDate() and this.DeliveryDate() <> Date::MinDate();
     
     this.OnTime( value );
   *]

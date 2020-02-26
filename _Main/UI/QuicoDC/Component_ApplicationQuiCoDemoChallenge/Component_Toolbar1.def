@@ -10,6 +10,7 @@ Component Toolbar1
     [
       GBFlow.Column { grow: 0 id: 1 parent: 0 }
       GBFlow.Column { grow: 0 id: 2 parent: 0 }
+      GBFlow.Column { grow: 0 id: 915 parent: 0 }
     ]
     Elements:
     [
@@ -22,6 +23,11 @@ Component Toolbar1
       {
         Component => Button2
         Position { startcolumn: 2 startrow: 1 endcolumn: 2 endrow: 1 }
+      }
+      GBElement
+      {
+        Component => ButtonSync
+        Position { startcolumn: 915 startrow: 1 endcolumn: 915 endrow: 1 }
       }
     ]
     Gaps: [ left: 5 right: 5 top: 0 bottom: 0 inner: 5 ]
@@ -54,6 +60,17 @@ Component Toolbar1
         Tooltip: 'Redo'
       ]
     }
+    Component ButtonSync
+    {
+      #keys: '[409348.0.288666982]'
+      BaseType: 'Button'
+      Properties:
+      [
+        Image: 'SERVER_CLIENT_EXCHANGE'
+        LayoutGroup: 'Button'
+        Text: 'Synchronize'
+      ]
+    }
   ]
   Properties:
   [
@@ -62,6 +79,7 @@ Component Toolbar1
     {
       c: btnUndo
       c: Button2
+      c: ButtonSync
     }
   ]
 }

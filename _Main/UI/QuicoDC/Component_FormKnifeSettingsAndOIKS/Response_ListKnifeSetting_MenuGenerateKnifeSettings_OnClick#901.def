@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: ListKnifeSetting
+Response OnClick (KnifeSetting selection) id:Response_ListKnifeSetting_MenuGenerateKnifeSettings_OnClick_901
+{
+  #keys: '[409348.0.294453897]'
+  Body:
+  [*
+    // Create knifesettings for inidivduals orders
+    KnifeSetting::CreateAllSingels( selection.Company() );
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListKnifeSetting/Responsedef_ListKnifeSetting_Menu_OnClick
+  Initiator: 'MenuGenerateKnifeSettings'
+}

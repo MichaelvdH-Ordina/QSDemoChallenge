@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: ListKnifeSetting
+Response OnClick (KnifeSetting selection) id:Response_ListKnifeSetting_MenuGeneratePaperRolls_OnClick
+{
+  #keys: '[409348.0.294482166]'
+  Body:
+  [*
+    PaperRoll::GenerateAllRolls( selection.Company());
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListKnifeSetting/Responsedef_ListKnifeSetting_Menu_OnClick
+  Initiator: 'MenuGeneratePaperRolls'
+}

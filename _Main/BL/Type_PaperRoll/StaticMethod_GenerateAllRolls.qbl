@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod GenerateAllRolls (Company company)
+{
+  Description: 'Generate paper rolls for all available knife settings'
+  TextBody:
+  [*
+    // Michael van den Hoogenband Feb-25-2020 (created)
+    traverse( company, KnifeSetting, ks)
+    {
+      PaperRoll::Create( ks, ks.MakeRepetitionsSuggestion() );
+    }
+  *]
+}

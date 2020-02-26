@@ -6,6 +6,20 @@ Method GetPackingAftertask (PackingMachine machine, FoldingTask foldingtask) as 
   TextBody:
   [*
     // mho23702 Feb-21-2020 (created)
+    //time := guard( foldingtask.PreviousTask().End(), machine.Company().Time() );
+    //p := maxselect( machine,
+    //                Task,
+    //                task,
+    //                task.End() <= time,
+    //                task.End() );
+    //
+    //info( p.Operation().PlanUnit().Idenitifier(), time );
+    
+    //traverse( machine, Task, task, task.End()<= time )
+    //{
+    //  info( task.Operation().PlanUnit().Idenitifier(), task.End() )
+    //}
+    
     
     return guard( foldingtask.PreviousTask().astype( FoldingTask ).PackingTask(), null( PackingTask ) );
     

@@ -21,17 +21,23 @@ Component ListPaperRoll
             Component MenuSeparator { #keys: '[409348.0.274258752]' BaseType: 'Menu' Properties: [ Separator: true ] }
             Component MenuEditPaperRoll { #keys: '[409348.0.274258753]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
             Component MenuDeletePaperRoll { #keys: '[409348.0.274258754]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
+            Component MenuPlan874 { #keys: '[409348.0.298218875]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_ADD' Shortcut: 'Ctrl+P' Text: 'Plan' ] }
+            Component menuSeparator { #keys: '[409348.0.298219116]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuUnplan572 { #keys: '[409348.0.298219930]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_DELETE' Shortcut: 'Ctrl+U' Text: 'Unplan' ] }
           ]
           Properties:
           [
             ModeledStringList ChildOrdering
             {
+              c: MenuEditPaperRoll
+              c: MenuDeletePaperRoll
+              c: MenuSeparator
+              c: MenuPlan874
+              c: MenuUnplan572
+              c: menuSeparator
               c: MenuActions
               c: MenuFilter
               c: menuListQuintiqSetQuantor
-              c: MenuSeparator
-              c: MenuEditPaperRoll
-              c: MenuDeletePaperRoll
             }
           ]
         }

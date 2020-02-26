@@ -7,7 +7,6 @@ Response OnClick (Order selection) id:Response_ListOrder_MenuPlan924_OnClick
   [*
     selection.FirstOperation().Plan();
   *]
-  CanBindMultiple: false
   DefinitionID => /ListOrder/Responsedef_ListOrder_Menu_OnClick
   Initiator: 'MenuPlan924'
 }

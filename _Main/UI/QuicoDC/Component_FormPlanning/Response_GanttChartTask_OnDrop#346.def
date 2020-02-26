@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: GanttChartTask
+Response OnDrop (PaperRoll source, Machine droprow, Task droptarget, 
+  Task beforedroptarget) id:Response_GanttChartTask_OnDrop_346
+{
+  #keys: '[409348.0.298213351]'
+  Body:
+  [*
+    // Plan the operation of a paperroll.
+    traverse( source, Operation, op)
+    {
+      op.Plan();
+    }
+  *]
+  CanBindMultiple: false
+  DefinitionID: 'Responsedef_GanttChart_OnDrop'
+}

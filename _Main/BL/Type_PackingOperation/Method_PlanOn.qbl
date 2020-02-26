@@ -6,7 +6,7 @@ MethodOverride PlanOn (Machine machine, Task aftertask) as Task
   [*
     packingtask := this.PlanPacking( machine.astype( PackingMachine ), aftertask.astype( PackingTask ) );
     fold := this.PreviousOperation().astype( FoldingOperation );
-    foldmachine := fold.Task().Machine().astype( FoldingMachine );
+    foldmachine := packingtask.PreviousTask().astype( PackingTask ).FoldingTask().Machine().astype( FoldingMachine );
     
     foldingtask := fold.PlanFolding( foldmachine, this.GetFoldingAftertask( foldmachine, packingtask ) );
     
