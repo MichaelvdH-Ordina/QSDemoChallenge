@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Thickness
+{
+  #keys: '3[409348.0.98300240][409348.0.98300239][409348.0.98300241]'
+  Description: 'Main thickness of the KS'
+  ValueType: Number
+}

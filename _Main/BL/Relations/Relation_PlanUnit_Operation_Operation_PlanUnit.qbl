@@ -6,6 +6,8 @@ Relation PlanUnit_Operation_Operation_PlanUnit
   ProceduralSequenceRelationStrategy
   {
     #keys: '13[0.0.0][107600.0.334729170][107600.0.334729164][107600.0.334729171][107600.0.334729165][107600.0.334729172][107600.0.334729166][107600.0.334729173][107600.0.334729167][107600.0.334729174][107600.0.334729168][107600.0.334729175][107600.0.334729169]'
+    SequenceElementSuffix: 'Operation'
+    SequenceSuffix: 'Operation'
   }
   RelationSide.LeftSide Operation
   {

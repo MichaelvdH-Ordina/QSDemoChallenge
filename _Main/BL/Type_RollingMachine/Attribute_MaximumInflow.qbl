@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute MaximumInflow
+{
+  #keys: '3[409348.0.180700093][409348.0.180700092][409348.0.180700094]'
+  Description: 'The max inflow of paper pulp in KG/minute'
+  ValueType: Real
+}

@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute DueDate
+{
+  #keys: '3[409348.0.277751175][409348.0.277751174][409348.0.277751176]'
+  Description: 'Earliest due date of all order in paper roll'
+  ValueType: Date
+}

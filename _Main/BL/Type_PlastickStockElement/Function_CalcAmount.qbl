@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcAmount
+{
+  Description: 'Calc the amount.'
+  TextBody:
+  [*
+    // Michael van den Hoogenband Feb-27-2020 (created)
+  *]
+}

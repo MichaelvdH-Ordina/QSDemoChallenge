@@ -1,0 +1,21 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcIsPlanned
+{
+  TextBody:
+  [*
+    foldandpack := forall( this,
+                           Operation,
+                           oper,
+                           oper.IsPlanned() );
+    
+    rollandcut := forall( this,
+                          OrderInPaperRoll.PaperRoll,
+                          oper,
+                          oper.IsPlanned() );
+    
+    value := foldandpack and rollandcut;
+    
+    this.IsPlanned( value );
+  *]
+}

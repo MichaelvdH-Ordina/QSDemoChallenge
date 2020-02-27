@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization RollingOperation
+{
+  #keys: '2[409348.0.167351011][409348.0.167351010]'
+  Description: 'Rolling operation'
+  Parent: Operation
+  StructuredName: 'RollingOperations'
+}

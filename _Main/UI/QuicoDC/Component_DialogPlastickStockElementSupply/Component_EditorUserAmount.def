@@ -1,0 +1,28 @@
+Quintiq file version 2.0
+Component EditorUserAmount
+{
+  #keys: '[409348.0.309547398]'
+  BaseType: 'Editor'
+  Children:
+  [
+    Component popupEdit845
+    {
+      #keys: '[409348.0.309547399]'
+      BaseType: 'popupEdit'
+      Properties:
+      [
+        PosX: 5
+        PosY: 5
+      ]
+    }
+  ]
+  Properties:
+  [
+    BackgroundColor: 'Window'
+    Border: true
+    ContextMenu: 'popupEdit845'
+    DataBinding: 'DialogPlastickStockElementSupply.Data.UserAmount'
+    Mask: 'NUMBER'
+    WordWrap: true
+  ]
+}

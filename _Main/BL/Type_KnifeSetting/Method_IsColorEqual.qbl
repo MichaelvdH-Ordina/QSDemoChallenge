@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+Method IsColorEqual (Order order) declarative remote as Boolean
+{
+  Description: 'Checks if the color of the order is equal to that of the kinfe setting'
+  TextBody:
+  [*
+    // mho23702 Feb-14-2020 (created)
+    feedbackobject := FeedbackObject::LocalFeedback();
+    value := ( this.Color() = order.Color() or this.Color() = '');
+    text := Translations::CheckColor( this, order );
+    feedbackobject.AddSoft( value, text );
+    
+    return feedbackobject.IsAllowed();
+  *]
+}

@@ -1,0 +1,22 @@
+Quintiq file version 2.0
+#parent: #root
+Method IsOrdersBelowMax () declarative remote as Boolean
+{
+  Description: 'Check if the amount of orders is below the maximum allowed.'
+  TextBody:
+  [*
+    // mho23702 Feb-17-2020 (created)
+    fbo := FeedbackObject::LocalFeedback();
+    
+    value := counter( this,
+                      OrderInKnifeSetting,
+                      oiks,
+                      true ) < 3;
+    
+    text := Translations::CheckAmountOrders( this );
+    
+    fbo.AddSoft( value, text );
+    
+    return fbo.IsAllowed();
+  *]
+}

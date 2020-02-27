@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: GanttChartTask
+Response OnClick (Task selection) id:Response_GanttChartTask_MenuUnplan_OnClick
+{
+  #keys: '[409348.0.245913166]'
+  Body:
+  [*
+    // Unplan selected orders.
+    if( not selection.istype( PackingTask ) )
+    {
+      selection.Operation().Unplan();
+    }
+  *]
+  DefinitionID => /GanttChartTask/Responsedef_GanttChartTask_Menu_OnClick
+  GroupServerCalls: true
+  Initiator: 'MenuUnplan'
+}

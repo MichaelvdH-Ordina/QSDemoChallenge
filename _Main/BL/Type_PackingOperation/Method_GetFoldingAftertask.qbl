@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#parent: #root
+Method GetFoldingAftertask (FoldingMachine machine, PackingTask packingtask) as FoldingTask
+{
+  TextBody:
+  [*
+    // mho23702 Feb-21-2020 (created)
+    return guard( packingtask.PreviousTask().astype( PackingTask ).FoldingTask(), null( FoldingTask ) );
+  *]
+}

@@ -1,0 +1,90 @@
+Quintiq file version 2.0
+Component SplitterWnd521
+{
+  #keys: '[409348.0.274258520]'
+  BaseType: 'SplitterWnd'
+  Children:
+  [
+    Component SplitterPanePR
+    {
+      #keys: '[409348.0.274258521]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 777 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListPaperRoll
+            Position { startcolumn: 777 startrow: 876 endcolumn: 777 endrow: 876 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 876 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListPaperRoll
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Title: 'Paper rolls'
+      ]
+    }
+    Component SplitterPaneOper
+    {
+      #keys: '[409348.0.274258522]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 265 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListOperation
+            Position { startcolumn: 265 startrow: 338 endcolumn: 265 endrow: 338 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 338 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListOperation
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Title: 'Operations'
+      ]
+    }
+  ]
+  Properties:
+  [
+    DoubleBuffering: false
+    ModeledStringList ChildOrdering
+    {
+      c: SplitterPanePR
+      c: SplitterPaneOper
+    }
+  ]
+}

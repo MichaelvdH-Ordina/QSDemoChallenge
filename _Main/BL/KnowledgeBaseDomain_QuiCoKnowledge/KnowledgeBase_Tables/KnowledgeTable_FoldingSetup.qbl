@@ -1,0 +1,32 @@
+Quintiq file version 2.0
+#parent: #root
+KnowledgeTable FoldingSetup
+{
+  #keys: '6[409348.0.180700088][409348.0.180700085][0.0.0][409348.0.180700086][0.0.0][409348.0.180700087]'
+  Description: 'The setup time between two folding tasks.'
+  EnforceColumnOrder: true
+  ColumnDefinitions:
+  [
+    Column Machine
+    {
+      ColumnWeight: 1
+      Description: 'The machine on which a task is performed.'
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column LengthDifference
+    {
+      ColumnWeight: 1
+      Description: 'The difference in length between two following foldingtasks'
+      ISODefaultValue: '*'
+      Type: Number
+    }
+    Column SetupDuration
+    {
+      ColumnWeight: 1
+      Description: 'The setup duration based on the length difference in hours.'
+      ISODefaultValue: '*'
+      Type: Duration
+    }
+  ]
+}

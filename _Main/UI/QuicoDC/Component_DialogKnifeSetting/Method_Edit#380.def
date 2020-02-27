@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: #root
+Method Edit (GUIComponent parent, shadow[KnifeSetting] selection) id:Method_DialogKnifeSetting_Edit_380
+{
+  #keys: '[409348.0.109252201]'
+  Body:
+  [*
+    Dialog.Data( selection );
+    
+    Dialog.DoModal( parent );
+  *]
+}

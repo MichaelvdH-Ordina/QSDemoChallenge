@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+KnowledgeTable RollingMachines
+{
+  #keys: '6[409348.0.180700043][409348.0.180700040][0.0.0][409348.0.180700041][0.0.0][409348.0.180700042]'
+  Description: 'The information for the rolling machines.'
+  EnforceColumnOrder: true
+  ColumnDefinitions:
+  [
+    Column Name
+    {
+      ColumnWeight: 1
+      Description: 'Name of the machine'
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column MaxInflow
+    {
+      ColumnWeight: 1
+      Description: 'The max inflow of paper pulp in kg/minute'
+      ISODefaultValue: '*'
+      Type: Real
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization CuttingMachine
+{
+  #keys: '2[409348.0.167351026][409348.0.167351025]'
+  Description: 'Cutting machine'
+  Parent: Machine
+  StructuredName: 'CuttingMachines'
+}

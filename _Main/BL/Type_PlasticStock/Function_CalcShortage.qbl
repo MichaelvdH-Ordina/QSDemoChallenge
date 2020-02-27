@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcShortage
+{
+  TextBody:
+  [*
+    // Michael van den Hoogenband Feb-27-2020 (created)
+    
+    value := guard( minvalue( floor( this.Amount( this.Company().Time() + Duration::Weeks( 2 ) ) ), 0 ), 0);
+    
+    this.Shortage( - value );
+  *]
+}

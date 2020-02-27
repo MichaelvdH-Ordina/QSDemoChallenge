@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcWidth
+{
+  Description: 'Calc the total width of the KS'
+  TextBody:
+  [*
+    // mho23702 Feb-13-2020 (created)
+    
+    value := sum( this, OrderInKnifeSetting, oiks, true,
+                  oiks.Order().Width()*oiks.WidthInKnifeSetting() );
+    
+    this.Width( value );
+  *]
+}

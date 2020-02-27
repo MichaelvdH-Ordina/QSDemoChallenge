@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute RemaingProduction
+{
+  #keys: '3[409348.0.147261079][409348.0.147261078][409348.0.147261080]'
+  Description: 'The amount of the order already produced.'
+  ValueType: Number
+}

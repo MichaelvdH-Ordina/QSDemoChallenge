@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcAvailableWidth
+{
+  Description: 'Calc the available width'
+  TextBody:
+  [*
+    // mho23702 Feb-14-2020 (created)
+    
+    value := this.Company().GlobalParameters().RollWidth() - this.Width();
+    
+    this.AvailableWidth( value );
+  *]
+}

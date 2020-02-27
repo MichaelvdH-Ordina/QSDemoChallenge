@@ -1,0 +1,40 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent FormImgKnifeSetting
+{
+  #keys: '[409348.0.298261143]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 373 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => CustomDrawComponent583
+        Position { startcolumn: 373 startrow: 314 endcolumn: 373 endrow: 314 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 314 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: CustomDrawComponent583
+  ]
+  Properties:
+  [
+    Height: 309
+    IncludeInView: true
+    Title: 'Knife setting'
+    Width: 312
+  ]
+}

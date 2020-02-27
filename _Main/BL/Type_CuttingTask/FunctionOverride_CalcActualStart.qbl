@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcActualStart
+{
+  TextBody:
+  [*
+    companytime := this.Machine().Company().Time();
+    
+    endofrolling := guard( this.Operation().PreviousOperation().Task().End(), companytime );
+    earlieststart := companytime + this.SetupDuration();
+    endofprevtask := guard( this.PreviousTask().End() + this.SetupDuration(), earlieststart );
+    
+    value := maxvalue( endofrolling, earlieststart, endofprevtask );
+    this.ActualStart( value );
+  *]
+}

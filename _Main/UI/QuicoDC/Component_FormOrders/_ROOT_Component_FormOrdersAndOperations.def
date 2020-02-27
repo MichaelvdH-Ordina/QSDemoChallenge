@@ -1,0 +1,41 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent FormOrdersAndOperations
+{
+  #keys: '[409348.0.147215790]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 890 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => SplitterWnd907
+        Position { startcolumn: 890 startrow: 346 endcolumn: 890 endrow: 346 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 346 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: SplitterWnd907
+  ]
+  Properties:
+  [
+    Height: 264
+    Image: 'SHOPPINGCART'
+    IncludeInView: true
+    Title: 'Orders'
+    Width: 351
+  ]
+}

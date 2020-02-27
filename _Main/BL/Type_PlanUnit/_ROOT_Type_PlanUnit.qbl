@@ -7,5 +7,12 @@ Type PlanUnit
   BaseType: Object
   Description: 'Supertype for all plannable types'
   IsUserAbstract: true
+  OnDelete:
+  [*
+    traverse( this, Operation, operation)
+    {
+      operation.Unplan();
+    }
+  *]
   StructuredName: 'PlanUnits'
 }

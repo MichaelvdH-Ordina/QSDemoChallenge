@@ -1,0 +1,97 @@
+Quintiq file version 2.0
+Component ListOrderInPaperRoll
+{
+  #keys: '[409348.0.147275948]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles871
+    Component popupList309
+    {
+      #keys: '[409348.0.147275952]'
+      BaseType: 'popupList'
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor539
+    {
+      #keys: '[409348.0.147275954]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'ListPaperRoll'
+        DataType: 'PaperRoll'
+        PosX: 5
+        PosY: 30
+        Transformation: 'OrderInPaperRoll'
+      ]
+    }
+    Component GUIDataSetLevel600
+    {
+      #keys: '[409348.0.147275955]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        DataExtractor: 'GUIDataExtractor539'
+        PosX: 35
+        PosY: 30
+        SortCriteria: "datamember:'Order.OrderNr'"
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList309'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles871
+      c: popupList309
+      c: GUIDataExtractor539
+      c: GUIDataSetLevel600
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrderInPaperRoll_Menu_OnClick
+    {
+      #keys: '[409348.0.147275956]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[457.0.1234056]'
+          Binding: 'this.Selection()'
+        }
+        ResponseDefinitionArgument masterselection
+        {
+          #keys: '[457.0.1234651]'
+          Binding: 'ListPaperRoll.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrderInPaperRoll_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.147275957]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[457.0.1234101]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: GanttChartTask
+Response OnDrop (Task source, Machine droprow, Task droptarget, 
+  Task beforedroptarget, Task afterdroptarget) id:Response_GanttChartTask_OnDrop_889
+{
+  #keys: '[409348.0.256914207]'
+  Body:
+  [*
+    // Drag/drop task
+    source.Operation().PlanOn( droprow, beforedroptarget );
+  *]
+  CanBindMultiple: false
+  DefinitionID: 'Responsedef_GanttChart_OnDrop'
+  Precondition:
+  [*
+    source.Operation().IsAllowedOnMachine( droprow )
+  *]
+}

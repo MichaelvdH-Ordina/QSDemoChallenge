@@ -1,0 +1,29 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization PackingOperation
+{
+  #keys: '2[409348.0.167351020][409348.0.167351019]'
+  Description: 'Packing operation'
+  OnCreate:
+  [*
+    Transaction::Transaction().Propagate( attribute( Order, Length ) );
+    
+    ps := select( this,
+                  PlanUnit.astype( Order ).Company.PlasticStock,
+                  stock,
+                  stock.Length() = this.PlanUnit().astype( Order ).Length() );
+    
+    plasticconsumption := PlastickStockElementConsumption::Create( ps );
+    this.PlastickStockElementConsumption( relset, plasticconsumption );
+  *]
+  OnDelete:
+  [*
+    if( not isnull( this.PlastickStockElementConsumption() ) )
+    {
+      this.PlastickStockElementConsumption().Delete();
+    }
+  *]
+  Parent: Operation
+  StructuredName: 'PackingOperations'
+}

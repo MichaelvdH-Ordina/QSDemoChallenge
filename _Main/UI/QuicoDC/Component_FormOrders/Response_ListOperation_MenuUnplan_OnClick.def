@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: ListOperation
+Response OnClick (Operation selection) id:Response_ListOperation_MenuUnplan_OnClick
+{
+  #keys: '[409348.0.264506675]'
+  Body:
+  [*
+    // Unplan the folding and packing.
+    selection.Unplan();
+  *]
+  DefinitionID => /ListOperation/Responsedef_ListOperation_Menu_OnClick
+  GroupServerCalls: true
+  Initiator: 'MenuUnplan'
+}

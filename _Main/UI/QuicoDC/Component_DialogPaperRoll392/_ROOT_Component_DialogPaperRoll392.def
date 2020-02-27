@@ -1,0 +1,67 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent DialogPaperRoll
+{
+  #keys: '[409348.0.147276340]'
+  BaseType: 'Dialog'
+  Databinding: 'shadow[PaperRoll]'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 0 id: 576 parent: 0 }
+      GBFlow.Column { grow: 128 id: 996 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => LabelRepetitions
+        Position { startcolumn: 576 startrow: 326 endcolumn: 576 endrow: 326 }
+      }
+      GBElement
+      {
+        Component => EditorRepetitions
+        Position { startcolumn: 996 startrow: 326 endcolumn: 996 endrow: 326 }
+      }
+    ]
+    Gaps: [ left: 10 right: 10 top: 10 bottom: 10 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 326 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: EditorRepetitions
+    Component LabelRepetitions
+    {
+      #keys: '[409348.0.147276345]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Repetitions'
+        Transparent: true
+      ]
+    }
+    #child: Toolbar897
+  ]
+  Properties:
+  [
+    EnterButton: 'btnOk'
+    EscapeButton: 'btnCancel'
+    Height: 108
+    Image: 'PAPER_ROLL'
+    Title: 'Edit repetitions'
+    Width: 224
+    ModeledStringList ChildOrdering
+    {
+      c: EditorRepetitions
+      c: LabelRepetitions
+      c: Toolbar897
+    }
+  ]
+}

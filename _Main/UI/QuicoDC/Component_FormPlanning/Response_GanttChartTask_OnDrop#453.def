@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: GanttChartTask
+Response OnDrop (Order source, Machine droprow, Task droptarget, 
+  Task beforedroptarget) id:Response_GanttChartTask_OnDrop_453
+{
+  #keys: '[409348.0.294484539]'
+  Body:
+  [*
+    // Drop order on gantt chart and plan F and P
+    source.FirstOperation().Plan();
+  *]
+  CanBindMultiple: false
+  DefinitionID: 'Responsedef_GanttChart_OnDrop'
+}

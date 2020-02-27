@@ -1,0 +1,355 @@
+Quintiq file version 2.0
+Component GanttChartTask
+{
+  #keys: '[409348.0.174717769]'
+  BaseType: 'GanttChart'
+  Children:
+  [
+    Component menuGanttChart
+    {
+      #keys: '[409348.0.174717770]'
+      BaseType: 'popupGanttchart'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.555535]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuUnplan { #keys: '[409348.0.245915077]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_DELETE' Shortcut: 'Del' Text: 'Unplan' ] }
+            Component menuSeparator { #keys: '[409348.0.245915185]' BaseType: 'Menu' Properties: [ Separator: true ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuUnplan
+              c: menuSeparator
+              c: MenuActions
+              c: MenuFilter
+              c: MenuNavigation
+            }
+          ]
+        }
+      ]
+    }
+    Component GUIDataExtractor204
+    {
+      #keys: '[409348.0.174717817]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 50
+        PosY: 5
+      ]
+    }
+    #child: GanttChartRowDefinition440
+    Component ChartMarking471
+    {
+      #keys: '[409348.0.174717820]'
+      BaseType: 'ChartMarking'
+      Properties:
+      [
+        MarkPosition: 'Company.Time()'
+        PosX: 100
+        PosY: 50
+      ]
+    }
+    Component NavigationToolbar218
+    {
+      #keys: '[409348.0.174717821]'
+      BaseType: 'NavigationToolbar'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 364 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /dpNavigationPanel
+            Position { startcolumn: 364 startrow: 512 endcolumn: 364 endrow: 512 }
+          }
+        ]
+        Gaps: [ left: 5 right: 5 top: 5 bottom: 5 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 0 id: 512 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: dpNavigationPanel
+      ]
+      Properties:
+      [
+        Location: 'bottom'
+        Priority: 1
+        Size: 37
+      ]
+    }
+    Component menuGanttChartRows
+    {
+      #keys: '[409348.0.174717826]'
+      BaseType: 'popupGanttchartRows'
+      Children:
+      [
+        Component PopupParent id:PopupParent_1
+        {
+          #keys: '[530.0.59473]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuFilter id:MenuFilter_1
+            {
+              #keys: '[104128.0.41519836]'
+              BaseType: 'MenuFilter'
+              IsDerived: true
+              Properties:
+              [
+                ModeledStringList ChildOrdering
+                {
+                  c: menuEditFilter
+                  c: MenuClearFilter
+                  c: MenuStoredFilters
+                  c: Menu_1
+                  c: menuHideGanttchartRow
+                  c: MenuUnhideAllRows
+                  c: Menu1_1
+                  c: menuShowAllGanttChartRows
+                }
+              ]
+            }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuFilter_1
+              c: MenuSortGanttChartRows
+            }
+          ]
+        }
+      ]
+    }
+    Component X
+    {
+      #keys: '[409348.0.174717833]'
+      BaseType: 'UserConfigurableInformation'
+      Properties:
+      [
+        Identification: 'Machine'
+        ObjectText: 'VALUE(object.Name())'
+        ObjectType: 'Machine'
+        PosX: 50
+        PosY: 50
+      ]
+    }
+    Component X793
+    {
+      #keys: '[409348.0.174717834]'
+      BaseType: 'UserConfigurableInformation'
+      Properties:
+      [
+        Identification: 'Task'
+        ObjectText: 'VALUE(object.Operation().PlanUnit().Idenitifier())'
+        ObjectType: 'Task'
+        PosX: 50
+        PosY: 80
+      ]
+    }
+  ]
+  Properties:
+  [
+    BackgroundColor: 'Window'
+    Border: true
+    ContextMenu: 'menuGanttChart'
+    NavigationRangeManager:
+    [*
+      {
+        Name := '1 Day'
+        Interval := 2
+        Count := 1
+        Offset := 0
+        Interval := 1
+        Count := 2
+        Offset := 0
+        IntervalStartType := 2
+        Item := 0
+      }
+      {
+        Name := '2 Days'
+        Interval := 2
+        Count := 2
+        Offset := 0
+        Interval := 1
+        Count := 2
+        Offset := 0
+        IntervalStartType := 2
+        Item := 0
+      }
+      {
+        Name := '4 Days'
+        Interval := 2
+        Count := 4
+        Offset := 0
+        Interval := 1
+        Count := 2
+        Offset := 0
+        IntervalStartType := 2
+        Item := 0
+      }
+      {
+        Name := '1 Week'
+        Interval := 3
+        Count := 1
+        Offset := 0
+        Interval := 1
+        Count := 2
+        Offset := 0
+        IntervalStartType := 3
+        Item := 0
+      }
+      {
+        Name := '2 Weeks'
+        Interval := 3
+        Count := 2
+        Offset := 0
+        Interval := 2
+        Count := 1
+        Offset := 0
+        IntervalStartType := 3
+        Item := 0
+      }
+      {
+        Name := '4 Weeks'
+        Interval := 3
+        Count := 4
+        Offset := 0
+        Interval := 2
+        Count := 1
+        Offset := 0
+        IntervalStartType := 3
+        Item := 0
+      }
+      {
+        Name := '1 Month'
+        Interval := 4
+        Count := 1
+        Offset := 0
+        Interval := 2
+        Count := 2
+        Offset := 0
+        IntervalStartType := 4
+        Item := 1
+      }
+      {
+        Name := '3 Months'
+        Interval := 4
+        Count := 3
+        Offset := 0
+        Interval := 3
+        Count := 1
+        Offset := 0
+        IntervalStartType := 4
+        Item := 1
+      }
+      {
+        Name := '6 Months'
+        Interval := 4
+        Count := 6
+        Offset := 0
+        Interval := 3
+        Count := 1
+        Offset := 0
+        IntervalStartType := 4
+        Item := 1
+      }
+      {
+        Name := '1 Year'
+        Interval := 5
+        Count := 1
+        Offset := 0
+        Interval := 3
+        Count := 1
+        Offset := 0
+        IntervalStartType := 6
+        Item := 1
+      }
+      {
+        Name := '5 Years'
+        Interval := 5
+        Count := 5
+        Offset := 0
+        Interval := 4
+        Count := 1
+        Offset := 0
+        IntervalStartType := 6
+        Item := 1
+      }
+    *]
+    RowContextMenu: 'menuGanttChartRows'
+    ModeledStringList ChildOrdering
+    {
+      c: menuGanttChart
+      c: GUIDataExtractor204
+      c: GanttChartRowDefinition440
+      c: ChartMarking471
+      c: NavigationToolbar218
+      c: menuGanttChartRows
+      c: X
+      c: X793
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_GanttChartTask_Menu_OnClick
+    {
+      #keys: '[409348.0.174717831]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[531.0.1057170]'
+          Binding: 'this.Selection()'
+        }
+        ResponseDefinitionArgument row
+        {
+          #keys: '[531.0.1057185]'
+          Binding: 'this.ContextMenuRowObject()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_GanttChartTask_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.174717832]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[531.0.1057203]'
+          Binding: 'this.Selection()'
+        }
+        ResponseDefinitionArgument row
+        {
+          #keys: '[531.0.1057217]'
+          Binding: 'this.ContextMenuRowObject()'
+        }
+      ]
+    }
+  ]
+}

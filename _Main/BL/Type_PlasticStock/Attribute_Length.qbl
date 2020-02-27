@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Length
+{
+  #keys: '3[409348.0.302000215][409348.0.302000214][409348.0.302000216]'
+  Description: 'The length of the plastic in this stock.'
+  ValueType: Number
+}

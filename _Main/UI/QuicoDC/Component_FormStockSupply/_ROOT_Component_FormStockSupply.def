@@ -1,0 +1,40 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent FormStockSupply
+{
+  #keys: '[409348.0.302062458]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 932 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => SplitterWndPlasticStock_PlastickStockElementSupply
+        Position { startcolumn: 932 startrow: 315 endcolumn: 932 endrow: 315 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 315 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: SplitterWndPlasticStock_PlastickStockElementSupply
+  ]
+  Properties:
+  [
+    Height: 365
+    IncludeInView: true
+    Title: 'Plastic supply'
+    Width: 408
+  ]
+}

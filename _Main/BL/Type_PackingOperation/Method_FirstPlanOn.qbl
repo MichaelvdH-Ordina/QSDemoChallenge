@@ -1,0 +1,21 @@
+Quintiq file version 2.0
+#parent: #root
+Method FirstPlanOn (Machine machine, Task aftertask) as PackingTask
+{
+  TextBody:
+  [*
+    // Michael van den Hoogenband Feb-24-2020 (created)
+    packingtask := this.PlanPacking( machine.astype( PackingMachine ), aftertask.astype( PackingTask ) );
+    fold := this.PreviousOperation().astype( FoldingOperation );
+    foldmachine := fold.SelectMachine().astype( FoldingMachine );
+    
+    foldingtask := fold.PlanFolding( foldmachine, foldmachine.LastTask().astype( FoldingTask ) );
+    
+    return packingtask;
+  *]
+  SuppressedModelError
+  {
+    ElementKey: '[1.2.1629]'
+    ErrorKey: '[1.12.376]'
+  }
+}

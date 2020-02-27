@@ -1,0 +1,88 @@
+Quintiq file version 2.0
+Component SplitterWndPlasticStock_PlastickStockElementSupply
+{
+  #keys: '[409348.0.309547024]'
+  BaseType: 'SplitterWnd'
+  Children:
+  [
+    Component SplitterPane717
+    {
+      #keys: '[409348.0.309547025]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 715 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListPlasticStock
+            Position { startcolumn: 715 startrow: 133 endcolumn: 715 endrow: 133 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 133 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListPlasticStock
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+      ]
+    }
+    Component SplitterPane808
+    {
+      #keys: '[409348.0.309547026]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 746 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListPlastickStockElementSupply
+            Position { startcolumn: 746 startrow: 478 endcolumn: 746 endrow: 478 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 478 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListPlastickStockElementSupply
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+      ]
+    }
+  ]
+  Properties:
+  [
+    DoubleBuffering: false
+    ModeledStringList ChildOrdering
+    {
+      c: SplitterPane717
+      c: SplitterPane808
+    }
+  ]
+}

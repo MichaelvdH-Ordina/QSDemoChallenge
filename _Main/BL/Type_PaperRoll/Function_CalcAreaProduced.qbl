@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcAreaProduced
+{
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    
+    value := this.Length() * this.KnifeSetting().Company().GlobalParameters().RollWidth();
+    
+    this.AreaProduced( value );
+  *]
+}

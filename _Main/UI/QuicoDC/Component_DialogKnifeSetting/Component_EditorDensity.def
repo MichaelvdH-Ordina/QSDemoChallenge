@@ -1,0 +1,28 @@
+Quintiq file version 2.0
+Component EditorDensity
+{
+  #keys: '[409348.0.109252186]'
+  BaseType: 'Editor'
+  Children:
+  [
+    Component popupEdit519
+    {
+      #keys: '[409348.0.109252187]'
+      BaseType: 'popupEdit'
+      Properties:
+      [
+        PosX: 5
+        PosY: 5
+      ]
+    }
+  ]
+  Properties:
+  [
+    BackgroundColor: 'Window'
+    Border: true
+    ContextMenu: 'popupEdit519'
+    DataBinding: 'Dialog.Data.Density'
+    Mask: 'NUMBER'
+    WordWrap: true
+  ]
+}

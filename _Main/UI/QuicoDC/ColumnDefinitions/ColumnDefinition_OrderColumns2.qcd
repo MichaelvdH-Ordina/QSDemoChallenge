@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+ColumnDefinition
+{
+  #keys: '1[409348.0.109250645]'
+  Name: 'OrderColumns2'
+  Type: 'Order'
+  Columns:
+  [
+    Column { #keys: '1[409348.0.109250653]' DataPath: OrderNr }
+    Column { #keys: '1[409348.0.109250654]' DataPath: Quantity }
+    Column { #keys: '1[409348.0.109250655]' DataPath: DueDate }
+  ]
+}

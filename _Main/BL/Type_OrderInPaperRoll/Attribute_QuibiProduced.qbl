@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute QuibiProduced
+{
+  #keys: '3[409348.0.147251378][409348.0.147251377][409348.0.147251379]'
+  Description: 'The amount of quibi produced with the roll.'
+  ValueType: Number
+}

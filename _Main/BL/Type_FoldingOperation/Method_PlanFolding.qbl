@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+Method PlanFolding (FoldingMachine machine, FoldingTask aftertask) as FoldingTask
+{
+  Description: 'Plan the folding operation'
+  TextBody:
+  [*
+    // mho23702 Feb-21-2020 (created)
+    foldingtask := this.Task().astype( FoldingTask );
+    
+    if( isnull( foldingtask ) )
+    {
+      foldingtask := FoldingTask::Create( machine, aftertask );
+      this.Task( relset, foldingtask );
+    }
+    else
+    {
+      machine.MoveAfterTask( foldingtask, aftertask );
+    }
+    
+    this.IsPlanned( true );
+    
+    return foldingtask;
+  *]
+}

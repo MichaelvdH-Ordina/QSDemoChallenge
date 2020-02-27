@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (Company owner) as KnifeSetting
+{
+  Description: 'Create a new KnifeSetting'
+  TextBody:
+  [*
+    // mho23702 Feb-13-2020 (created)
+    result := owner.KnifeSetting( relnew );
+    
+    return result;
+  *]
+}

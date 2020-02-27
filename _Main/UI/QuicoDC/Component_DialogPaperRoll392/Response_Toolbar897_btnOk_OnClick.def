@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: Toolbar897/btnOk
+Response OnClick () id:Response_Toolbar897_btnOk_OnClick
+{
+  #keys: '[409348.0.147276354]'
+  Body:
+  [*
+    Dialog.ApplyChanges();
+    Dialog.EndModal(1);
+  *]
+  DefinitionID: 'Responsedef_GUIButtonBase_OnClick'
+}

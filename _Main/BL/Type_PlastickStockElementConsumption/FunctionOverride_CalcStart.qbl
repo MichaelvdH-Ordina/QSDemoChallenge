@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcStart
+{
+  TextBody:
+  [*
+    value := guard( this.PackingOperation().Task().ActualStart(), DateTime::MaxDateTime() );
+    this.Start( value );
+  *]
+}

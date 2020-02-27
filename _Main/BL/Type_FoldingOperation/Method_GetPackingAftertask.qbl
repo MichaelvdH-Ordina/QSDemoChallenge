@@ -1,0 +1,39 @@
+Quintiq file version 2.0
+#parent: #root
+Method GetPackingAftertask (PackingMachine machine, FoldingTask foldingtask) as PackingTask
+{
+  Description: 'Determine what the packing aftertask is.'
+  TextBody:
+  [*
+    // mho23702 Feb-21-2020 (created)
+    //time := guard( foldingtask.PreviousTask().End(), machine.Company().Time() );
+    //p := maxselect( machine,
+    //                Task,
+    //                task,
+    //                task.End() <= time,
+    //                task.End() );
+    //
+    //info( p.Operation().PlanUnit().Idenitifier(), time );
+    
+    //traverse( machine, Task, task, task.End()<= time )
+    //{
+    //  info( task.Operation().PlanUnit().Idenitifier(), task.End() )
+    //}
+    
+    
+    return guard( foldingtask.PreviousTask().astype( FoldingTask ).PackingTask(), null( PackingTask ) );
+    
+    /*
+    time := foldingtask.PreviousTask().End();
+    
+    p := select( machine,
+                 Task.astype( PackingTask ),
+                 task,
+                 true,
+                 task.End() <= time );
+    
+    info( p.Operation().PlanUnit().Idenitifier() );
+    
+    return p;
+  *]
+}

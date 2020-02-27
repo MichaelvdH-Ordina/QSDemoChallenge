@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type Machine
+{
+  #keys: '5[409348.0.98300103][409348.0.98300101][0.0.0][409348.0.98300102][409348.0.98300104]'
+  BaseType: Object
+  Description: 'Machines on which tasks should be done'
+  StructuredName: 'Machines'
+}

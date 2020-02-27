@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute WidthInKnifeSetting
+{
+  #keys: '3[409348.0.109200134][409348.0.109200133][409348.0.109200135]'
+  Description: 'The number of times the width of an Order is in a KS'
+  ValueType: Number
+}

@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization FoldingTask
+{
+  #keys: '2[409348.0.98300219][409348.0.98300218]'
+  Description: 'Task for folding an Order'
+  Parent: Task
+  StructuredName: 'FoldingTasks'
+}

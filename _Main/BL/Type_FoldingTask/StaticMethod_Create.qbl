@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (FoldingMachine owner, FoldingTask aftertask) as FoldingTask
+{
+  Description: 'Create a folding task'
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    task := construct( FoldingTask );
+    value := task;
+    
+    owner.AddAfterTask( &task, aftertask );
+    
+    return value;
+  *]
+}

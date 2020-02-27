@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Shortage
+{
+  #keys: '3[409348.0.309561324][409348.0.309561323][409348.0.309561325]'
+  Description: 'The shortage of stock.'
+  ValueType: Number
+}

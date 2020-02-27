@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute AvailableWidth
+{
+  #keys: '3[409348.0.138541127][409348.0.138541126][409348.0.138541128]'
+  Description: 'The width still available for this KS.'
+  ValueType: Real
+}

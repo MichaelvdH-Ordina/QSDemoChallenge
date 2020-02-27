@@ -1,0 +1,230 @@
+Quintiq file version 2.0
+Component ChartComponentStockConsumption
+{
+  #keys: '[409348.0.302013387]'
+  BaseType: 'ChartComponent'
+  Children:
+  [
+    Component menuChartComponent
+    {
+      #keys: '[409348.0.302013388]'
+      BaseType: 'popupChartComponent'
+    }
+    Component GUIDataExtractor927
+    {
+      #keys: '[409348.0.302013414]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 50
+        PosY: 5
+        Transformation: 'PlasticStock'
+      ]
+    }
+    Component UserConfigurableInformation457
+    {
+      #keys: '[409348.0.302013415]'
+      BaseType: 'UserConfigurableInformation'
+      Properties:
+      [
+        ObjectType: 'ChartComponentMousePosition'
+        PosX: 50
+        PosY: 52
+      ]
+    }
+  ]
+  Properties:
+  [
+    AllowGap: true
+    AllowZero: true
+    BackgroundColor: 'Window'
+    Border: true
+    ContextMenu: 'menuChartComponent'
+    DataDefinition:
+    [*
+      Version := 1
+      {
+        0
+        ''
+        ''
+        SortCriteria := ''
+        'Plastick stock'
+        '"Stock " + [String]object.Length()'
+        'object.Amount()'
+        'object.Moment()'
+        ''
+        'Events'
+        '<none>'
+        'Day'
+        0
+        true
+        false
+        false
+        true
+        false
+        false
+        [0.0.0]
+        [409348.0.309581112]
+        false
+        Version := 1
+      }
+    *]
+    DataExtractor: 'GUIDataExtractor927'
+    NavigationRangeManager:
+    [*
+      {
+        Name := '1 Day'
+        Interval := 2
+        Count := 1
+        Offset := 0
+        Interval := 1
+        Count := 2
+        Offset := 0
+        IntervalStartType := 2
+        Item := 0
+      }
+      {
+        Name := '2 Days'
+        Interval := 2
+        Count := 2
+        Offset := 0
+        Interval := 1
+        Count := 2
+        Offset := 0
+        IntervalStartType := 2
+        Item := 0
+      }
+      {
+        Name := '4 Days'
+        Interval := 2
+        Count := 4
+        Offset := 0
+        Interval := 1
+        Count := 2
+        Offset := 0
+        IntervalStartType := 2
+        Item := 0
+      }
+      {
+        Name := '1 Week'
+        Interval := 3
+        Count := 1
+        Offset := 0
+        Interval := 1
+        Count := 2
+        Offset := 0
+        IntervalStartType := 3
+        Item := 0
+      }
+      {
+        Name := '2 Weeks'
+        Interval := 3
+        Count := 2
+        Offset := 0
+        Interval := 2
+        Count := 1
+        Offset := 0
+        IntervalStartType := 3
+        Item := 0
+      }
+      {
+        Name := '4 Weeks'
+        Interval := 3
+        Count := 4
+        Offset := 0
+        Interval := 2
+        Count := 1
+        Offset := 0
+        IntervalStartType := 3
+        Item := 0
+      }
+      {
+        Name := '1 Month'
+        Interval := 4
+        Count := 1
+        Offset := 0
+        Interval := 2
+        Count := 2
+        Offset := 0
+        IntervalStartType := 4
+        Item := 1
+      }
+      {
+        Name := '3 Months'
+        Interval := 4
+        Count := 3
+        Offset := 0
+        Interval := 3
+        Count := 1
+        Offset := 0
+        IntervalStartType := 4
+        Item := 1
+      }
+      {
+        Name := '6 Months'
+        Interval := 4
+        Count := 6
+        Offset := 0
+        Interval := 3
+        Count := 1
+        Offset := 0
+        IntervalStartType := 4
+        Item := 1
+      }
+      {
+        Name := '1 Year'
+        Interval := 5
+        Count := 1
+        Offset := 0
+        Interval := 3
+        Count := 1
+        Offset := 0
+        IntervalStartType := 6
+        Item := 1
+      }
+      {
+        Name := '5 Years'
+        Interval := 5
+        Count := 5
+        Offset := 0
+        Interval := 4
+        Count := 1
+        Offset := 0
+        IntervalStartType := 6
+        Item := 1
+      }
+    *]
+    RowHeading: '[String]object.Length()'
+    XScaleFullstopFormat: 'D-M'
+    XScaleLabel: 'Time'
+    YScaleFormat: 'N(Dec(0))'
+    YScaleFullstopFormat: 'N(Dec(0))'
+    YScaleLabel: 'Quantity'
+    ModeledStringList ChildOrdering
+    {
+      c: menuChartComponent
+      c: GUIDataExtractor927
+      c: UserConfigurableInformation457
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ChartComponentStockConsumption_Menu_OnClick
+    {
+      #keys: '[409348.0.302013417]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument chartline
+        {
+          #keys: '[905.0.1132425]'
+          Binding: 'this.ChartLine()'
+        }
+      ]
+    }
+  ]
+}

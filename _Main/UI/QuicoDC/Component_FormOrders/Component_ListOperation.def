@@ -1,0 +1,124 @@
+Quintiq file version 2.0
+Component ListOperation
+{
+  #keys: '[409348.0.172349636]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles729
+    Component popupList443
+    {
+      #keys: '[409348.0.172349640]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuPlan { #keys: '[409348.0.264504034]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_ADD' Shortcut: 'Ctrl+P' Text: 'Plan' ] }
+            Component menuSeparator { #keys: '[409348.0.264504187]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuUnplan { #keys: '[409348.0.264504733]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_DELETE' Shortcut: 'Ctrl+U' Text: 'Unplan' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuPlan
+              c: MenuUnplan
+              c: menuSeparator
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor203
+    {
+      #keys: '[409348.0.172349642]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'ListOrder'
+        DataType: 'Order'
+        PosX: 5
+        PosY: 30
+        Transformation: 'Operation'
+      ]
+    }
+    Component GUIDataSetLevel398
+    {
+      #keys: '[409348.0.172349643]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'OperationColumns'
+        DataExtractor: 'GUIDataExtractor203'
+        PosX: 35
+        PosY: 30
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList443'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles729
+      c: popupList443
+      c: GUIDataExtractor203
+      c: GUIDataSetLevel398
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOperation_Menu_OnClick
+    {
+      #keys: '[409348.0.172349644]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[525.0.1055280]'
+          Binding: 'this.Selection()'
+        }
+        ResponseDefinitionArgument masterselection
+        {
+          #keys: '[525.0.1055410]'
+          Binding: 'ListOrder.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOperation_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.172349645]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[525.0.1055325]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

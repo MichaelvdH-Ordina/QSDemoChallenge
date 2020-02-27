@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (CuttingMachine owner, CuttingTask aftertask) as CuttingTask
+{
+  Description: 'Create cutting task'
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    task := construct( CuttingTask );
+    value := task;
+    
+    owner.AddAfterTask( &task, aftertask );
+    
+    return value;
+  *]
+}

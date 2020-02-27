@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+#parent: ListKnifeSetting
+Response OnDrop (Order information, KnifeSetting target) id:Response_ListKnifeSetting_OnDrop
+{
+  #keys: '[409348.0.116712370]'
+  Body:
+  [*
+    // Add an Order to an KnifeSetting
+    dlg := construct( DialogOrderInKnifeSetting );
+    dlg.New( this, information, target );
+  *]
+  DefinitionID: 'Responsedef_GUIComponent_OnDrop'
+  Precondition:
+  [*
+    target.IsOrderAllowedInSetting( information );
+    
+    return FeedbackObject::IsAllowedWithOverride( dropaction.IsControl() );
+  *]
+}

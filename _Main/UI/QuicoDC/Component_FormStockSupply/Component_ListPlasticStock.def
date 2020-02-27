@@ -1,0 +1,118 @@
+Quintiq file version 2.0
+Component ListPlasticStock
+{
+  #keys: '[409348.0.309547027]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles651
+    Component popupList669
+    {
+      #keys: '[409348.0.309547031]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component menuSeparator { #keys: '[409348.0.309576697]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuNewPlasticOrder { #keys: '[409348.0.313202721]' BaseType: 'Menu' Properties: [ Image: 'PURCHASE_ORDER' Shortcut: 'Enter' Text: 'New plastic order' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuNewPlasticOrder
+              c: menuSeparator
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor522
+    {
+      #keys: '[409348.0.309547033]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 5
+        PosY: 30
+        Transformation: 'PlasticStock'
+      ]
+    }
+    Component GUIDataSetLevel806
+    {
+      #keys: '[409348.0.309547034]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'PlasticStockColumns2'
+        DataExtractor: 'GUIDataExtractor522'
+        PosX: 35
+        PosY: 30
+        SortCriteria: "datamember:'Length'"
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList669'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles651
+      c: popupList669
+      c: GUIDataExtractor522
+      c: GUIDataSetLevel806
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListPlasticStock_Menu_OnClick
+    {
+      #keys: '[409348.0.309547035]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[927.0.1224789]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListPlasticStock_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.309547036]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[927.0.1224834]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

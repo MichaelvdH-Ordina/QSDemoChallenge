@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: #root
+Method PlanOn (Machine machine, Task aftertask) as Task
+{
+  Description: 'Plan a operation on a machine'
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    return null( Task );
+  *]
+}

@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+KnowledgeTable Colors
+{
+  #keys: '6[409348.0.254441013][409348.0.254441010][0.0.0][409348.0.254441011][0.0.0][409348.0.254441012]'
+  Description: 'Give a quill color based on the input.'
+  EnforceColumnOrder: true
+  ColumnDefinitions:
+  [
+    Column StringColor
+    {
+      ColumnWeight: 1
+      Description: 'The color in the string'
+      ISODefaultValue: '*'
+      Type: String
+    }
+    Column QuillColor
+    {
+      ColumnWeight: 1
+      Description: 'Color from quill'
+      ISODefaultValue: '*'
+      Type: String
+    }
+  ]
+}

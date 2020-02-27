@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: #root
+Method IsWidthAllowed (Order order) declarative remote as Boolean
+{
+  Description: 'Check if when an order is added, the max width of a PR is not violated'
+  TextBody:
+  [*
+    // mho23702 Feb-17-2020 (created)
+    feedbackobject := FeedbackObject::LocalFeedback();
+    
+    value := order.Width() <= this.AvailableWidth();
+    text := Translations::CheckWidth( order, this );
+    
+    feedbackobject.AddSoft( value, text );
+    
+    return feedbackobject.IsAllowed();
+  *]
+}

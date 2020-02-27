@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: GanttChartTask
+Response OnDrawNode (Task element) id:Response_GanttChartTask_OnDrawNode
+{
+  #keys: '[409348.0.174717835]'
+  Body:
+  [*
+    // Draw the setup duration.
+    drawinfo.AddBorderCompartment(Color::Color("$F2F2F2"), element.SetupDuration() );
+    // Draw a compartment with the color of the planunit
+    drawinfo.AddBorderCompartment( Color::Color( element.Operation().PlanUnit().QuillColor() ), element.Duration() );
+  *]
+  DefinitionID: 'Responsedef_GanttChart_OnDrawNode'
+}

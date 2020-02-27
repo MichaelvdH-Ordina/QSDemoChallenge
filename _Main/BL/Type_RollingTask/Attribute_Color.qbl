@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Color
+{
+  #keys: '3[409348.0.224251012][409348.0.224251011][409348.0.224251013]'
+  Description: 'Color of the corresponding paperroll.'
+  ValueType: String
+}

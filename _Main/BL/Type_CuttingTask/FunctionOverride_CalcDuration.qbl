@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcDuration
+{
+  TextBody:
+  [*
+    prlength := guard( this.Operation().PlanUnit().astype( PaperRoll ).Length(), 0);
+    speed := this.Machine().Speed();
+    
+    value := Duration::Minutes( prlength / speed );
+    
+    this.Duration( value );
+  *]
+}

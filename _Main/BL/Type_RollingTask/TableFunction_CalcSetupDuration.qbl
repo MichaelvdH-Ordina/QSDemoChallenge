@@ -1,0 +1,36 @@
+Quintiq file version 2.0
+#parent: #root
+TableFunction CalcSetupDuration
+{
+  DefaultOutputFunction:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    
+    value := Duration::Zero();
+    this.SetupDuration( value );
+  *]
+  OutputFunction:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    value := SetupDuration;
+    if( this.Color() = this.PreviousColor() )
+    {
+      value := Duration::Zero();
+    }
+    
+    this.SetupDuration( value );
+  *]
+  TableDefinition: RollingSetup
+  FunctionColumnMatch
+  {
+    ColumnDefinition: FromColor
+    MatchExpression: 'this.PreviousColor();'
+    Operator: '='
+  }
+  FunctionColumnMatch
+  {
+    ColumnDefinition: ToColor
+    MatchExpression: 'this.Color();'
+    Operator: '='
+  }
+}

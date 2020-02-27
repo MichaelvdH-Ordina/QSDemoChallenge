@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcSetupDuration
+{
+  Description: 'The cutting setup, based on the global value.'
+  TextBody:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    
+    value := this.Machine().Company().GlobalParameters().CuttingSetup();
+    
+    this.SetupDuration( value );
+  *]
+}

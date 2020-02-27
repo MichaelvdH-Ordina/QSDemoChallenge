@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (Order owner) as FoldingOperation
+{
+  Description: 'Create a new folding operation'
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    operation := construct( FoldingOperation );
+    value := operation;
+    
+    owner.AddLastOperation( &operation );
+    
+    return value;
+  *]
+}

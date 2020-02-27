@@ -1,0 +1,42 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcActualStart
+{
+  TextBody:
+  [*
+    companytime := this.Machine().Company().Time();
+    
+    maxendofrolls := guard( max( this,
+                                 Operation.PlanUnit.astype( Order ).OrderInPaperRoll,
+                                 oipr,
+                                 oipr.PaperRoll().LastOperation().Task().End() ),
+                            companytime );
+    
+    transporttime := this.Machine().Company().GlobalParameters().TransitionTime();
+    endprevfoldtaskonmachine := guard( this.PreviousTask().End() + this.SetupDuration(), companytime + this.SetupDuration() );
+    endprevpacktask := guard( this.PackingTask().PreviousTask().End(), companytime );
+    //endoftaskothermachine := guard( latestfoldmachine.LastTask().End(), companytime );
+    //  this.Operation().PlanUnit().astype( Order ).Company().Machine().astype( FoldingMachine ).Task                                         
+    //
+    //test := guard( maxselect( this,
+    //                          Operation.PlanUnit.astype( Order ).Company.Machine.astype( FoldingMachine ).Task,
+    //                          task,
+    //                          task.Machine().Name() <> this.Machine().Name(),
+    //                          and task.ActualStart() < this.PreviousTask().End(),
+    //                          task.End() ).End(),
+    //               companytime );
+    
+    
+    value := maxvalue( maxendofrolls + transporttime,
+                       endprevpacktask,
+    //                   endoftaskothermachine,
+    //                   test,
+    //                   ts.End(),
+                       endprevfoldtaskonmachine );
+    
+    
+    
+    
+    this.ActualStart( value );
+  *]
+}

@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcOverproduction
+{
+  Description: 'Calc the overproduction of an order.'
+  TextBody:
+  [*
+    // mho23702 Feb-17-2020 (created)
+    overproduction := this.AmountProduced() - this.Quantity();
+    
+    value := maxvalue( overproduction, 0);
+    
+    this.Overproduction( value );
+  *]
+}

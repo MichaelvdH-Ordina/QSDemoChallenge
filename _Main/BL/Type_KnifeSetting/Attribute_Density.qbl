@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Density
+{
+  #keys: '3[409348.0.109200033][409348.0.109200032][409348.0.109200034]'
+  Description: 'Main density of the KS'
+  ValueType: Number
+}

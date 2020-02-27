@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+Method MakeRepetitionsSuggestion () declarative remote as Number
+{
+  TextBody:
+  [*
+    // mho23702 Feb-21-2020 (created)
+    return min( this,
+                OrderInKnifeSetting,
+                oiks,
+                true,
+                ceil( oiks.Order().RemaingProduction() / oiks.QuibiPerRoll() 
+                     )
+                );
+  *]
+}

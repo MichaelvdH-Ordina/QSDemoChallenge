@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute SetupDuration
+{
+  #keys: '3[409348.0.172351036][409348.0.172351035][409348.0.172351037]'
+  Description: 'The setup duration of a task.'
+  ValueType: Duration
+}

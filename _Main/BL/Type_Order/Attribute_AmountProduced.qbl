@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute AmountProduced
+{
+  #keys: '3[409348.0.147261122][409348.0.147261121][409348.0.147261123]'
+  Description: 'The amount of quibi produced of this order.'
+  ValueType: Number
+}

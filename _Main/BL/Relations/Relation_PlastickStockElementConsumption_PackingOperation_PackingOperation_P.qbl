@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation PlastickStockElementConsumption_PackingOperation_PackingOperation_PlastickStockElementConsumption
+{
+  #keys: '1[409348.0.302041070]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide PackingOperation
+  {
+    #keys: '3[409348.0.302041072][409348.0.302041071][409348.0.302041073]'
+    Cardinality: '0to1'
+    ObjectDefinition: PlastickStockElementConsumption
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide PlastickStockElementConsumption
+  {
+    #keys: '3[409348.0.302041075][409348.0.302041074][409348.0.302041076]'
+    Cardinality: '0to1'
+    ObjectDefinition: PackingOperation
+    OwningSide: 'Reference'
+  }
+}

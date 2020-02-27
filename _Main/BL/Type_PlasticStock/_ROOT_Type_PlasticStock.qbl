@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+Type PlasticStock
+{
+  #keys: '5[409348.0.302041013][409348.0.302041011][0.0.0][409348.0.302041012][409348.0.302041014]'
+  BaseType: StockForPlasticStock
+  Description: 'The stock of plastic for packing.'
+  StructuredName: 'PlasticStocks'
+  TypeMapping TElement { Type: PlastickStockElement }
+}

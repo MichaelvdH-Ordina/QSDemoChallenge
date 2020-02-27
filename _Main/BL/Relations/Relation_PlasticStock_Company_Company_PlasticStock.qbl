@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation PlasticStock_Company_Company_PlasticStock
+{
+  #keys: '1[409348.0.302041052]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide Company
+  {
+    #keys: '3[409348.0.302041054][409348.0.302041053][409348.0.302041055]'
+    Cardinality: '0to1'
+    ObjectDefinition: PlasticStock
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide PlasticStock
+  {
+    #keys: '3[409348.0.302041057][409348.0.302041056][409348.0.302041058]'
+    Cardinality: '1toN'
+    ObjectDefinition: Company
+    OwningSide: 'Owned'
+  }
+}

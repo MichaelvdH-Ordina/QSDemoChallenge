@@ -1,0 +1,130 @@
+Quintiq file version 2.0
+Component ListKnifeSetting
+{
+  #keys: '[409348.0.116706761]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles644
+    Component popupList556
+    {
+      #keys: '[409348.0.116706765]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuSeparator { #keys: '[409348.0.116706782]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuNewKnifeSetting { #keys: '[409348.0.116706783]' BaseType: 'Menu' Properties: [ Image: 'NEW' Shortcut: 'Ins' Text: '&New...' ] }
+            Component MenuDeleteKnifeSetting { #keys: '[409348.0.116706785]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
+            Component MenuCreatePaperRoll { #keys: '[409348.0.147212223]' BaseType: 'Menu' Properties: [ Image: 'PAPER_ROLL' Shortcut: 'Ctrl+P' Text: 'Create paper roll' ] }
+            Component menuSeparator436 { #keys: '[409348.0.147212993]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuGenerateKnifeSettings { #keys: '[409348.0.294418090]' BaseType: 'Menu' Properties: [ Image: 'CUT' Shortcut: 'Ctrl+K' Text: 'Generate knife settings' ] }
+            Component menuSeparator446 { #keys: '[409348.0.294419802]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuGeneratePaperRolls { #keys: '[409348.0.294470877]' BaseType: 'Menu' Properties: [ Image: 'PAPER_ROLL' Shortcut: 'Ctrl+R' Text: 'Generate paper rolls' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuNewKnifeSetting
+              c: MenuDeleteKnifeSetting
+              c: MenuSeparator
+              c: MenuCreatePaperRoll
+              c: menuSeparator436
+              c: MenuGenerateKnifeSettings
+              c: MenuGeneratePaperRolls
+              c: menuSeparator446
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor695
+    {
+      #keys: '[409348.0.116706767]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 5
+        PosY: 30
+        Transformation: 'KnifeSetting'
+      ]
+    }
+    Component GUIDataSetLevel527
+    {
+      #keys: '[409348.0.116706768]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'KnifeSettingColumns2'
+        DataExtractor: 'GUIDataExtractor695'
+        PosX: 35
+        PosY: 30
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList556'
+    FullRowSelect: true
+    ImageWidth: 50
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles644
+      c: popupList556
+      c: GUIDataExtractor695
+      c: GUIDataSetLevel527
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListKnifeSetting_Menu_OnClick
+    {
+      #keys: '[409348.0.116706769]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[357.0.1339921]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListKnifeSetting_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.116706770]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[357.0.1339966]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute EndOfLastTask
+{
+  #keys: '3[409348.0.224241334][409348.0.224241333][409348.0.224241335]'
+  Description: 'The end of the last task on a machine.'
+  ValueType: DateTime
+}

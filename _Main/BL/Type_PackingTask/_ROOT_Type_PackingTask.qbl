@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization PackingTask
+{
+  #keys: '2[409348.0.98300222][409348.0.98300221]'
+  Description: 'Task to pack an Order'
+  Parent: Task
+  StructuredName: 'PackingTasks'
+}

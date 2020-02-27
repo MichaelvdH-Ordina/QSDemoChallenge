@@ -1,0 +1,23 @@
+Quintiq file version 2.0
+#parent: #root
+Relation PackingTask_FoldingTask_FoldingTask_PackingTask
+{
+  #keys: '1[409348.0.256941167]'
+  DefaultRelationStrategy
+  {
+  }
+  RelationSide.LeftSide FoldingTask
+  {
+    #keys: '3[409348.0.256941169][409348.0.256941168][409348.0.256941170]'
+    Cardinality: '0to1'
+    ObjectDefinition: PackingTask
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide PackingTask
+  {
+    #keys: '3[409348.0.256941172][409348.0.256941171][409348.0.256941173]'
+    Cardinality: '0to1'
+    ObjectDefinition: FoldingTask
+    OwningSide: 'Reference'
+  }
+}

@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: ListOperation
+Response OnClick (Operation selection) id:Response_ListOperation_MenuPlan_OnClick
+{
+  #keys: '[409348.0.269342978]'
+  Body:
+  [*
+    // Plan the operations of an order.
+    selection.Plan();
+  *]
+  DefinitionID => /ListOperation/Responsedef_ListOperation_Menu_OnClick
+  Initiator: 'MenuPlan'
+}

@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+TableFunction CalcQuillColor
+{
+  DefaultOutputFunction:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    
+    value := "White";
+    this.QuillColor( value );
+  *]
+  OutputFunction:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    value := QuillColor;
+    this.QuillColor( value );
+  *]
+  TableDefinition: Colors
+  FunctionColumnMatch
+  {
+    ColumnDefinition: StringColor
+    MatchExpression: 'this.Color();'
+    Operator: '='
+  }
+}

@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+#parent: #root
+Method New (GUIComponent parent, shadow[Company] owner) as shadow[KnifeSetting] id:Method_DialogKnifeSetting_New_549
+{
+  #keys: '[409348.0.109252200]'
+  Body:
+  [*
+    data := owner.KnifeSetting( relnew );
+    
+    Dialog.Data( data );
+    
+    if ( Dialog.DoModal( parent ) < 0 )
+    {
+      data.Delete();
+    }
+    
+    return data;
+  *]
+}

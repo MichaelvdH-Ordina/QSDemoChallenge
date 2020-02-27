@@ -1,0 +1,20 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcDuration
+{
+  TextBody:
+  [*
+    quantity := this.Operation().PlanUnit().astype( Order ).Quantity();
+    packmachine := minselect( this,
+                              Machine.Company.Machine,
+                              machine,
+                              machine.istype( PackingMachine ),
+                              machine.Speed() );
+    
+    speed := minvalue( this.Machine().Speed(),packmachine.Speed() );
+    
+    value := Duration::Minutes( quantity / speed );
+    
+    this.Duration( value );
+  *]
+}

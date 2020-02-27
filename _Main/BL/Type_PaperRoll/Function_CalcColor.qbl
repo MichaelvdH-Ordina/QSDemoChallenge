@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcColor
+{
+  TextBody:
+  [*
+    // mho23702 Feb-20-2020 (created)
+    
+    value := this.KnifeSetting().Color();
+    
+    this.Color( value );
+  *]
+}

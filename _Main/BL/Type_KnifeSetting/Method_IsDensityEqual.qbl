@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: #root
+Method IsDensityEqual (Order order) declarative remote as Boolean
+{
+  Description: 'Checks if the density of the order is equal tot he knife settings'
+  TextBody:
+  [*
+    // mho23702 Feb-14-2020 (created)
+    fbo := FeedbackObject::LocalFeedback();
+    value := ( this.Density() = order.Density() or this.Density() = 0 );
+    text := Translations::CheckDensity( this, order );
+    fbo.AddSoft( value, text );
+    return fbo.IsAllowed();
+  *]
+}

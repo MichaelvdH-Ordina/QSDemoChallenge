@@ -1,0 +1,13 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcStartWithSetup
+{
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    
+    value := maxvalue( this.ActualStart() - this.SetupDuration(), this.Machine().Company().Time() );
+    
+    this.StartWithSetup( value );
+  *]
+}

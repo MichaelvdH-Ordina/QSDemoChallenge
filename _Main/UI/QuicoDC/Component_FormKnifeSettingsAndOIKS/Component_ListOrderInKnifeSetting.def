@@ -1,0 +1,125 @@
+Quintiq file version 2.0
+Component ListOrderInKnifeSetting
+{
+  #keys: '[409348.0.116706771]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles948
+    Component popupList900
+    {
+      #keys: '[409348.0.116706775]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuDelete { #keys: '[409348.0.116713858]' BaseType: 'Menu' Properties: [ Image: 'Delete' Shortcut: 'Del' Text: 'Delete' ] }
+            Component MenuEditOIKS { #keys: '[409348.0.116715381]' BaseType: 'Menu' Properties: [ Image: 'Edit' Shortcut: 'Enter' Text: 'Edit' ] }
+            Component menuSeparator { #keys: '[409348.0.116715550]' BaseType: 'Menu' Properties: [ Separator: true ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+              c: menuSeparator
+              c: MenuEditOIKS
+              c: MenuDelete
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor256
+    {
+      #keys: '[409348.0.116706777]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'ListKnifeSetting'
+        DataType: 'KnifeSetting'
+        PosX: 5
+        PosY: 30
+        Transformation: 'OrderInKnifeSetting'
+      ]
+    }
+    Component GUIDataSetLevel444
+    {
+      #keys: '[409348.0.116706778]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'OrderInKnifeSettingColumns'
+        DataExtractor: 'GUIDataExtractor256'
+        PosX: 35
+        PosY: 30
+        SortCriteria: "datamember:'Order.OrderNr'"
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList900'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles948
+      c: popupList900
+      c: GUIDataExtractor256
+      c: GUIDataSetLevel444
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrderInKnifeSetting_Menu_OnClick
+    {
+      #keys: '[409348.0.116706779]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[357.0.1343136]'
+          Binding: 'this.Selection()'
+        }
+        ResponseDefinitionArgument masterselection
+        {
+          #keys: '[357.0.1343740]'
+          Binding: 'ListKnifeSetting.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListOrderInKnifeSetting_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.116706780]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[357.0.1343181]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

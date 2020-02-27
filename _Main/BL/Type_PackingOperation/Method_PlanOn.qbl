@@ -1,0 +1,26 @@
+Quintiq file version 2.0
+#parent: #root
+MethodOverride PlanOn (Machine machine, Task aftertask) as Task
+{
+  TextBody:
+  [*
+    packingtask := this.PlanPacking( machine.astype( PackingMachine ), aftertask.astype( PackingTask ) );
+    fold := this.PreviousOperation().astype( FoldingOperation );
+    foldmachine := packingtask.PreviousTask().astype( PackingTask ).FoldingTask().Machine().astype( FoldingMachine );
+    
+    foldingtask := fold.PlanFolding( foldmachine, this.GetFoldingAftertask( foldmachine, packingtask ) );
+    
+    return packingtask;
+    
+    //foldmachine := this.PreviousOperation().SelectMachine();
+    //foldaftertask := aftertask.astype( PackingTask ).FoldingTask().PreviousTask();
+    //
+    //foldingtask := this.PreviousOperation().PlanOn( foldmachine, foldaftertask );
+    //return foldingtask;
+  *]
+  SuppressedModelError
+  {
+    ElementKey: '[1.2.1629]'
+    ErrorKey: '[1.12.376]'
+  }
+}

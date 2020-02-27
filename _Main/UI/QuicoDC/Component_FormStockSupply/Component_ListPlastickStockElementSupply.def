@@ -1,0 +1,127 @@
+Quintiq file version 2.0
+Component ListPlastickStockElementSupply
+{
+  #keys: '[409348.0.309547037]'
+  BaseType: 'List'
+  Children:
+  [
+    #child: ColumnTitles615
+    Component popupList342
+    {
+      #keys: '[409348.0.309547041]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuSeparator { #keys: '[409348.0.309547049]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuNewPlastickStockElementSupply { #keys: '[409348.0.309547050]' BaseType: 'Menu' Properties: [ Image: 'NEW' Shortcut: 'Ins' Text: '&New...' ] }
+            Component MenuEditPlastickStockElementSupply { #keys: '[409348.0.309547051]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
+            Component MenuDeletePlastickStockElementSupply { #keys: '[409348.0.309547052]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+              c: MenuSeparator
+              c: MenuNewPlastickStockElementSupply
+              c: MenuEditPlastickStockElementSupply
+              c: MenuDeletePlastickStockElementSupply
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor133
+    {
+      #keys: '[409348.0.309547043]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        Component: 'ListPlasticStock'
+        DataType: 'PlasticStock'
+        PosX: 5
+        PosY: 30
+        Transformation: 'PlastickStockElement.astype(PlastickStockElementSupply)'
+      ]
+    }
+    Component GUIDataSetLevel562
+    {
+      #keys: '[409348.0.309547044]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'PlastickStockElementSupplyColumns4'
+        DataExtractor: 'GUIDataExtractor133'
+        PosX: 35
+        PosY: 30
+        SortCriteria: "datamember:'Start'"
+      ]
+    }
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList342'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles615
+      c: popupList342
+      c: GUIDataExtractor133
+      c: GUIDataSetLevel562
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListPlastickStockElementSupply_Menu_OnClick
+    {
+      #keys: '[409348.0.309547045]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[927.0.1228004]'
+          Binding: 'this.Selection()'
+        }
+        ResponseDefinitionArgument masterselection
+        {
+          #keys: '[927.0.1228329]'
+          Binding: 'ListPlasticStock.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListPlastickStockElementSupply_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.309547046]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[927.0.1228049]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

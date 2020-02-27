@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcDuration
+{
+  TextBody:
+  [*
+    paperroll := this.Operation().PlanUnit().astype( PaperRoll );
+    machine := this.Machine().astype( RollingMachine );
+    
+    value := Duration::Minutes( paperroll.Weigth() / machine.MaximumInflow() );
+    
+    this.Duration( value );
+  *]
+}

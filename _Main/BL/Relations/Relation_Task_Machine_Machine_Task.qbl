@@ -1,0 +1,26 @@
+Quintiq file version 2.0
+#parent: #root
+Relation Task_Machine_Machine_Task
+{
+  #keys: '1[409348.0.98300156]'
+  ProceduralSequenceRelationStrategy
+  {
+    #keys: '13[0.0.0][409348.0.98300173][409348.0.98300167][409348.0.98300174][409348.0.98300168][409348.0.98300175][409348.0.98300169][409348.0.98300176][409348.0.98300170][409348.0.98300177][409348.0.98300171][409348.0.98300178][409348.0.98300172]'
+    SequenceElementSuffix: 'Task'
+    SequenceSuffix: 'Task'
+  }
+  RelationSide.LeftSide Machine
+  {
+    #keys: '3[409348.0.98300158][409348.0.98300157][409348.0.98300159]'
+    Cardinality: '0to1'
+    ObjectDefinition: Task
+    OwningSide: 'Reference'
+  }
+  RelationSide.RightSide Task
+  {
+    #keys: '3[409348.0.98300161][409348.0.98300160][409348.0.98300162]'
+    Cardinality: '1toN'
+    ObjectDefinition: Machine
+    OwningSide: 'Owned'
+  }
+}

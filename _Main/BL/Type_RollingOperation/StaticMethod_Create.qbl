@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+StaticMethod Create (PaperRoll owner) as RollingOperation
+{
+  Description: 'Create a new Rolling operation'
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    operation := construct( RollingOperation );
+    value := operation;
+    
+    owner.AddLastOperation( &operation );
+    
+    return value;
+  *]
+}

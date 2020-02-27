@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcIsPlanned
+{
+  TextBody:
+  [*
+    // Michael van den Hoogenband Feb-21-2020 (created)
+    
+    value := forall( this,
+                     Operation,
+                     oper,
+                     oper.IsPlanned() );
+    
+    this.IsPlanned( value );
+  *]
+}

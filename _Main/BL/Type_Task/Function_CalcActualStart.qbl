@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcActualStart
+{
+  TextBody:
+  [*
+    // mho23702 Feb-19-2020 (created)
+    value := this.StartWithSetup() + this.SetupDuration();
+    this.ActualStart( value );
+  *]
+}

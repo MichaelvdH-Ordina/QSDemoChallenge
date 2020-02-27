@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute CuttingSetup
+{
+  #keys: '3[409348.0.224241024][409348.0.224241023][409348.0.224241025]'
+  Description: 'The global cutting setup.'
+  ValueType: Duration
+}

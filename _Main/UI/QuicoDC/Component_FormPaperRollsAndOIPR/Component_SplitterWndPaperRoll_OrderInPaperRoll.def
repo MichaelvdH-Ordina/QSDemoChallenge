@@ -1,0 +1,92 @@
+Quintiq file version 2.0
+Component SplitterWndPaperRoll_OrderInPaperRoll
+{
+  #keys: '[409348.0.147275935]'
+  BaseType: 'SplitterWnd'
+  Children:
+  [
+    Component SplitterPane542
+    {
+      #keys: '[409348.0.147275937]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 586 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListOrderInPaperRoll
+            Position { startcolumn: 586 startrow: 469 endcolumn: 586 endrow: 469 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 469 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListOrderInPaperRoll
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Size: 66.6666666666667
+      ]
+    }
+    Component SplitterPanePaperRoll2
+    {
+      #keys: '[409348.0.147275936]'
+      BaseType: 'SplitterPane'
+      GBLayout
+      {
+        Type: 'GBLayoutDefinition'
+        Columns:
+        [
+          GBFlow.Column { grow: 128 id: 590 parent: 0 }
+        ]
+        Elements:
+        [
+          GBElement
+          {
+            Component => /ListPaperRoll
+            Position { startcolumn: 590 startrow: 501 endcolumn: 590 endrow: 501 }
+          }
+        ]
+        Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+        Rows:
+        [
+          GBFlow.Row { grow: 128 id: 501 parent: 0 }
+        ]
+      }
+      Children:
+      [
+        #child: ListPaperRoll
+      ]
+      Properties:
+      [
+        Border: true
+        DoubleBuffering: false
+        Size: 33.3333333333333
+        Title: 'Paper rolls'
+      ]
+    }
+  ]
+  Properties:
+  [
+    DoubleBuffering: false
+    PaneOrder: '1;0'
+    ModeledStringList ChildOrdering
+    {
+      c: SplitterPanePaperRoll2
+      c: SplitterPane542
+    }
+  ]
+}

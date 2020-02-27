@@ -1,0 +1,28 @@
+Quintiq file version 2.0
+Component EditorRepetitions
+{
+  #keys: '[409348.0.147276342]'
+  BaseType: 'Editor'
+  Children:
+  [
+    Component popupEdit952
+    {
+      #keys: '[409348.0.147276343]'
+      BaseType: 'popupEdit'
+      Properties:
+      [
+        PosX: 5
+        PosY: 5
+      ]
+    }
+  ]
+  Properties:
+  [
+    BackgroundColor: 'Window'
+    Border: true
+    ContextMenu: 'popupEdit952'
+    DataBinding: 'DialogPaperRoll.Data.Repetitions'
+    Mask: 'POSNUMBER'
+    WordWrap: true
+  ]
+}

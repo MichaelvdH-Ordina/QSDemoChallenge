@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: #root
+DeclarativeReferenceRelation CalcOrderInKnifeSetting
+{
+  #keys: '1[409348.0.155361024]'
+  Expression:
+  [*
+    return select( this,
+                   Order.OrderInKnifeSetting,
+                   oiks,
+                   this.PaperRoll().KnifeSetting() = oiks.KnifeSetting() );
+  *]
+  Relation: OrderInKnifeSetting
+}

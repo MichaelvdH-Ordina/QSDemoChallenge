@@ -1,0 +1,20 @@
+Quintiq file version 2.0
+#parent: #root
+Method New (GUIComponent parent, PlasticStock owner) as PlastickStockElementSupply id:Method_DialogPlastickStockElementSupply_New
+{
+  #keys: '[409348.0.309547402]'
+  Body:
+  [*
+    proposeddate := owner.GetProposedDeliveryDate();
+    data := owner.PlastickStockElement( relshadow, PlastickStockElementSupply, UserStart := proposeddate );
+    
+    Dialog.Data( data );
+    
+    if ( Dialog.DoModal( parent ) > 0 )
+    {
+      data.Commit();
+    }
+    
+    return data.WrappedInstance();
+  *]
+}

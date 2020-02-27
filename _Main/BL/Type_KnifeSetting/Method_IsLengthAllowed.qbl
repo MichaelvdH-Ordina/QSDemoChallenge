@@ -1,0 +1,25 @@
+Quintiq file version 2.0
+#parent: #root
+Method IsLengthAllowed (Order order) declarative remote as Boolean
+{
+  Description: 'Check if the length of the new order is allowed in the knife setting.'
+  TextBody:
+  [*
+    // mho23702 Feb-17-2020 (created)
+    fbo := FeedbackObject::LocalFeedback();
+    
+    maxlength := maxvalue( this.Length(), order.Length() );
+    minlength := minvalue( this.Length(), order.Length() );
+    value := true ;
+    
+    if( minlength > 0 )
+    {
+      value := maxlength mod minlength = 0;
+    }
+    
+    text := Translations::CheckLength( order, this );
+    fbo.AddSoft( value, text );
+    
+    return fbo.IsAllowed();
+  *]
+}

@@ -1,0 +1,8 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute Overproduction
+{
+  #keys: '3[409348.0.147261099][409348.0.147261098][409348.0.147261100]'
+  Description: 'Overproduction of an order.'
+  ValueType: Number
+}

@@ -1,0 +1,19 @@
+Quintiq file version 2.0
+#parent: #root
+Method New (GUIComponent parent, shadow[PlasticStock] owner) as shadow[PlastickStockElementSupply] id:Method_DialogPlastickStockElementSupply_New_21
+{
+  #keys: '[409348.0.309547404]'
+  Body:
+  [*
+    data := owner.PlastickStockElement( relnew, PlastickStockElementSupply );
+    
+    Dialog.Data( data );
+    
+    if ( Dialog.DoModal( parent ) < 0 )
+    {
+      data.Delete();
+    }
+    
+    return data;
+  *]
+}

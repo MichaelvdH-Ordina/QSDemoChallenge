@@ -1,0 +1,17 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcIdentifier
+{
+  Description: 'Determine the identifier for a KS'
+  TextBody:
+  [*
+    // mho23702 Feb-13-2020 (created)
+    orderslist := selectvalues( this, OrderInKnifeSetting, oiks, true,
+                                [String]oiks.WidthInKnifeSetting() + 'x' + oiks.Order().OrderNr() );
+    
+    value := orderslist.ToString('+');
+    
+    
+    this.Identifier( value );
+  *]
+}

@@ -1,0 +1,126 @@
+Quintiq file version 2.0
+Component ListPaperRoll
+{
+  #keys: '[409348.0.274258750]'
+  BaseType: 'List'
+  Children:
+  [
+    Component popupList104
+    {
+      #keys: '[409348.0.274258751]'
+      BaseType: 'popupList'
+      Children:
+      [
+        Component PopupParent
+        {
+          #keys: '[514.0.129466]'
+          BaseType: 'PopupParent'
+          IsDerived: true
+          Children:
+          [
+            Component MenuSeparator { #keys: '[409348.0.274258752]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuEditPaperRoll { #keys: '[409348.0.274258753]' BaseType: 'Menu' Properties: [ BindDoubleClick: true Image: 'EDITOBJECT' Shortcut: 'Enter' Text: '&Edit...' ] }
+            Component MenuDeletePaperRoll { #keys: '[409348.0.274258754]' BaseType: 'Menu' Properties: [ Image: 'TRASH' Shortcut: 'Del' Text: '&Delete' ] }
+            Component MenuPlan874 { #keys: '[409348.0.298218875]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_ADD' Shortcut: 'Ctrl+P' Text: 'Plan' ] }
+            Component menuSeparator { #keys: '[409348.0.298219116]' BaseType: 'Menu' Properties: [ Separator: true ] }
+            Component MenuUnplan572 { #keys: '[409348.0.298219930]' BaseType: 'Menu' Properties: [ Image: 'GANTTCHART_DELETE' Shortcut: 'Ctrl+U' Text: 'Unplan' ] }
+          ]
+          Properties:
+          [
+            ModeledStringList ChildOrdering
+            {
+              c: MenuEditPaperRoll
+              c: MenuDeletePaperRoll
+              c: MenuSeparator
+              c: MenuPlan874
+              c: MenuUnplan572
+              c: menuSeparator
+              c: MenuActions
+              c: MenuFilter
+              c: menuListQuintiqSetQuantor
+            }
+          ]
+        }
+      ]
+      Properties:
+      [
+        PosX: 35
+        PosY: 60
+      ]
+    }
+    Component GUIDataExtractor747
+    {
+      #keys: '[409348.0.274258756]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 5
+        PosY: 30
+        Transformation: 'KnifeSetting.PaperRoll'
+      ]
+    }
+    Component GUIDataSetLevel184
+    {
+      #keys: '[409348.0.274258755]'
+      BaseType: 'GUIDataSetLevel'
+      Properties:
+      [
+        Columns: 'PaperRollColumns'
+        DataExtractor: 'GUIDataExtractor747'
+        PosX: 35
+        PosY: 30
+        SortCriteria: "datamember:'KnifeSetting.Color'"
+      ]
+    }
+    #child: ColumnTitles861
+  ]
+  Properties:
+  [
+    AutoDrag: true
+    BackgroundColor: 'Window'
+    ContextMenu: 'popupList104'
+    FullRowSelect: true
+    ModeledStringList ChildOrdering
+    {
+      c: ColumnTitles861
+      c: popupList104
+      c: GUIDataExtractor747
+      c: GUIDataSetLevel184
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_ListPaperRoll_Menu_OnClick
+    {
+      #keys: '[409348.0.147275946]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[457.0.1230837]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_ListPaperRoll_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.147275947]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[457.0.1230882]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

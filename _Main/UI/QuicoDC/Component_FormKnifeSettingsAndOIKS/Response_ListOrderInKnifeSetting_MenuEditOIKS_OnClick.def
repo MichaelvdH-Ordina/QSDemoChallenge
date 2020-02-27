@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: ListOrderInKnifeSetting
+Response OnClick (OrderInKnifeSetting selection) id:Response_ListOrderInKnifeSetting_MenuEditOIKS_OnClick
+{
+  #keys: '[409348.0.116715382]'
+  Body:
+  [*
+    // Edit amount of times an Order is in a KnifeSetting
+    dlg := construct( DialogOrderInKnifeSetting );
+    dlg.Edit( this, selection );
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListOrderInKnifeSetting/Responsedef_ListOrderInKnifeSetting_Menu_OnClick
+  Initiator: 'MenuEditOIKS'
+}

@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: #root
+Function CalcAmountProduced
+{
+  TextBody:
+  [*
+    // mho23702 Feb-17-2020 (created)
+    
+    value := sum( this,
+                  OrderInPaperRoll,
+                  oipr,
+                  oipr.QuibiProduced() );
+    
+    this.AmountProduced( value );
+  *]
+}

@@ -1,0 +1,102 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent DialogPlastickStockElementSupply
+{
+  #keys: '[409348.0.309547394]'
+  BaseType: 'Dialog'
+  Databinding: 'shadow[PlastickStockElementSupply]'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 0 id: 589 parent: 0 }
+      GBFlow.Column { grow: 0 id: 624 parent: 0 }
+      GBFlow.Column { grow: 128 id: 356 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => Label574
+        Position { startcolumn: 589 startrow: 360 endcolumn: 589 endrow: 360 }
+      }
+      GBElement
+      {
+        Component => Label895
+        Position { startcolumn: 589 startrow: 407 endcolumn: 589 endrow: 407 }
+      }
+      GBElement
+      {
+        Component => GUIDateTimeSelectorUserStart
+        Position { startcolumn: 624 startrow: 360 endcolumn: 624 endrow: 360 }
+      }
+      GBElement
+      {
+        Component => EditorUserAmount
+        Position { startcolumn: 624 startrow: 407 endcolumn: 356 endrow: 407 }
+      }
+    ]
+    Gaps: [ left: 10 right: 10 top: 10 bottom: 10 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 0 id: 360 parent: 0 }
+      GBFlow.Row { grow: 0 id: 407 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    Component GUIDateTimeSelectorUserStart
+    {
+      #keys: '[409348.0.309547396]'
+      BaseType: 'GUIDateTimeSelector'
+      Properties:
+      [
+        BackgroundColor: 'Window'
+        DataBinding: 'DialogPlastickStockElementSupply.Data.UserStart'
+      ]
+    }
+    Component Label574
+    {
+      #keys: '[409348.0.309547397]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Start'
+        Transparent: true
+      ]
+    }
+    #child: EditorUserAmount
+    Component Label895
+    {
+      #keys: '[409348.0.309547401]'
+      BaseType: 'Label'
+      Properties:
+      [
+        Alignment: 'right'
+        Text: 'Amount'
+        Transparent: true
+      ]
+    }
+    #child: Toolbar513
+  ]
+  Properties:
+  [
+    EnterButton: 'btnOk'
+    EscapeButton: 'btnCancel'
+    Height: 137
+    Image: 'PURCHASE_ORDER'
+    Title: 'Plastic order'
+    Width: 300
+    ModeledStringList ChildOrdering
+    {
+      c: GUIDateTimeSelectorUserStart
+      c: EditorUserAmount
+      c: Label574
+      c: Label895
+      c: Toolbar513
+    }
+  ]
+}

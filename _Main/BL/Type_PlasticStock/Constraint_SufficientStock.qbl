@@ -1,0 +1,95 @@
+Quintiq file version 2.0
+#parent: #root
+Constraint SufficientStock
+{
+  #keys: '2[409348.0.309581112][409348.0.309581113]'
+  ConstraintXML:
+  [*
+    <?xml version="1.0" encoding="UTF-16"?>
+    <GEBConstraintElement xmlns="http://www.quintiq.com/GEB/GEBConstraintElement" Key="@SufficientStock1" TargetType="PlasticStock" ValueType="Boolean" ModelElement="PlasticStock.SufficientStock" TargetColumn="@SufficientStock2">
+      <Name>SufficientStock</Name>
+      <Description></Description>
+      <DefinitionID>[409348.0.309581112]</DefinitionID>
+      <ConstraintKind>Soft</ConstraintKind>
+      <Priority>0</Priority>
+      <ConstraintText>There is a shortage of plastic for @Shortage@ Quibi of length @Length@.</ConstraintText>
+      <GEBConstraintElementData Key="@1">
+        <DefaultColumnPrefix></DefaultColumnPrefix>
+        <ColumnPostfix></ColumnPostfix>
+        <GEBProcessColumn Key="@SufficientStock2" ElementType="PlasticStock" ValueType="Boolean">
+          <ColumnID>[409348.0.309581111]</ColumnID>
+          <BaseName>SufficientStock</BaseName>
+          <Name>SufficientStock</Name>
+          <Title>NewConstraint</Title>
+          <IsTarget>true</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>False</ColumnFinal>
+          <GEBDerivation Key="@2">
+            <GEBDerivationBase Key="@3" TargetType="PlasticStock">
+              <ColumnID>[409348.0.309581111]</ColumnID>
+              <GEBNodeDerivation Key="@4">
+                <Operation>FirstExpression</Operation>
+                <Conditional>false</Conditional>
+                <Multiple>false</Multiple>
+                <AllowWildcards>false</AllowWildcards>
+                <GEBNodeDerivationExpression Key="@5">
+                  <GEBNodeDerivationExpressionBody Key="@6">
+                    <ExpressionText>Shortage &lt;= 0;</ExpressionText>
+                    <Converter>
+                      <ZeroConverter Key="@7">
+                        <IsStandard>true</IsStandard>
+                        <IsISO>false</IsISO>
+                        <IsCustom>false</IsCustom>
+                        <ConversionType>0</ConversionType>
+                      </ZeroConverter>
+                    </Converter>
+                  </GEBNodeDerivationExpressionBody>
+                </GEBNodeDerivationExpression>
+              </GEBNodeDerivation>
+            </GEBDerivationBase>
+          </GEBDerivation>
+        </GEBProcessColumn>
+        <GEBSelectColumn Key="@Shortage1" ElementType="PlasticStock" ValueType="Number">
+          <ColumnID>[409348.0.309610490]</ColumnID>
+          <BaseName>Shortage</BaseName>
+          <Name>Shortage</Name>
+          <Title>Shortage</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>Shortage</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@8" Attribute="PlasticStock.Shortage">
+              <PathIdentifier>
+                <PathIdentifier Key="@9" StartType="PlasticStock">
+                  <Nodes>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+        <GEBSelectColumn Key="@Length1" ElementType="PlasticStock" ValueType="Number">
+          <ColumnID>[409348.0.309610509]</ColumnID>
+          <BaseName>Length</BaseName>
+          <Name>Length</Name>
+          <Title>Length</Title>
+          <IsTarget>false</IsTarget>
+          <NameHasBeenSet>false</NameHasBeenSet>
+          <ColumnFinal>Fail</ColumnFinal>
+          <AttributePathText>Length</AttributePathText>
+          <AttributePathIdentifier>
+            <AttributePathIdentifier Key="@10" Attribute="PlasticStock.Length">
+              <PathIdentifier>
+                <PathIdentifier Key="@11" StartType="PlasticStock">
+                  <Nodes>
+                  </Nodes>
+                </PathIdentifier>
+              </PathIdentifier>
+            </AttributePathIdentifier>
+          </AttributePathIdentifier>
+        </GEBSelectColumn>
+      </GEBConstraintElementData>
+    </GEBConstraintElement>
+  *]
+}

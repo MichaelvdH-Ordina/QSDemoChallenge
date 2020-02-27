@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: ListPlastickStockElementSupply
+Response OnClick (PlastickStockElementSupply selection) id:Response_ListPlastickStockElementSupply_MenuEditPlastickStockElementSupply_OnClick
+{
+  #keys: '[409348.0.309547054]'
+  Body:
+  [*
+    // Edit a PlastickStockElementSupply
+    dlg := construct( DialogPlastickStockElementSupply );
+    dlg.Edit( this, selection );
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListPlastickStockElementSupply/Responsedef_ListPlastickStockElementSupply_Menu_OnClick
+  Initiator: 'MenuEditPlastickStockElementSupply'
+}

@@ -1,0 +1,18 @@
+Quintiq file version 2.0
+#parent: #root
+DeclarativeOwningNMRelation CalcOrderInPaperRoll
+{
+  #keys: '1[409348.0.155361018]'
+  Expression:
+  [*
+    value := selectset( this,
+                       OrderInKnifeSetting.KnifeSetting.PaperRoll,
+                       roll,
+                       true );
+               
+    return &value;
+  *]
+  HelperRelation: PaperRoll
+  InstantiationType: OrderInPaperRoll
+  Relation: OrderInPaperRoll
+}

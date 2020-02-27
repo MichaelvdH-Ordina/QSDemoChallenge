@@ -1,0 +1,39 @@
+Quintiq file version 2.0
+Component DashboardKPIs
+{
+  #keys: '[409348.0.161203627]'
+  BaseType: 'Dashboard'
+  Children:
+  [
+    Component popupDashboard393
+    {
+      #keys: '[409348.0.161203628]'
+      BaseType: 'popupDashboard'
+      Properties:
+      [
+        PosX: 40
+        PosY: 10
+      ]
+    }
+    Component GUIDataExtractor738
+    {
+      #keys: '[409348.0.161203630]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 10
+        PosY: 10
+      ]
+    }
+  ]
+  Properties:
+  [
+    ModeledStringList ChildOrdering
+    {
+      c: popupDashboard393
+      c: GUIDataExtractor738
+    }
+  ]
+}

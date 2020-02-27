@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization FoldingMachine
+{
+  #keys: '2[409348.0.167351029][409348.0.167351028]'
+  Description: 'Folding machine'
+  Parent: Machine
+  StructuredName: 'FoldingMachines'
+}
