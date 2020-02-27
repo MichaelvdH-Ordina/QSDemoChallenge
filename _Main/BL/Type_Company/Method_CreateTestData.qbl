@@ -6,6 +6,7 @@ Method CreateTestData
   TextBody:
   [*
     this.CreateArticles();
+    this.CreateStocks();
     this.CreateOrders();
     this.CreateMachines();
   *]

@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: #root
+Method Edit (GUIComponent parent, shadow[PlastickStockElementSupply] selection) id:Method_DialogPlastickStockElementSupply_Edit_359
+{
+  #keys: '[409348.0.309547405]'
+  Body:
+  [*
+    Dialog.Data( selection );
+    
+    Dialog.DoModal( parent );
+  *]
+}

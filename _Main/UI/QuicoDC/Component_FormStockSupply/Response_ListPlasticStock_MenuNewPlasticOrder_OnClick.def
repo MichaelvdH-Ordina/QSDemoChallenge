@@ -1,0 +1,15 @@
+Quintiq file version 2.0
+#parent: ListPlasticStock
+Response OnClick (PlasticStock selection) id:Response_ListPlasticStock_MenuNewPlasticOrder_OnClick
+{
+  #keys: '[409348.0.313200016]'
+  Body:
+  [*
+    // Create a new plastic order.
+    dlg := construct( DialogPlastickStockElementSupply );
+    dlg.New( this, selection );
+  *]
+  CanBindMultiple: false
+  DefinitionID => /ListPlasticStock/Responsedef_ListPlasticStock_Menu_OnClick
+  Initiator: 'MenuNewPlasticOrder'
+}

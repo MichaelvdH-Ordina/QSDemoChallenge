@@ -1,0 +1,9 @@
+Quintiq file version 2.0
+#root
+#parent: #DomainModel
+TypeSpecialization PlastickStockElementConsumption
+{
+  #keys: '2[409348.0.302041068][409348.0.302041067]'
+  Parent: PlastickStockElement
+  StructuredName: 'PlastickStockElementConsumptions'
+}

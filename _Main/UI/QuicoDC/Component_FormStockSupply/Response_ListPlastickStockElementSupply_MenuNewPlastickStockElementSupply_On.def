@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: ListPlastickStockElementSupply
+Response OnClick (PlasticStock masterselection) id:Response_ListPlastickStockElementSupply_MenuNewPlastickStockElementSupply_OnClick
+{
+  #keys: '[409348.0.309547053]'
+  Body:
+  [*
+    // Create a new PlastickStockElementSupply
+    dlg := construct( DialogPlastickStockElementSupply );
+    dlg.New( this, masterselection );
+  *]
+  DefinitionID => /ListPlastickStockElementSupply/Responsedef_ListPlastickStockElementSupply_Menu_OnClick
+  Initiator: 'MenuNewPlastickStockElementSupply'
+}

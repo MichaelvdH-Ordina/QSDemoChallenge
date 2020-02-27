@@ -1,0 +1,6 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcStart
+{
+  TextBody: 'this.Start( this.UserStart() );'
+}

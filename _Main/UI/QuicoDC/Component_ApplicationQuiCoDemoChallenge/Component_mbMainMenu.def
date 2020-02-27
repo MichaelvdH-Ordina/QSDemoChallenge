@@ -163,6 +163,9 @@ Component mbMainMenu
         Component ComponentMenuKPI { #keys: '[409348.0.161204243]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormKPIDashboard' Text: 'KPI Dashboard' ] }
         Component ComponentMenuPlanning { #keys: '[409348.0.180784811]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormPlanning' Text: 'Planning' ] }
         Component ComponentMenuPaperRollsAndOperations { #keys: '[409348.0.274254771]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormPaperRollsAndOperations' Text: 'Paper rolls and operations' ] }
+        Component ComponentMenuPlastic { #keys: '[409348.0.302053998]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormStockConsumption' Text: 'Plastic stock' ] }
+        Component menuSeparator { #keys: '[409348.0.309558857]' BaseType: 'Menu' Properties: [ Separator: true ] }
+        Component ComponentMenuStockSupply { #keys: '[409348.0.309558963]' BaseType: 'ComponentMenu' Properties: [ ComponentType: 'FormStockSupply' Text: 'Stock supply' ] }
       ]
       Properties:
       [
@@ -174,6 +177,9 @@ Component mbMainMenu
           c: ComponentMenuPaperRollsAndOperations
           c: ComponentMenuOrders
           c: ComponentMenuPlanning
+          c: menuSeparator
+          c: ComponentMenuPlastic
+          c: ComponentMenuStockSupply
           c: MenuFormsSeparator1
           c: MenuFormStandardAnalysis
           c: ComponentMenuKPI

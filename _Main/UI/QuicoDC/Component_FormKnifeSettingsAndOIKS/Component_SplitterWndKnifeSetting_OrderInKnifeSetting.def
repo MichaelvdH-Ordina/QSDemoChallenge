@@ -157,7 +157,7 @@ Component SplitterWndKnifeSetting_OrderInKnifeSetting
   Properties:
   [
     DoubleBuffering: false
-    PaneOrder: '0;1;2'
+    PaneOrder: '0;1;2;3'
     ModeledStringList ChildOrdering
     {
       c: SplitterPaneKS

@@ -1,0 +1,7 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute UserStart
+{
+  #keys: '3[409348.0.302000190][409348.0.302000189][409348.0.302000191]'
+  ValueType: DateTime
+}

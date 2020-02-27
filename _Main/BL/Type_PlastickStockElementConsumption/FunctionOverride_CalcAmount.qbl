@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcAmount
+{
+  TextBody:
+  [*
+    value := guard( - this.PackingOperation().PlanUnit().astype( Order ).Quantity(), 0 );
+    this.Amount( value );
+  *]
+}

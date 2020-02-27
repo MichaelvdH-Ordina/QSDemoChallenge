@@ -1,0 +1,89 @@
+Quintiq file version 2.0
+Component CustomDrawComponent583
+{
+  #keys: '[409348.0.298261764]'
+  BaseType: 'CustomDrawComponent'
+  Children:
+  [
+    Component menuCustomDraw
+    {
+      #keys: '[409348.0.298261765]'
+      BaseType: 'popupCustomDraw'
+    }
+    Component CustomDrawDataLayer659
+    {
+      #keys: '[409348.0.298262330]'
+      BaseType: 'CustomDrawDataLayer'
+      Properties:
+      [
+        ContextMenu: 'menuCustomDraw'
+        DataExtractor: 'GUIDataExtractorCompany'
+        DrawingOrder: 3
+        PosX: 90
+        PosY: 113
+      ]
+    }
+    Component GUIDataExtractorCompany
+    {
+      #keys: '[409348.0.298262331]'
+      BaseType: 'GUIDataExtractor'
+      Properties:
+      [
+        DataSet: 'Company'
+        DataType: 'Company'
+        PosX: 5
+        PosY: 30
+        Transformation: 'KnifeSetting.OrderInKnifeSetting.Order'
+      ]
+    }
+  ]
+  Properties:
+  [
+    BackgroundColor: 'Window'
+    Border: true
+    ModeledStringList ChildOrdering
+    {
+      c: menuCustomDraw
+      c: CustomDrawDataLayer659
+      c: GUIDataExtractorCompany
+    }
+  ]
+  ResponseDefinitions:
+  [
+    DelegatedResponseDefinition OnClick id:Responsedef_CustomDrawComponent583_Menu_OnClick
+    {
+      #keys: '[409348.0.298261772]'
+      Initiator: 'Menu'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[891.0.1250638]'
+          Binding: 'this.Selection()'
+        }
+        ResponseDefinitionArgument row
+        {
+          #keys: '[891.0.1250653]'
+          Binding: 'this.MouseRowObject()'
+        }
+      ]
+    }
+    DelegatedResponseDefinition OnClick id:Responsedef_CustomDrawComponent583_GUIButtonBase_OnClick
+    {
+      #keys: '[409348.0.298261773]'
+      Initiator: 'GUIButtonBase'
+      IsInherited: false
+      ResponseType: 'OnClick'
+      Arguments:
+      [
+        ResponseDefinitionArgument selection
+        {
+          #keys: '[891.0.1250671]'
+          Binding: 'this.Selection()'
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Quintiq file version 2.0
+#parent: #root
+Method GetProposedDeliveryDate () as DateTime
+{
+  Description: 'Propose a delivery moment for plastic.'
+  TextBody:
+  [*
+    // Michael van den Hoogenband Feb-27-2020 (created)
+    return this.NextBelowAmount( 1000.0, this.Company().Time() );
+  *]
+}

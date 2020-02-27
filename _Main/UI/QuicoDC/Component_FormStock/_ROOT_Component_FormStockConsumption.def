@@ -1,0 +1,41 @@
+Quintiq file version 2.0
+#root
+#parent: QuicoDC
+OrphanComponent FormStockConsumption
+{
+  #keys: '[409348.0.302012119]'
+  BaseType: 'Form'
+  GBLayout
+  {
+    Type: 'GBLayoutDefinition'
+    Columns:
+    [
+      GBFlow.Column { grow: 128 id: 942 parent: 0 }
+    ]
+    Elements:
+    [
+      GBElement
+      {
+        Component => ChartComponentStockConsumption
+        Position { startcolumn: 942 startrow: 907 endcolumn: 942 endrow: 907 }
+      }
+    ]
+    Gaps: [ left: 0 right: 0 top: 0 bottom: 0 inner: 5 ]
+    Rows:
+    [
+      GBFlow.Row { grow: 128 id: 907 parent: 0 }
+    ]
+  }
+  Children:
+  [
+    #child: ChartComponentStockConsumption
+  ]
+  Properties:
+  [
+    Height: 520
+    Image: 'WAREHOUSE'
+    IncludeInView: true
+    Title: 'Stock'
+    Width: 474
+  ]
+}

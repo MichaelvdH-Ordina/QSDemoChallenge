@@ -1,0 +1,16 @@
+Quintiq file version 2.0
+#parent: ListPlastickStockElementSupply
+Response OnClick (PlastickStockElementSupply selection) id:Response_ListPlastickStockElementSupply_MenuDeletePlastickStockElementSupply_OnClick
+{
+  #keys: '[409348.0.309547055]'
+  Body:
+  [*
+    // Delete a PlastickStockElementSupply
+    if ( MessageBox::Question( this, 'Are you sure you want to delete the selected PlastickStockElementSupply?', '&Yes|&No' ) = 0 )
+    {
+      selection.Delete();
+    }
+  *]
+  DefinitionID => /ListPlastickStockElementSupply/Responsedef_ListPlastickStockElementSupply_Menu_OnClick
+  Initiator: 'MenuDeletePlastickStockElementSupply'
+}

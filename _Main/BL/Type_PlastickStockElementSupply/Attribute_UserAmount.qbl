@@ -1,0 +1,7 @@
+Quintiq file version 2.0
+#parent: #root
+Attribute UserAmount
+{
+  #keys: '3[409348.0.302000196][409348.0.302000195][409348.0.302000197]'
+  ValueType: Number
+}

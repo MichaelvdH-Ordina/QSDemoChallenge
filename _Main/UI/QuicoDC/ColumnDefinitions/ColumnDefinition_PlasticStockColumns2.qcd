@@ -1,0 +1,12 @@
+Quintiq file version 2.0
+#parent: #root
+ColumnDefinition
+{
+  #keys: '1[409348.0.309547047]'
+  Name: 'PlasticStockColumns2'
+  Type: 'PlasticStock'
+  Columns:
+  [
+    Column { #keys: '1[409348.0.309547056]' DataPath: Length }
+  ]
+}

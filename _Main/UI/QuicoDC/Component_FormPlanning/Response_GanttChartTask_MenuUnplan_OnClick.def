@@ -6,7 +6,10 @@ Response OnClick (Task selection) id:Response_GanttChartTask_MenuUnplan_OnClick
   Body:
   [*
     // Unplan selected orders.
-    selection.Operation().Unplan();
+    if( not selection.istype( PackingTask ) )
+    {
+      selection.Operation().Unplan();
+    }
   *]
   DefinitionID => /GanttChartTask/Responsedef_GanttChartTask_Menu_OnClick
   GroupServerCalls: true

@@ -18,4 +18,9 @@ MethodOverride PlanOn (Machine machine, Task aftertask) as Task
     //foldingtask := this.PreviousOperation().PlanOn( foldmachine, foldaftertask );
     //return foldingtask;
   *]
+  SuppressedModelError
+  {
+    ElementKey: '[1.2.1629]'
+    ErrorKey: '[1.12.376]'
+  }
 }

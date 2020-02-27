@@ -1,0 +1,10 @@
+Quintiq file version 2.0
+#parent: #root
+FunctionOverride CalcDuration
+{
+  TextBody:
+  [*
+    value := guard( this.PackingOperation().Task().Duration(), Duration::Zero() );
+    this.Duration( value );
+  *]
+}

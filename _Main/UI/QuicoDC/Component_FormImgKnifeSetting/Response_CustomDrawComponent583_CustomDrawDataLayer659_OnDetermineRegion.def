@@ -1,0 +1,14 @@
+Quintiq file version 2.0
+#parent: CustomDrawComponent583/CustomDrawDataLayer659
+Response OnDetermineRegion (Order object) id:Response_CustomDrawComponent583_CustomDrawDataLayer659_OnDetermineRegion
+{
+  #keys: '[409348.0.298264722]'
+  Body:
+  [*
+    x := [Number]object.Width();
+    y := [Number]object.Length();
+    this.AddRegion( x, y, 10, 10 );
+  *]
+  CanBindMultiple: false
+  DefinitionID: 'Responsedef_CustomDrawDataLayer_OnDetermineRegion'
+}

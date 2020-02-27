@@ -8,5 +8,6 @@ Method RemoveAllData
     this.Order( relflush );
     this.Article( relflush );
     this.Machine( relflush );
+    this.PlasticStock( relflush );
   *]
 }
